@@ -22,14 +22,49 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
+
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import CardHeader from '@mui/material/CardHeader';
 import background from "../../../src/img/background.png";
+import { Timeline } from 'react-twitter-widgets';
+import Box from '@mui/material/Box';
+import PropTypes from 'prop-types';
 
+
+function Item(props) {
+  const { sx, ...other } = props;
+  return (
+    <Box
+      sx={{
+        p: 1,
+        m: 1,
+        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : 'grey.100'),
+        color: (theme) => (theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800'),
+        border: '1px solid',
+        borderColor: (theme) =>
+          theme.palette.mode === 'dark' ? 'grey.800' : 'grey.300',
+        borderRadius: 2,
+        fontSize: '0.875rem',
+        fontWeight: '700',
+        ...sx,
+      }}
+      {...other}
+    />
+  );
+}
+
+Item.propTypes = {
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: PropTypes.oneOfType([
+    PropTypes.arrayOf(
+      PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool]),
+    ),
+    PropTypes.func,
+    PropTypes.object,
+  ]),
+};
 
 
 
@@ -85,7 +120,6 @@ export const HomeView: FC = ({ }) => {
 */
 
   return (
-    <div style={{ backgroundImage: `url(${background})` }}>
     <div className="md:hero mx-auto p-4">
       <div className="md:hero-content flex flex-col">
         <h1 className="text-center text-4xl md:pl-12 font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#FFFFFF] to-[#8B0000]">
@@ -96,14 +130,17 @@ export const HomeView: FC = ({ }) => {
         </h4>
      
           <div className="text-center">
-      <Card sx={{ maxWidth: 600 }}>
+
+      <Box sx={{display: 'flex',flexDirection: 'row', p: 1, m: 1,justifyContent: 'center'}}>
+      <Item>
+      <Card sx={{ minWidth: 400}}>
       <CardHeader
         title="Actual Score"
         //subheader={time}
       />
       <CardContent>
           <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 300 }} aria-label="simple table">
+      <Table sx={{ minWidth: 300}} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>REALM</TableCell>
@@ -127,7 +164,28 @@ export const HomeView: FC = ({ }) => {
     </TableContainer>
     </CardContent>
     </Card>
-        </div>
+    </Item>
+    <Item>
+    <Card sx={{ minWidth: 400}}>
+      <CardHeader
+        title="TWITTER"
+        //subheader={time}
+      />
+      <CardContent>
+      <Timeline
+  dataSource={{
+    sourceType: 'mentions',
+    screenName: 'skullbots'
+  }}
+  options={{
+    height: '400'
+  }}
+/>  
+    </CardContent>
+    </Card>
+    </Item>
+    </Box>
+       
       </div>
     </div>
     </div>
