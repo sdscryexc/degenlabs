@@ -47,15 +47,12 @@ export const HomeView: FC = ({ }) => {
           <p> .</p>
           7 REALMS fighting for the REV SHARE.
         </h4>
-        <div className="max-w-md mx-auto mockup-code bg-primary p-6 my-2">
-          <pre data-prefix=">">
-            <code className="truncate">Start building on Solana  </code>
-          </pre>
-        </div>        
+        <h4 className="md:w-full text-center text-slate-300 my-2">
+          <p> .</p>
+          WHO WILL WIN THIS WEEK?.
+        </h4>
+               
           <div className="text-center">
-        
-          {/* {wallet.publicKey && <p>Public Key: {wallet.publicKey.toBase58()}</p>} */}
-          {wallet && <p>SOL Balance: {(balance || 0).toLocaleString()}</p>}
           <div>
           WRATH {amount_wrath}
           </div>
