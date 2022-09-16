@@ -11,6 +11,11 @@ import pkg from '../../../package.json';
 
 // Store
 import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
+import { amount_wrath, amount_envy, amount_gluttony, amount_greed, amount_lust, amount_pride, amount_sloth } from '../../stores/useUserSOLBalanceStore';
+
+
+
+
 
 export const HomeView: FC = ({ }) => {
   const wallet = useWallet();
@@ -19,12 +24,17 @@ export const HomeView: FC = ({ }) => {
   const balance = useUserSOLBalanceStore((s) => s.balance)
   const { getUserSOLBalance } = useUserSOLBalanceStore()
 
+
+  console.log(`amount_wrath: ${amount_wrath}`);
+
   useEffect(() => {
     if (wallet.publicKey) {
       console.log(wallet.publicKey.toBase58())
       getUserSOLBalance(wallet.publicKey, connection)
     }
   }, [wallet.publicKey, connection, getUserSOLBalance])
+
+  
 
   return (
 
@@ -46,6 +56,27 @@ export const HomeView: FC = ({ }) => {
           <RequestAirdrop />
           {/* {wallet.publicKey && <p>Public Key: {wallet.publicKey.toBase58()}</p>} */}
           {wallet && <p>SOL Balance: {(balance || 0).toLocaleString()}</p>}
+          <div>
+          WRATH {amount_wrath}
+          </div>
+          <div>
+          GREED {amount_greed}
+          </div>
+          <div>
+          GLUTTONY {amount_gluttony}
+          </div>
+          <div>
+          SLOTH {amount_sloth}
+          </div>
+          <div>
+          LUST {amount_lust}
+          </div>
+          <div>
+          ENVY {amount_envy}
+          </div>
+          <div>
+          PRIDE {amount_pride}
+          </div>
         </div>
       </div>
     </div>
