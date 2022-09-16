@@ -113,13 +113,13 @@ export const HomeView: FC = ({ }) => {
   ];
 
   const data = [
-    {argument: 'GREED', value: amount_greed},
-    {argument: 'LUST', value: amount_lust},
-    {argument: 'PRIDE', value: amount_pride},
-    {argument: 'GLUTTONY', value: amount_gluttony},
-    {argument: 'ENVY', value: amount_envy},
-    {argument: 'SLOTH', value: amount_sloth},
-    {argument: 'WRATH', value: amount_wrath},
+    {argument: 'GRE', value: amount_greed},
+    {argument: 'LUS', value: amount_lust},
+    {argument: 'PRI', value: amount_pride},
+    {argument: 'GLU', value: amount_gluttony},
+    {argument: 'ENV', value: amount_envy},
+    {argument: 'SLO', value: amount_sloth},
+    {argument: 'WRA', value: amount_wrath},
   ];
   
   const [time, setTime] = React.useState();
@@ -147,8 +147,14 @@ export const HomeView: FC = ({ }) => {
      
           <div className="text-center">
 
-      <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
-      <Item sx={{display: 'flex', minWidth: 400 }}>
+      <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap',}}>
+      <Item>
+      <Card sx={{ minWidth: 350}}>
+      <CardHeader
+        title="Actual Score"
+        //subheader={time}
+      />
+      <CardContent>
           <TableContainer component={Paper}>
       <Table sx={{ minWidth: 300}} aria-label="simple table">
         <TableHead>
@@ -172,10 +178,13 @@ export const HomeView: FC = ({ }) => {
         </TableBody>
       </Table>
     </TableContainer>
- 
+    </CardContent>
+    </Card>
     </Item>
-    <Item sx={{display: 'flex', minWidth: 400}}>
-   
+    <Item>
+    <Card sx={{ minWidth: 350}}>
+
+      <CardContent>
       <Timeline
   dataSource={{
     sourceType: 'mentions',
@@ -185,11 +194,14 @@ export const HomeView: FC = ({ }) => {
     height: '500'
   }}
 />  
- 
+    </CardContent>
+    </Card>
     </Item>
    
-    <Item sx={{display: 'flex', minWidth: 400}}>
-    
+    <Item>
+    <Card sx={{ minWidth: 350}}>
+
+      <CardContent>
 
     <Paper>
     <Chart
@@ -201,7 +213,8 @@ export const HomeView: FC = ({ }) => {
       <BarSeries valueField="value" argumentField="argument" />
     </Chart>
   </Paper>
- 
+  </CardContent>
+    </Card>
     </Item>
   </Box>
        
