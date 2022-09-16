@@ -77,7 +77,7 @@ export const HomeView: FC = ({ }) => {
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      return setTime(new Date().toLocaleString());
+      return setTime(new Date()?.toLocaleString());
     }, 1000);
 
     return () => {
