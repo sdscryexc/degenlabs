@@ -28,9 +28,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CardHeader from '@mui/material/CardHeader';
-import cardimage from "../../../src/img/skullbots_black_400.png";
 import background from "../../../src/img/background.png";
-import { url } from 'inspector';
 
 
 
@@ -90,8 +88,8 @@ export const HomeView: FC = ({ }) => {
     <div style={{ backgroundImage: `url(${background})` }}>
     <div className="md:hero mx-auto p-4">
       <div className="md:hero-content flex flex-col">
-        <h1 className="text-center text-5xl md:pl-12 font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#FFFFFF] to-[#8B0000]">
-          DEGENBOTS WAR INTERFACE <span className='text-sm font-normal align-top text-slate-700'>v{pkg.version}</span>
+        <h1 className="text-center text-4xl md:pl-12 font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#FFFFFF] to-[#8B0000]">
+          DEGENBOTS WAR INTERFACE 
         </h1>
         <h4 className="md:w-full text-center text-slate-300 my-2">
           <p> </p>
