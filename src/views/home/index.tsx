@@ -74,17 +74,17 @@ export const HomeView: FC = ({ }) => {
   ];
   
   const [time, setTime] = React.useState();
-
-  React.useEffect(() => {
+ 
+ /* React.useEffect(() => {
     const timer = setInterval(() => {
-      return setTime(new Date()?.toLocaleString());
+      return setTime(new Date().toLocaleString());
     }, 1000);
 
     return () => {
       clearInterval(timer);
     };
   }, []);
-
+*/
 
   return (
     <div style={{ backgroundImage: `url(${background})` }}>
@@ -101,7 +101,7 @@ export const HomeView: FC = ({ }) => {
       <Card sx={{ maxWidth: 600 }}>
       <CardHeader
         title="Actual Score"
-        subheader={time}
+        //subheader={time}
       />
       <CardContent>
           <TableContainer component={Paper}>
