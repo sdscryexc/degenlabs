@@ -29,6 +29,12 @@ import background from "../../../src/img/background.png";
 import { Timeline } from 'react-twitter-widgets';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
+import {
+  ArgumentAxis,
+  ValueAxis,
+  Chart,
+  BarSeries,
+} from '@devexpress/dx-react-chart-material-ui';
 
 
 function Item(props) {
@@ -105,6 +111,16 @@ export const HomeView: FC = ({ }) => {
     createData('SLOTH', amount_sloth),
     createData('WRATH', amount_wrath),
   ];
+
+  const data = [
+    {argument: 'GREED', value: amount_greed},
+    {argument: 'LUST', value: amount_lust},
+    {argument: 'PRIDE', value: amount_pride},
+    {argument: 'GLUTTONY', value: amount_gluttony},
+    {argument: 'ENVY', value: amount_envy},
+    {argument: 'SLOTH', value: amount_sloth},
+    {argument: 'WRATH', value: amount_wrath},
+  ];
   
   const [time, setTime] = React.useState();
  
@@ -131,14 +147,8 @@ export const HomeView: FC = ({ }) => {
      
           <div className="text-center">
 
-      <Box sx={{display: 'flex',flexDirection: 'row', p: 1, m: 1,justifyContent: 'center'}}>
-      <Item>
-      <Card sx={{ minWidth: 400}}>
-      <CardHeader
-        title="Actual Score"
-        //subheader={time}
-      />
-      <CardContent>
+      <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
+      <Item sx={{display: 'flex', minWidth: 400 }}>
           <TableContainer component={Paper}>
       <Table sx={{ minWidth: 300}} aria-label="simple table">
         <TableHead>
@@ -162,29 +172,38 @@ export const HomeView: FC = ({ }) => {
         </TableBody>
       </Table>
     </TableContainer>
-    </CardContent>
-    </Card>
+ 
     </Item>
-    <Item>
-    <Card sx={{ minWidth: 400}}>
-      <CardHeader
-        title="TWITTER"
-        //subheader={time}
-      />
-      <CardContent>
+    <Item sx={{display: 'flex', minWidth: 400}}>
+   
       <Timeline
   dataSource={{
     sourceType: 'mentions',
     screenName: 'skullbots'
   }}
   options={{
-    height: '400'
+    height: '500'
   }}
 />  
-    </CardContent>
-    </Card>
+ 
     </Item>
-    </Box>
+   
+    <Item sx={{display: 'flex', minWidth: 400}}>
+    
+
+    <Paper>
+    <Chart
+      data={data}
+    >
+      <ArgumentAxis />
+      <ValueAxis />
+  
+      <BarSeries valueField="value" argumentField="argument" />
+    </Chart>
+  </Paper>
+ 
+    </Item>
+  </Box>
        
       </div>
     </div>
