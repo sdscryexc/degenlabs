@@ -4,8 +4,6 @@ import Link from "next/link";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useAutoConnect } from '../contexts/AutoConnectProvider';
 import NetworkSwitcher from './NetworkSwitcher';
-import degenbots from './degenbots.png';
-import logo from 'degenbots.png';
 
 
 export const AppBar: FC = props => {
@@ -25,7 +23,6 @@ export const AppBar: FC = props => {
           </label>
         
           <div className=" sm:inline w-22 h-22 md:p-2 text-5x1 font-bold text-red-600">
-          
           DEGENBOTS REALMS WAR
           </div>
         </div>
