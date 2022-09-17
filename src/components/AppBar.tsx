@@ -26,10 +26,7 @@ export const AppBar: FC = props => {
         
           <div className=" sm:inline w-22 h-22 md:p-2 text-5x1 font-bold text-red-600">
           
-          DEGENBOTS
-          </div>
-          <div>
-         
+          DEGENBOTS REALMS WAR
           </div>
         </div>
 
