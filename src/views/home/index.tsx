@@ -44,11 +44,10 @@ function Item(props) {
       sx={{
         p: 1,
         m: 1,
-        bgcolor: 'transparent',
+        bgcolor: 'white',
         color: (theme) => (theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800'),
-        border: '1px solid',
-        borderColor: (theme) =>
-          theme.palette.mode === 'dark' ? 'grey.800' : 'grey.300',
+        border: '2px solid',
+        borderColor: 'red',
         borderRadius: 2,
         fontSize: '0.875rem',
         fontWeight: '700',
@@ -137,8 +136,8 @@ export const HomeView: FC = ({ }) => {
 
   return (
     <div className="md:hero mx-auto p-4">
-      <div className="md:hero-content flex flex-col">
-        <h1 className="text-center text-4xl md:pl-12 font-bold text-transparent bg-clip-text bg-gradient-to-tr from-[#FFFFFF] to-[#8B0000]">
+      <div className="md:hero-content flex flex-col text-red-600">
+        <h1 className="text-center text-4xl font-bold">
           DEGENBOTS WAR INTERFACE 
         </h1>
         <h4 className="md:w-full text-center text-slate-300 my-2">
