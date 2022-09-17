@@ -23,8 +23,8 @@ export const ContentContainer: FC = props => {
             </Link>
           </li>
           <li>
-            <Link href="/basics">
-              <a>Basics</a>
+            <Link href="https://magiceden.io/marketplace/degenbots_">
+              <a>BUY Degenbot</a>
             </Link>
           </li>
         </ul>

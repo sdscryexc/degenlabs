@@ -55,8 +55,8 @@ export const AppBar: FC = props => {
             <Link href="/">
               <a className="btn btn-ghost btn-sm rounded-btn">Home</a>
             </Link>
-            <Link href="/basics">
-              <a className="btn btn-ghost btn-sm rounded-btn">Basics</a>
+            <Link href="https://magiceden.io/marketplace/degenbots_">
+              <a className="btn btn-ghost btn-sm rounded-btn">Buy Degenbot</a>
             </Link>
           </div>
         </div>

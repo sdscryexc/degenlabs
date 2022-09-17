@@ -44,7 +44,7 @@ function Item(props) {
       sx={{
         p: 1,
         m: 1,
-        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : 'grey.100'),
+        bgcolor: 'transparent',
         color: (theme) => (theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800'),
         border: '1px solid',
         borderColor: (theme) =>
@@ -147,16 +147,15 @@ export const HomeView: FC = ({ }) => {
      
           <div className="text-center">
 
-      <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap',}}>
+      <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap', bgcolor: 'transparent'}}>
       <Item>
       <Card sx={{ minWidth: 350}}>
       <CardHeader
-        title="Actual Score"
-        //subheader={time}
+        title="ACTUAL SCORE"
       />
-      <CardContent>
+      <CardContent sx={{display: 'flex'}}>
           <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 300}} aria-label="simple table">
+      <Table sx={{ minWidth: 300, bgcolor: 'transparent'}} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>REALM</TableCell>
