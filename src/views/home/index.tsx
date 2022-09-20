@@ -5,9 +5,6 @@ import Link from 'next/link';
 // Wallet
 import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 
-// Components
-import { RequestAirdrop } from '../../components/RequestAirdrop';
-import pkg from '../../../package.json';
 
 // Store
 import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
@@ -22,12 +19,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Card from '@mui/material/Card';
-
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
-import background from "../../../src/img/background.png";
+import CardMedia from '@mui/material/CardHeader';
 import { Timeline } from 'react-twitter-widgets';
 import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import {
   ArgumentAxis,
@@ -35,41 +32,11 @@ import {
   Chart,
   BarSeries,
 } from '@devexpress/dx-react-chart-material-ui';
+import Image from 'next/image';
+import bg from '../../images/SB_BG.png';
 
 
-function Item(props) {
-  const { sx, ...other } = props;
-  return (
-    <Box
-      sx={{
-        p: 1,
-        m: 1,
-        bgcolor: 'white',
-        color: (theme) => (theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800'),
-        border: '2px solid',
-        borderColor: 'red',
-        borderRadius: 2,
-        fontSize: '0.875rem',
-        fontWeight: '700',
-        ...sx,
-      }}
-      {...other}
-    />
-  );
-}
 
-Item.propTypes = {
-  /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */
-  sx: PropTypes.oneOfType([
-    PropTypes.arrayOf(
-      PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool]),
-    ),
-    PropTypes.func,
-    PropTypes.object,
-  ]),
-};
 
 
 
@@ -84,7 +51,7 @@ export const HomeView: FC = ({ }) => {
   const { getUserSOLBalance } = useUserSOLBalanceStore()
 
 
-  console.log(`amount_wrath: ${amount_wrath}`);
+
 
   useEffect(() => {
     if (wallet.publicKey) {
@@ -134,94 +101,90 @@ export const HomeView: FC = ({ }) => {
   }, []);
 */
 
+
+
   return (
-    <div className="md:hero mx-auto p-4">
-      <div className="md:hero-content flex flex-col text-red-600">
-        <h1 className="text-center text-4xl font-bold">
-          DEGENBOTS WAR INTERFACE 
-        </h1>
-        <h4 className="md:w-full text-center text-slate-300 my-2">
-          <p> </p>
-        </h4>
+    <Box>
+          <Image src={require('../../images/title.png')}  layout="responsive"  />
+          <Box sx={{display: 'flex', justifyContent: 'center'}} >
+            <Typography variant="h2" component="div" align='center' color='black' margin='10px' font-family= 'cursive'   >
+              Skullbots Whale Foundation
+            </Typography>
+            </Box>
+            <Box sx={{width: '1200px', justifyContent: 'center', display:'flex'}} >
+            <Typography variant="body1" component="div" align='center' color='black' margin='10px' font-family= 'cursive'   >
+             
+            
+
+            We are a small group of HellDAO members: SDS, Lewy, Apex, Watermalone, Haui, Cartu, LittleP,Frait, Oawzz and MintyMike – along with the full support from the main man himself, our founder and the reason we are all here LUCIFER. 
+
+We felt there was an opportunity to really help drive this project forwards, providing our full support to Lucifer enabling him to offload some of his workload so he can focus on what he does best, build quality tools!
+ 
+We thought it would be a good time to tell you what we have been up to this past few weeks and ask for your help in supporting our activity!    
+              </Typography>
+
+
+
+
+
+
+          </Box>
+          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
+            <Box sx={{display: 'flex',  flex: '1',  margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
+              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
+            </Box>
+          <Box sx={{display: 'flex', flex: '2', alignItems: 'center' , justifyContent: 'center'}}>
+            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
+              Lewy "the Brain"
+            </Typography>
+            </Box>    
+          </Box>
+
+          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
+          <Box sx={{display: 'flex', flex: '2',  alignItems: 'center' , justifyContent: 'center'}}>
+            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
+              Mike "the Voice"
+            </Typography>
+            </Box>
+          <Box sx={{display: 'flex',  flex: '1', margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
+              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
+         </Box>
      
-          <div className="text-center">
+          </Box>
 
-      <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap', bgcolor: 'transparent'}}>
-      <Item>
-      <Card sx={{ minWidth: 350}}>
-      <CardHeader
-        title="ACTUAL SCORE"
-      />
-      <CardContent sx={{display: 'flex'}}>
-          <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 300, bgcolor: 'transparent'}} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>REALM</TableCell>
-            <TableCell align="right">AMOUNT TOKEN</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.Tokenamount}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    </CardContent>
-    </Card>
-    </Item>
-    <Item>
-    <Card sx={{ minWidth: 350}}>
+          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
+            <Box sx={{display: 'flex',  flex: '1', margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
+              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
+            </Box>
+          <Box sx={{display: 'flex', flex: '2', alignItems: 'center' , justifyContent: 'center'}}>
+            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
+              Lewy "the Brain"
+            </Typography>
+            </Box>    
+          </Box>
 
-      <CardContent>
-      <Timeline
-  dataSource={{
-    sourceType: 'mentions',
-    screenName: 'skullbots'
-  }}
-  options={{
-    height: '500'
-  }}
-/>  
-    </CardContent>
-    </Card>
-    </Item>
-   
-    <Item>
-    <Card sx={{ minWidth: 350}}>
+          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
+          <Box sx={{display: 'flex', flex: '2', alignItems: 'center' , justifyContent: 'center'}}>
+            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
+              Lewy "the Brain"
+            </Typography>
+            </Box>
+          <Box sx={{display: 'flex',  flex: '1', margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
+              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
+         </Box>
+     
+          </Box>
 
-      <CardContent>
-
-    <Paper>
-    <Chart
-      data={data}
-    >
-      <ArgumentAxis />
-      <ValueAxis />
-  
-      <BarSeries valueField="value" argumentField="argument" />
-    </Chart>
-  </Paper>
-  </CardContent>
-    </Card>
-    </Item>
-  </Box>
-       
-      </div>
-    </div>
-    </div>
-  );
-};
-
-
-
-
+          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
+            <Box sx={{display: 'flex',  flex: '1', margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
+              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
+            </Box>
+          <Box sx={{display: 'flex', flex: '2', alignItems: 'center' , justifyContent: 'center'}}>
+            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
+              Lewy "the Brain"
+            </Typography>
+            </Box>    
+          </Box>
+    </Box>
+      )};
+ 

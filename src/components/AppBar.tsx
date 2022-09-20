@@ -1,71 +1,77 @@
-import { FC } from 'react';
-import Link from "next/link";
-
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MoreIcon from '@mui/icons-material/MoreVert';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import { useAutoConnect } from '../contexts/AutoConnectProvider';
-import NetworkSwitcher from './NetworkSwitcher';
+import Link from "next/link";
+import Image from "next/image";
 
 
-export const AppBar: FC = props => {
-  const { autoConnect, setAutoConnect } = useAutoConnect();
 
+const darkTheme = createTheme({
+  palette: {
+    
+    primary: {
+      main: '#000000',
+    },
+  },
+});
+
+function MenuPopupState() {
   return (
-    <div>
-
-      {/* NavBar / Header */}
-      <div className="navbar flex flex-row md:mb-2 shadow-lg bg-white text-neutral-content">
-        <div className="navbar-start">
-          <label htmlFor="my-drawer" className="btn btn-square " >
-
-            <svg className="inline-block w-6 h-6 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" color="gray" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </label>
-        
-          <div className=" sm:inline w-22 h-22 md:p-2 text-5x1 font-bold text-red-600">
-          DEGENBOTS REALMS WAR 
-          </div>
-        </div>
-
-        {/* Nav Links */}
-        <div className="hidden md:inline md:navbar-center">
-          <div className="flex items-stretch text-red-600 text-lg" >
-            <Link href="/">
-              <a className="btn btn-ghost btn-sm rounded-btn">Home</a>
-            </Link>
-            <Link href="https://magiceden.io/marketplace/degenbots_">
-              <a className="btn btn-ghost btn-sm rounded-btn">Buy Degenbot</a>
-            </Link>
-          </div>
-        </div>
-
-        {/* Wallet & Settings */}
-        <div className="navbar-end">
-          <WalletMultiButton className="btn stroke-red-600 mr-4" />
-
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} className="btn btn-square  text-right">
-              <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <ul tabIndex={0} className="p-2 shadow menu dropdown-content bg-base-100 rounded-box sm:w-52">
-              <li>
-                <div className="form-control">
-                  <label className="cursor-pointer label">
-                    <a>Autoconnect</a>
-                    <input type="checkbox" checked={autoConnect} onChange={(e) => setAutoConnect(e.target.checked)} className="toggle" />
-                  </label>
-
-                  <NetworkSwitcher />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      {props.children}
-    </div>
+    <PopupState variant="popover" popupId="demo-popup-menu">
+      {(popupState) => (
+        <React.Fragment>
+          <IconButton {...bindTrigger(popupState)}
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 0 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu {...bindMenu(popupState)}>
+            <MenuItem onClick={popupState.close}><Link href="/SB">Skullbots</Link></MenuItem>
+            <MenuItem onClick={popupState.close}><Link href="/degenbots">Degenbots</Link></MenuItem>
+            <MenuItem onClick={popupState.close}><Link href="/war">War Interface</Link></MenuItem>
+          </Menu>
+        </React.Fragment>
+      )}
+    </PopupState>
   );
-};
+}
+
+
+export default function Header() {
+  return (
+    <Box >
+       <ThemeProvider theme={darkTheme}>
+          <AppBar position="static">
+            <Toolbar>
+              
+              <MenuPopupState/>
+              <div className="p-3">
+              <Image src={require('../images/sWFLOGO.png')} width='40' height={'40'}/>
+              </div>
+              <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+              
+              <Link href="/">Skullbots Whale Foundation</Link>
+              </Typography>
+              <WalletMultiButton/>
+          
+              </Toolbar>
+          </AppBar>
+        </ThemeProvider>
+    </Box>
+  );
+}
