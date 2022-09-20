@@ -34,6 +34,7 @@ import {
 } from '@devexpress/dx-react-chart-material-ui';
 import Image from 'next/image';
 import bg from '../../images/SB_BG.png';
+import Container from '@mui/material/Container';
 
 
 
@@ -107,12 +108,12 @@ export const HomeView: FC = ({ }) => {
     <Box>
           <Image src={require('../../images/title.png')}  layout="responsive"  />
           <Box sx={{display: 'flex', justifyContent: 'center'}} >
-            <Typography variant="h2" component="div" align='center' color='black' margin='10px' font-family= 'cursive'   >
+            <Typography variant="h2" component="div" align='center' color='white' margin='30px' >
               Skullbots Whale Foundation
             </Typography>
             </Box>
-            <Box sx={{width: '1200px', justifyContent: 'center', display:'flex'}} >
-            <Typography variant="body1" component="div" align='center' color='black' margin='10px' font-family= 'cursive'   >
+            <Container maxWidth="xl">
+            <Typography variant="body1" component="div" align='center' color='white' margin='10px' marginBottom= '30px'   >
              
             
 
@@ -122,67 +123,136 @@ We felt there was an opportunity to really help drive this project forwards, pro
  
 We thought it would be a good time to tell you what we have been up to this past few weeks and ask for your help in supporting our activity!    
               </Typography>
-
-
-
-
-
-
-          </Box>
+          </Container>
           <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
-            <Box sx={{display: 'flex',  flex: '1',  margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
-              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
+            <Box sx={{display: 'flex',  flex: '4', alignItems: 'center' , justifyContent: 'right'  }}>
+              <div style={{border :'5px solid', borderColor : 'white'}}>
+              <Image src={require('../../images/lewy.jpg')} width= '200px' height= '200px'/></div>
             </Box>
-          <Box sx={{display: 'flex', flex: '2', alignItems: 'center' , justifyContent: 'center'}}>
-            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
+            <Box sx={{display: 'flex',  flex: '1', alignItems: 'center' , justifyContent: 'right'  }}></Box>
+          <Box sx={{ flex: '8', alignItems: 'center' , justifyContent: 'left',}}>
+            <Typography variant="h5"  color='white' margin='10px' justifyContent='left'>
               Lewy "the Brain"
             </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+              blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div" color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+
             </Box>    
           </Box>
 
-          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
-          <Box sx={{display: 'flex', flex: '2',  alignItems: 'center' , justifyContent: 'center'}}>
-            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
-              Mike "the Voice"
+          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', margin: '30px'}} >
+          <Box sx={{ flex: '8', alignItems: 'center' , textAlign: 'right'}}>
+            <Typography variant="h5"  color='white' margin='10px' justifyContent='right'>
+              Mike "the Hammer"
             </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px'>
+              blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div" color='white' margin='10px'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px'>
+            blablablablablabl
+            </Typography>
+
             </Box>
-          <Box sx={{display: 'flex',  flex: '1', margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
-              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
-         </Box>
+            <Box sx={{display: 'flex',  flex: '1', alignItems: 'center' , justifyContent: 'left'  }}></Box>  
+            <Box sx={{display: 'flex',  flex: '4', alignItems: 'center' , justifyContent: 'left'  }}>
+              <div style={{border :'5px solid', borderColor : 'white'}}>
+              <Image src={require('../../images/mike.jpg')} width= '200px' height= '200px'/></div>
+            </Box>
      
           </Box>
 
           <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
-            <Box sx={{display: 'flex',  flex: '1', margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
-              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
+            <Box sx={{display: 'flex',  flex: '4', alignItems: 'center' , justifyContent: 'right'  }}>
+              <div style={{border :'5px solid', borderColor : 'white'}}>
+              <Image src={require('../../images/apex.jpg')} width= '200px' height= '200px'/></div>
             </Box>
-          <Box sx={{display: 'flex', flex: '2', alignItems: 'center' , justifyContent: 'center'}}>
-            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
-              Lewy "the Brain"
+            <Box sx={{display: 'flex',  flex: '1', alignItems: 'center' , justifyContent: 'right'  }}></Box>
+          <Box sx={{ flex: '8', alignItems: 'center' , justifyContent: 'left',}}>
+            <Typography variant="h5"  color='white' margin='10px' justifyContent='left'>
+              Apex "the Creative"
             </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+              blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div" color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+
             </Box>    
           </Box>
 
-          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
-          <Box sx={{display: 'flex', flex: '2', alignItems: 'center' , justifyContent: 'center'}}>
-            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
-              Lewy "the Brain"
+          <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', margin: '30px'}} >
+          <Box sx={{ flex: '8', alignItems: 'center' , textAlign: 'right'}}>
+            <Typography variant="h5"  color='white' margin='10px' justifyContent='right'>
+              Watermalone
             </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px'>
+              blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div" color='white' margin='10px'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px'>
+            blablablablablabl
+            </Typography>
+
             </Box>
-          <Box sx={{display: 'flex',  flex: '1', margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
-              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
-         </Box>
+            <Box sx={{display: 'flex',  flex: '1', alignItems: 'center' , justifyContent: 'left'  }}></Box>  
+            <Box sx={{display: 'flex',  flex: '4', alignItems: 'center' , justifyContent: 'left'  }}>
+              <div style={{border :'5px solid', borderColor : 'white'}}>
+              <Image src={require('../../images/malo.jpg')} width= '200px' height= '200px'/></div>
+            </Box>
      
           </Box>
 
           <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}} >
-            <Box sx={{display: 'flex',  flex: '1', margin: '10px', alignItems: 'center' , justifyContent: 'center'   }}>
-              <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'/>
+            <Box sx={{display: 'flex',  flex: '4', alignItems: 'center' , justifyContent: 'right'  }}>
+              <div style={{border :'5px solid', borderColor : 'white'}}>
+              <Image src={require('../../images/sds.jpg')} width= '200px' height= '200px'/></div>
             </Box>
-          <Box sx={{display: 'flex', flex: '2', alignItems: 'center' , justifyContent: 'center'}}>
-            <Typography variant="h5" component="div" align='center' color='black' margin='10px'>
-              Lewy "the Brain"
+            <Box sx={{display: 'flex',  flex: '1', alignItems: 'center' , justifyContent: 'right'  }}></Box>
+          <Box sx={{ flex: '8', alignItems: 'center' , justifyContent: 'left',}}>
+            <Typography variant="h5"  color='white' margin='10px' justifyContent='left'>
+              SDS
             </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+              blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div" color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+            <Typography variant="body2" component="div"  color='white' margin='10px' justifyContent='left'>
+            blablablablablabl
+            </Typography>
+
             </Box>    
           </Box>
     </Box>
