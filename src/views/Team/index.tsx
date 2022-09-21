@@ -35,8 +35,20 @@ import {
 import Image from 'next/image';
 import bg from '../../images/SB_BG.png';
 import Container from '@mui/material/Container';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+const theme = createTheme({
+  palette: {
+    
+    primary: {
+      main: 'rgba(0, 0, 0, 1)',
+    },
+    secondary: {
+      main: 'rgba(255, 255, 255, 0.7)'
+    }
+  },
 
+});
 
 
 
@@ -105,6 +117,7 @@ export const Team: FC = ({ }) => {
 
 
   return (
+    <ThemeProvider theme={theme}>
     <Box>
           <Box sx={{ display: 'flex', alignItems: 'center',  justifyContent: 'center', backgroundColor: 'white', flexDirection: 'row', flexGrow: '1', minHeight:'20vh' }}>
         <div>
@@ -112,12 +125,12 @@ export const Team: FC = ({ }) => {
       </div>      
       </Box>
           <Box sx={{display: 'flex', justifyContent: 'center'}} >
-            <Typography variant="h2" component="div" align='center' color='black' margin='30px' >
+            <Typography variant="h2" component="div" align='center' color='black' margin='30px' fontFamily= "montserrat">
               Skullbots Whale Foundation
             </Typography>
             </Box>
             <Container maxWidth="xl">
-            <Typography variant="body1" component="div" align='center' color='black' margin='10px' marginBottom= '30px'   >
+            <Typography variant="body1" component="div" align='center' color='black' margin='10px' marginBottom= '30px' fontFamily= "montserrat"  >
              
             
 
@@ -135,19 +148,19 @@ We thought it would be a good time to tell you what we have been up to this past
             </Box>
             <Box sx={{display: 'flex',  flex: '1', alignItems: 'center' , justifyContent: 'right'  }}></Box>
           <Box sx={{ flex: '8', alignItems: 'center' , justifyContent: 'left',}}>
-            <Typography variant="h5"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="h5"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
               Lewy "the Brain"
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
               blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div" color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div" color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
 
@@ -156,19 +169,19 @@ We thought it would be a good time to tell you what we have been up to this past
 
           <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', margin: '30px'}} >
           <Box sx={{ flex: '8', alignItems: 'center' , textAlign: 'right'}}>
-            <Typography variant="h5"  color='black' margin='10px' justifyContent='right'>
+            <Typography variant="h5"  color='black' margin='10px' justifyContent='right' fontFamily= "montserrat">
               Mike "the Hammer"
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' fontFamily= "montserrat">
               blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' fontFamily= "montserrat"> 
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div" color='black' margin='10px'>
+            <Typography variant="body2" component="div" color='black' margin='10px' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
 
@@ -188,19 +201,19 @@ We thought it would be a good time to tell you what we have been up to this past
             </Box>
             <Box sx={{display: 'flex',  flex: '1', alignItems: 'center' , justifyContent: 'right'  }}></Box>
           <Box sx={{ flex: '8', alignItems: 'center' , justifyContent: 'left',}}>
-            <Typography variant="h5"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="h5"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
               Apex "the Creative"
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
               blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div" color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div" color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
 
@@ -209,19 +222,19 @@ We thought it would be a good time to tell you what we have been up to this past
 
           <Box sx={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', margin: '30px'}} >
           <Box sx={{ flex: '8', alignItems: 'center' , textAlign: 'right'}}>
-            <Typography variant="h5"  color='black' margin='10px' justifyContent='right'>
+            <Typography variant="h5"  color='black' margin='10px' justifyContent='right' fontFamily= "montserrat">
               Watermalone
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' fontFamily= "montserrat">
               blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div" color='black' margin='10px'>
+            <Typography variant="body2" component="div" color='black' margin='10px' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
 
@@ -241,24 +254,25 @@ We thought it would be a good time to tell you what we have been up to this past
             </Box>
             <Box sx={{display: 'flex',  flex: '1', alignItems: 'center' , justifyContent: 'right'  }}></Box>
           <Box sx={{ flex: '8', alignItems: 'center' , justifyContent: 'left',}}>
-            <Typography variant="h5"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="h5"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
               SDS
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
               blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div" color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div" color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
-            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left'>
+            <Typography variant="body2" component="div"  color='black' margin='10px' justifyContent='left' fontFamily= "montserrat">
             blablablablablabl
             </Typography>
 
             </Box>    
           </Box>
     </Box>
+    </ThemeProvider>
       )};
  
