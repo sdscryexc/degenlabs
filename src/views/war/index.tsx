@@ -132,6 +132,7 @@ export const War: FC = ({ }) => {
 */
 
   return (
+          
           <div style={{marginTop: '80px'}}>
           
           
@@ -159,7 +160,7 @@ export const War: FC = ({ }) => {
           <Typography marginBottom='20px' marginTop="25px" variant="h5" align='center' color='black'  fontFamily= "montserrat">
           Actual Score
           </Typography>
-      <Table sx={{ width: '400px', bgcolor: 'transparent'}} aria-label="simple table">
+      <Table sx={{ width: '350px', bgcolor: 'transparent'}} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>REALM</TableCell>
@@ -191,7 +192,7 @@ export const War: FC = ({ }) => {
     screenName: 'skullbots'
   }}
   options={{
-    width: '400px',
+    width: '350px',
     height: '500'
   }}
 />  
@@ -201,7 +202,7 @@ export const War: FC = ({ }) => {
     <Item>
     
 
-    <Paper sx={{width:'400px'}}>
+    <Paper sx={{width:'350px'}}>
     <Chart
       data={data}
     >

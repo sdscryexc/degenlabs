@@ -33,47 +33,31 @@ import {
   BarSeries,
 } from '@devexpress/dx-react-chart-material-ui';
 import Image from 'next/image';
-import bg from '../../images/SB_BG.png';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+import { url } from 'inspector';
+import bg from "../../images/biker3.png";
+import Container from '@mui/material/Container';
 
 
 
 
 
 
-function Item(props) {
-  const { sx, ...other } = props;
-  return (
-    <Box
-      sx={{
-        p: 1,
-        m: 1,
-        bgcolor: 'white',
-        color: (theme) => (theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800'),
-        borderColor: 'red',
-        borderRadius: 1,
-        fontSize: '0.875rem',
-        fontWeight: '700',
-        display: 'flex',
-        width: '250 px',
-        ...sx,
-      }}
-      {...other}
-    />
-  );
-}
-
-Item.propTypes = {
-  /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */
-  sx: PropTypes.oneOfType([
-    PropTypes.arrayOf(
-      PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool]),
-    ),
-    PropTypes.func,
-    PropTypes.object,
-  ]),
-};
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: 'lightgray','&:hover': {
+    backgroundColor: 'gray',
+    opacity: [0.9, 0.8, 0.7],},
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  alignContent: 'center',
+  justifyContent: 'center',
+  justifyItems:'center',
+  color: theme.palette.text.secondary,
+  height: '20vh',
+  alignSelf:'center',
+  borderRadius: '3px',
+}));
 
 
 
@@ -139,88 +123,54 @@ export const SB: FC = ({ }) => {
 
 
   return (
-    <Box sx={{backgroundImage: '../../images/biker.png'  }}>
-       <Image src={require('../../images/biker.png')}  layout="responsive"  /> 
-       <Box sx={{display: 'flex',flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap', margin: '25px'}} >
-          <Item>
-          <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
+    <Container style={{ marginTop:"170px", height: "70vh"}}>
+      
+     
+      <Typography variant="h6"  color='black' fontFamily= "montserrat">
+             
+        <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+      <Grid item xs={4}>
+          <Item style={{display: 'flex' ,flexDirection: 'column', justifyContent:'space-around'}}>
+          <Link href="/Coll"> Skullbot Collections </Link>
+          </Item>   
+        </Grid>
+        <Grid item xs={4}>
+          <Item style={{display: 'flex' ,flexDirection: 'column', justifyContent:'space-around'}}>
+            How to earn $BOLT
+          </Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item style={{display: 'flex' ,flexDirection: 'column', justifyContent:'space-around'}}>
+            $BOLT Ecosystem
+          </Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item style={{display: 'flex' ,flexDirection: 'column', justifyContent:'space-around'}}>
+            Biker Upgrade System
+          </Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item style={{display: 'flex' ,flexDirection: 'column', justifyContent:'space-around'}}>
+            Building Prospects
+          </Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item style={{display: 'flex' ,flexDirection: 'column', justifyContent:'space-around'}}>
+            Demonic Rider
+          </Item>
+        </Grid>
+      </Grid>
+    </Box>
+    
+            </Typography>
+
+
+
+
+
+    </Container>
           
-          <Box sx={{margin: '10px', backgroundColor: 'white' , '&:hover': {
-          backgroundColor: 'lightgray',
-          opacity: [0.9, 0.8, 0.7],}}}> 
-
-
-
-          <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'  />
-          </Box>    
-          <Typography gutterBottom  variant="h5" component="div" align='center'>
-          Gen0
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          earn 69Bolt/week
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          SUPPLY 169
-          </Typography>     
-          </Card>
-          </Item>
-          <Item>
-          <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
-          <Box sx={{margin: '10px'}}> 
-          <Image src={require('../../images/gen1.gif')} width= '200px' height= '200px'  />
-          </Box>    
-          <Typography gutterBottom  variant="h5" component="div" align='center'>
-          Gen1
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          earn 30Bolt/week
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          SUPPLY 338
-          </Typography>     
-          </Card>
-          </Item>
-          <Item>
-          <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
-          <Box sx={{margin: '10px'}}> 
-          <Image src={require('../../images/gen2.png')} width= '200px' height= '200px'  />
-          </Box>    
-          <Typography gutterBottom  variant="h5" component="div" align='center'>
-          Gen2 - Biker
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          earn 10Bolt/week - upgradable
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          SUPPLY 3666
-          </Typography>     
-          </Card>
-          </Item>
-          <Item>
-          <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
-          <Box sx={{margin: '10px'}}> 
-          <Image src={require('../../images/prospects.png')} width= '200px' height= '200px'  />
-          </Box>    
-          <Typography gutterBottom  variant="h5" component="div" align='center'>
-          Prospects
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          earn 7Fuel/week
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          SUPPLY 16000
-          </Typography>     
-          </Card>
-          </Item>
-          
-          </Box>
-          <Box>
-          <Image src={require('../../images/biker2.png')}  layout="responsive"  />
-
-          </Box>
-
-
-          </Box>
   
       
   );

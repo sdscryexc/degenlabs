@@ -137,7 +137,7 @@ export default function Header() {
                 <div>
                     <React.Fragment key={anchor}>
                       <Button onClick={toggleDrawer(anchor, true)}>{
-            <Typography variant="h6" fontFamily="montserrat">
+            <Typography variant="h5" fontFamily="montserrat">
               Menu
             </Typography>}</Button>
                       <Drawer
@@ -153,7 +153,7 @@ export default function Header() {
               <div className="p-3">
               <Image src={require('../images/sWFLOGO.png')} width='40' height={'40'}/>
               </div>
-              <Typography variant="h6" component="div" color= "black" sx={{ flexGrow: 1 }} fontFamily="montserrat">
+              <Typography variant="h5" component="div" color= "black" sx={{ flexGrow: 1 }} fontFamily="montserrat">
               
               <Link href="/">Skullbots Whale Foundation</Link>
               </Typography>
