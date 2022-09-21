@@ -2,4 +2,4 @@ export { HomeView } from "./home";
 export { BasicsView } from "./basics";
 export { War } from "./war";
 export { SB } from "./SB";
-export { Team } from "./team";
+export { Team } from "./Team";
