@@ -99,9 +99,7 @@ export const War: FC = ({ }) => {
   }
 
   const rows = [
-    createData('GREED', <Typography color='red'>
-    {amount_greed}
-  </Typography>),
+    createData('GREED', amount_greed),
     createData('LUST', amount_lust),
     createData('PRIDE', amount_pride),
     createData('GLUTTONY', amount_gluttony),
@@ -134,19 +132,20 @@ export const War: FC = ({ }) => {
 */
 
   return (
-    <div className="md:hero mx-auto mt-20">
-      <div className="md:hero-content flex flex-col text-black">
-        <h1 className="text-center text-4xl font-bold">
-          DEGENBOTS WAR INTERFACE 
-        </h1>
-        <h4 className="md:w-full text-center text-slate-300 my-2">
-          <p> </p>
-        </h4>
-     
-          <div className="text-center">
+          <div style={{marginTop: '80px'}}>
+          
+          
+          <Box>
+            <Typography marginBottom='40px' marginTop="25px" variant="h3" align='center' color='black'  fontFamily= "montserrat">
+          Degenbots War Interface
+          </Typography>
+           
+          </Box>
+        
+       
 
 
-      <Container>
+      
 
 
 
@@ -160,7 +159,7 @@ export const War: FC = ({ }) => {
           <Typography marginBottom='20px' marginTop="25px" variant="h5" align='center' color='black'  fontFamily= "montserrat">
           Actual Score
           </Typography>
-      <Table sx={{ width: '300px', bgcolor: 'transparent'}} aria-label="simple table">
+      <Table sx={{ width: '400px', bgcolor: 'transparent'}} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>REALM</TableCell>
@@ -192,7 +191,7 @@ export const War: FC = ({ }) => {
     screenName: 'skullbots'
   }}
   options={{
-    width: '300px',
+    width: '400px',
     height: '500'
   }}
 />  
@@ -202,7 +201,7 @@ export const War: FC = ({ }) => {
     <Item>
     
 
-    <Paper sx={{width:'300px'}}>
+    <Paper sx={{width:'400px'}}>
     <Chart
       data={data}
     >
@@ -215,10 +214,8 @@ export const War: FC = ({ }) => {
 
     </Item>
   </Box>
-  </Container>    
-      </div>
-    </div>
-    </div>
+  </div> 
+
   );
 };
 
