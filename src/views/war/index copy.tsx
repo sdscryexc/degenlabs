@@ -30,8 +30,6 @@ import {
   Chart,
   BarSeries,
 } from '@devexpress/dx-react-chart-material-ui';
-import Container from '@mui/material/Container';
-import { Typography } from '@mui/material';
 
 
 function Item(props) {
@@ -41,10 +39,10 @@ function Item(props) {
       sx={{
         p: 1,
         m: 1,
-        bgcolor: 'lightgray',
+        bgcolor: 'white',
         color: (theme) => (theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800'),
         border: '2px solid',
-        borderColor: 'lightgray',
+        borderColor: 'red',
         borderRadius: 2,
         fontSize: '0.875rem',
         fontWeight: '700',
@@ -99,9 +97,7 @@ export const War: FC = ({ }) => {
   }
 
   const rows = [
-    createData('GREED', <Typography color='red'>
-    {amount_greed}
-  </Typography>),
+    createData('GREED', amount_greed),
     createData('LUST', amount_lust),
     createData('PRIDE', amount_pride),
     createData('GLUTTONY', amount_gluttony),
@@ -135,7 +131,7 @@ export const War: FC = ({ }) => {
 
   return (
     <div className="md:hero mx-auto mt-20">
-      <div className="md:hero-content flex flex-col text-black">
+      <div className="md:hero-content flex flex-col text-red-600">
         <h1 className="text-center text-4xl font-bold">
           DEGENBOTS WAR INTERFACE 
         </h1>
@@ -145,22 +141,15 @@ export const War: FC = ({ }) => {
      
           <div className="text-center">
 
-
-      <Container>
-
-
-
-
-
-      
-      <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap', bgcolor: 'transparent', justifyContent: 'center'}}>
+      <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap', bgcolor: 'transparent'}}>
       <Item>
-      
+      <Card sx={{ minWidth: 350}}>
+      <CardHeader
+        title="ACTUAL SCORE"
+      />
+      <CardContent sx={{display: 'flex'}}>
           <TableContainer component={Paper}>
-          <Typography marginBottom='20px' marginTop="25px" variant="h5" align='center' color='black'  fontFamily= "montserrat">
-          Actual Score
-          </Typography>
-      <Table sx={{ width: '300px', bgcolor: 'transparent'}} aria-label="simple table">
+      <Table sx={{ minWidth: 300, bgcolor: 'transparent'}} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>REALM</TableCell>
@@ -182,27 +171,33 @@ export const War: FC = ({ }) => {
         </TableBody>
       </Table>
     </TableContainer>
- 
+    </CardContent>
+    </Card>
     </Item>
     <Item>
-     <Timeline
+    <Card sx={{ minWidth: 350}}>
+
+      <CardContent>
+      <Timeline
   dataSource={{
     noheader: 'true',
     sourceType: 'timeline',
     screenName: 'skullbots'
   }}
   options={{
-    width: '300px',
     height: '500'
   }}
 />  
-  
+    </CardContent>
+    </Card>
     </Item>
    
     <Item>
-    
+    <Card sx={{ minWidth: 350}}>
 
-    <Paper sx={{width:'300px'}}>
+      <CardContent>
+
+    <Paper>
     <Chart
       data={data}
     >
@@ -211,11 +206,12 @@ export const War: FC = ({ }) => {
   
       <BarSeries valueField="value" argumentField="argument" />
     </Chart>
-      </Paper>
-
+  </Paper>
+  </CardContent>
+    </Card>
     </Item>
   </Box>
-  </Container>    
+       
       </div>
     </div>
     </div>
