@@ -130,7 +130,7 @@ export const War: FC = ({ }) => {
 */
 
   return (
-    <div className="md:hero mx-auto p-20">
+    <div className="md:hero mx-auto mt-20">
       <div className="md:hero-content flex flex-col text-red-600">
         <h1 className="text-center text-4xl font-bold">
           DEGENBOTS WAR INTERFACE 
