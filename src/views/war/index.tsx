@@ -137,7 +137,7 @@ export const War: FC = ({ }) => {
           
           
           <Box>
-            <Typography marginBottom='40px' marginTop="25px" variant="h3" align='center' color='black'  fontFamily= "montserrat">
+            <Typography marginBottom='40px' marginTop="25px" variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
           Degenbots War Interface
           </Typography>
            

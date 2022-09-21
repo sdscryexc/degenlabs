@@ -125,7 +125,7 @@ export const Team: FC = ({ }) => {
       </div>      
       </Box>
           <Box sx={{display: 'flex', justifyContent: 'center'}} >
-            <Typography variant="h2" component="div" align='center' color='black' margin='30px' fontFamily= "montserrat">
+            <Typography variant="h2" component="div" align='center' color='darkred' margin='30px' fontFamily= "montserrat">
               Skullbots Whale Foundation
             </Typography>
             </Box>

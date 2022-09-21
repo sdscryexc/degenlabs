@@ -46,8 +46,8 @@ import Container from '@mui/material/Container';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: 'lightgray','&:hover': {
-    backgroundColor: 'gray',
-    opacity: [0.9, 0.8, 0.7],},
+    backgroundColor: 'darkred',
+    opacity: [0.2, 1, 0.1],},
   padding: theme.spacing(1),
   textAlign: 'center',
   alignContent: 'center',
@@ -123,8 +123,13 @@ export const SB: FC = ({ }) => {
 
 
   return (
-    <Container style={{ marginTop:"170px", height: "70vh"}}>
-      
+    <Container style={{ marginTop:"80px", height: "70vh"}}>
+     <Box>
+            <Typography marginBottom='40px' marginTop="25px" variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
+          A guide through Skullbots
+          </Typography>
+           
+          </Box> 
      
       <Typography variant="h6"  color='black' fontFamily= "montserrat">
              
