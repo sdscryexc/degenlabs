@@ -139,7 +139,10 @@ export const Coll: FC = ({ }) => {
 
 
   return (
-    <Box sx={{backgroundImage: '../../images/biker.png'  }}>
+    <Box sx={{backgroundImage: '../../images/biker.png', marginTop:"10vh"  }}>
+      <Typography marginBottom='40px' variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
+          The Collections
+          </Typography>
        <Image src={require('../../images/biker.png')}  layout="responsive"  /> 
        <Box sx={{display: 'flex',flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap', margin: '25px'}} >
           <Item>
@@ -214,11 +217,7 @@ export const Coll: FC = ({ }) => {
           </Item>
           
           </Box>
-          <Box>
-          <Image src={require('../../images/biker2.png')}  layout="responsive"  />
-
-          </Box>
-
+          
 
           </Box>
   

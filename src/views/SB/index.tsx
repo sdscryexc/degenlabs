@@ -57,6 +57,7 @@ const Item = styled(Paper)(({ theme }) => ({
   height: '20vh',
   alignSelf:'center',
   borderRadius: '3px',
+  fontSize: '1vw',
 }));
 
 
@@ -123,7 +124,7 @@ export const SB: FC = ({ }) => {
 
 
   return (
-    <Container style={{ marginTop:"80px", height: "70vh"}}>
+    <Container className="sbov" style={{ marginTop:"80px", height: "70vh"}}>
      <Box>
             <Typography marginBottom='40px' marginTop="25px" variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
           A guide through Skullbots
