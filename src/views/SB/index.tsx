@@ -54,7 +54,7 @@ const Item = styled(Paper)(({ theme }) => ({
   justifyContent: 'center',
   justifyItems:'center',
   color: theme.palette.text.secondary,
-  height: '20vh',
+  height: '10vh',
   alignSelf:'center',
   borderRadius: '3px',
   fontSize: '1.5vw',
@@ -124,14 +124,15 @@ export const SB: FC = ({ }) => {
 
 
   return (
-    <Container className="sbov" style={{ marginTop:"80px", height: "70vh"}}>
+    <Box sx={{marginTop:"10vh"  }}>
      <Box>
-            <Typography marginBottom='40px' marginTop="25px" variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
+            <Typography marginBottom='2vw' variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
           A guide through Skullbots
           </Typography>
-           
+          
           </Box> 
-     
+          <Image src={require('../../images/biker4.png')}  layout="responsive"  />
+          <Container className="sbov" style={{ marginTop:"5vh", height: "70vh"}}>
       <Typography variant="h6"  color='black' fontFamily= "montserrat">
              
         <Box sx={{ flexGrow: 1 }}>
@@ -176,7 +177,7 @@ export const SB: FC = ({ }) => {
 
 
     </Container>
-          
+    </Box>     
   
       
   );

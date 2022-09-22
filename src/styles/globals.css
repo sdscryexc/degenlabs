@@ -35,6 +35,7 @@ a {
 .wallet-adapter-button{
   background-color: black;
   font-size: 1vw;
+  display: flex;
 }
 
 .btn-square {

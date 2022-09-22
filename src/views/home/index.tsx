@@ -106,10 +106,15 @@ export const HomeView: FC = ({ }) => {
 
   return (
     
-      <Box sx={{ display: 'flex', alignItems: 'center',  justifyContent: 'center', backgroundColor: 'white', flexDirection: 'row', flexGrow: '1', minHeight:'95vh' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center',  justifyContent: 'center', backgroundColor: 'white', flexDirection: 'column', flexGrow: '1', minHeight:'95vh' }}>
         <div>
       <Image src={require('../../images/sWFLOGO_gross.png')}  />
-      </div>      
+      </div>
+      <div>
+      <Typography fontSize='2.5vw' align='center' color='darkred' margin='30px' fontFamily= "montserrat">
+             Project advisory   -   Community management    -    Promotion
+            </Typography>     
+            </div>
       </Box>
       )};
  
