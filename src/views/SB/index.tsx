@@ -131,7 +131,7 @@ export const SB: FC = ({ }) => {
           </Typography>
           
           </Box> 
-          <Image src={require('../../images/biker4.png')}  layout="responsive"  />
+          <Image src={require('../../images/Biker4.png')}  layout="responsive"  />
           <Container className="sbov" style={{ marginTop:"5vh", height: "70vh"}}>
       <Typography variant="h6"  color='black' fontFamily= "montserrat">
              
