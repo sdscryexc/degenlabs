@@ -57,7 +57,7 @@ const Item = styled(Paper)(({ theme }) => ({
   height: '20vh',
   alignSelf:'center',
   borderRadius: '3px',
-  fontSize: '1vw',
+  fontSize: '1.5vw',
 }));
 
 
