@@ -45,7 +45,7 @@ import Container from '@mui/material/Container';
 
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: 'lightgray','&:hover': {
+  backgroundColor: 'white','&:hover': {
     backgroundColor: 'darkred',
     opacity: [0.2, 1, 0.1],},
   padding: theme.spacing(1),

@@ -1,6 +1,7 @@
 import create, { State } from 'zustand'
 import { Connection, PublicKey, LAMPORTS_PER_SOL, clusterApiUrl } from '@solana/web3.js'
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
+import * as bs58 from "bs58";
 
 interface UserSOLBalanceStore extends State {
   balance: number;
@@ -13,6 +14,14 @@ let amount_greed:number;
 let amount_lust:number;
 let amount_sloth:number
 let amount_pride:number;
+
+let amount_greed_stake:number;
+let amount_wrath_stake:number;
+let amount_envy_stake:number;
+let amount_gluttony_stake:number;
+let amount_lust_stake:number;
+let amount_sloth_stake:number
+let amount_pride_stake:number;
 
 const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
   balance: 0,
@@ -33,6 +42,194 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
     })
   },
 }));
+
+(async () => {
+  const GREED = new PublicKey("HWvQYCs2PVqzojeLSV3cJDqBN3SKSrvc9KyKBmLLahHH");
+  const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+
+  let stakeDataAccounts = await connection.getProgramAccounts(
+    GREED, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+    {
+      dataSlice: {
+        offset: 0,
+        length: 0,
+      },
+      filters: [createStakeTokenActiveFilter()],
+    });
+    
+
+    amount_greed_stake=stakeDataAccounts.length;
+ 
+
+ 
+  })();
+  export {amount_greed_stake};
+
+
+  (async () => {
+    const PRIDE = new PublicKey("uqr8EnUBim9nuFaLxrQXhsvYjTzzqz9pqRrtwfj6syC");
+    const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+  
+    let stakeDataAccounts = await connection.getProgramAccounts(
+      PRIDE, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+      {
+        dataSlice: {
+          offset: 0,
+          length: 0,
+        },
+        filters: [createStakeTokenActiveFilter()],
+      });
+      
+  
+      amount_pride_stake=stakeDataAccounts.length;
+   
+
+   
+    })();
+    export {amount_pride_stake};
+
+
+    (async () => {
+      const LUST = new PublicKey("EuHyjTWeWAwhQxGa7pAmWypYh5NZ484N4GiLYYonnoQ6");
+      const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+    
+      let stakeDataAccounts = await connection.getProgramAccounts(
+        LUST, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+        {
+          dataSlice: {
+            offset: 0,
+            length: 0,
+          },
+          filters: [createStakeTokenActiveFilter()],
+        });
+        
+    
+        amount_lust_stake=stakeDataAccounts.length;
+     
+    
+     
+      })();
+      export {amount_lust_stake};
+
+
+
+      (async () => {
+        const ENVY = new PublicKey("G9aio3ToS6SknjPTftq4XxxAPcCd95HK6jTEGehrVHzr");
+        const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+      
+        let stakeDataAccounts = await connection.getProgramAccounts(
+          ENVY, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+          {
+            dataSlice: {
+              offset: 0,
+              length: 0,
+            },
+            filters: [createStakeTokenActiveFilter()],
+          });
+          
+      
+          amount_envy_stake=stakeDataAccounts.length;
+       
+     
+       
+        })();
+        export {amount_envy_stake};
+
+
+
+        (async () => {
+          const GLUTTONY = new PublicKey("G66UbQdyq6FkyFyv3gfsZhDY1CagC5EcfjroNGTryxQL");
+          const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+        
+          let stakeDataAccounts = await connection.getProgramAccounts(
+            GLUTTONY, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+            {
+              dataSlice: {
+                offset: 0,
+                length: 0,
+              },
+              filters: [createStakeTokenActiveFilter()],
+            });
+            
+        
+            amount_gluttony_stake=stakeDataAccounts.length;
+         
+  
+         
+          })();
+          export {amount_gluttony_stake};
+
+
+
+          (async () => {
+            const WRATH = new PublicKey("5MGz9bqJd4nSjzPBXwMPXup5xALYfiNpNV67oYBRDhdA");
+            const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+          
+            let stakeDataAccounts = await connection.getProgramAccounts(
+              WRATH, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+              {
+                dataSlice: {
+                  offset: 0,
+                  length: 0,
+                },
+                filters: [createStakeTokenActiveFilter()],
+              });
+              
+          
+              amount_wrath_stake=stakeDataAccounts.length;
+           
+    
+           
+            })();
+            export {amount_wrath_stake};
+
+
+
+            (async () => {
+              const SLOTH = new PublicKey("73VXGs6Rs7aCQGDEDsfXcJtVfLCgxMh8cPJc5MnybvU6");
+              const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+            
+              let stakeDataAccounts = await connection.getProgramAccounts(
+                SLOTH, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+                {
+                  dataSlice: {
+                    offset: 0,
+                    length: 0,
+                  },
+                  filters: [createStakeTokenActiveFilter()],
+                });
+                
+            
+                amount_sloth_stake=stakeDataAccounts.length;
+             
+     
+             
+              })();
+              export {amount_sloth_stake};
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+ export function createStakeTokenActiveFilter(active = true) {
+    return {
+      memcmp: {
+        offset: 72,
+        bytes: bs58.encode([active ? 1 : 0]),
+      },
+    };
+  }
 
 
 
@@ -91,17 +288,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
  
     //console.log(`amount_wrath: ${amount_wrath}`);
   });
-  /*
-    // Output
 
-    Found 2 token account(s) for wallet FriELggez2Dy3phZeHHAdpcoEXkKQVkv6tx3zDtCVP8T: 
-    -- Token Account Address 0:  H12yCcKLHFJFfohkeKiN8v3zgaLnUMwRcnJTyB4igAsy --
-    Mint: CKKDsBT6KiT4GDKs3e39Ue9tDkhuGUKM3cC2a7pmV9YK
-    Amount: 1
-    -- Token Account Address 1:  Et3bNDxe2wP1yE5ao6mMvUByQUHg8nZTndpJNvfKLdCb --
-    Mint: BUGuuhPsHpk8YZrL2GctsCtXGneL1gmT5zYb7eMHZDWf
-    Amount: 3
-  */
 })();
 export default useUserSOLBalanceStore;
 export {amount_envy, amount_gluttony, amount_greed, amount_lust, amount_pride, amount_sloth, amount_wrath};

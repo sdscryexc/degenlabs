@@ -8,7 +8,8 @@ import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 
 // Store
 import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
-import { amount_wrath, amount_envy, amount_gluttony, amount_greed, amount_lust, amount_pride, amount_sloth } from '../../stores/useUserSOLBalanceStore';
+import { amount_wrath, amount_envy, amount_gluttony, amount_greed, amount_lust, amount_pride, amount_sloth, amount_greed_stake,
+amount_envy_stake, amount_gluttony_stake, amount_lust_stake, amount_pride_stake, amount_sloth_stake, amount_wrath_stake } from '../../stores/useUserSOLBalanceStore';
 
 import * as React from 'react';
 import Table from '@mui/material/Table';
@@ -108,6 +109,17 @@ export const War: FC = ({ }) => {
     createData('WRATH', amount_wrath),
   ];
 
+  const rows1 = [
+    createData('GREED', amount_greed_stake),
+    createData('LUST', amount_lust_stake),
+    createData('PRIDE', amount_pride_stake),
+    createData('GLUTTONY', amount_gluttony_stake),
+    createData('ENVY', amount_envy_stake),
+    createData('SLOTH', amount_sloth_stake),
+    createData('WRATH', amount_wrath_stake),
+  ];
+
+
   const data = [
     {argument: 'GRE', value: amount_greed},
     {argument: 'LUS', value: amount_lust},
@@ -184,6 +196,38 @@ export const War: FC = ({ }) => {
     </TableContainer>
  
     </Item>
+
+    <Item>
+      
+      <TableContainer component={Paper}>
+      <Typography marginBottom='20px' marginTop="25px" variant="h5" align='center' color='black'  fontFamily= "montserrat">
+      Staked Degenbots
+      </Typography>
+  <Table sx={{ width: '350px', bgcolor: 'transparent'}} aria-label="simple table">
+    <TableHead>
+      <TableRow>
+        <TableCell>REALM</TableCell>
+        <TableCell align="right">AMOUNT DBOTS</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      {rows1.map((row) => (
+        <TableRow
+          key={row.name}
+          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+        >
+          <TableCell component="th" scope="row">
+            {row.name}
+          </TableCell>
+          <TableCell align="right">{row.Tokenamount}</TableCell>
+        </TableRow>
+      ))}
+    </TableBody>
+  </Table>
+</TableContainer>
+
+</Item>
+
     <Item>
      <Timeline
   dataSource={{

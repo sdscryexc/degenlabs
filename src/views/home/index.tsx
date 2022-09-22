@@ -8,7 +8,7 @@ import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 
 // Store
 import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
-import { amount_wrath, amount_envy, amount_gluttony, amount_greed, amount_lust, amount_pride, amount_sloth } from '../../stores/useUserSOLBalanceStore';
+import { amount_wrath, amount_envy, amount_gluttony, amount_greed, amount_lust, amount_pride, amount_sloth, amount_greed_stake } from '../../stores/useUserSOLBalanceStore';
 
 import * as React from 'react';
 import Table from '@mui/material/Table';
@@ -61,35 +61,8 @@ export const HomeView: FC = ({ }) => {
     }
   }, [wallet.publicKey, connection, getUserSOLBalance])
 
-  function createData(
-    name: string,
-    Tokenamount: number,
 
-  ) {
-    return { name, Tokenamount};
-  }
 
-  const rows = [
-    createData('GREED', amount_greed),
-    createData('LUST', amount_lust),
-    createData('PRIDE', amount_pride),
-    createData('GLUTTONY', amount_gluttony),
-    createData('ENVY', amount_envy),
-    createData('SLOTH', amount_sloth),
-    createData('WRATH', amount_wrath),
-  ];
-
-  const data = [
-    {argument: 'GRE', value: amount_greed},
-    {argument: 'LUS', value: amount_lust},
-    {argument: 'PRI', value: amount_pride},
-    {argument: 'GLU', value: amount_gluttony},
-    {argument: 'ENV', value: amount_envy},
-    {argument: 'SLO', value: amount_sloth},
-    {argument: 'WRA', value: amount_wrath},
-  ];
-  
-  const [time, setTime] = React.useState();
  
  /* React.useEffect(() => {
     const timer = setInterval(() => {
