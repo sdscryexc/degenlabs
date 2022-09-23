@@ -198,6 +198,22 @@ export const War: FC = ({ }) => {
     </Item>
 
     <Item>
+    
+
+    <Paper sx={{width:'350px'}}>
+    <Chart
+      data={data}
+    >
+      <ArgumentAxis />
+      <ValueAxis />
+  
+      <BarSeries valueField="value" argumentField="argument" />
+    </Chart>
+      </Paper>
+
+    </Item>
+
+    <Item>
       
       <TableContainer component={Paper}>
       <Typography marginBottom='20px' marginTop="25px" variant="h5" align='center' color='black'  fontFamily= "montserrat">
@@ -228,6 +244,12 @@ export const War: FC = ({ }) => {
 
 </Item>
 
+ 
+
+   </Box>
+   <Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap', bgcolor: 'transparent', justifyContent: 'center'}}>
+
+   
     <Item>
      <Timeline
   dataSource={{
@@ -236,27 +258,11 @@ export const War: FC = ({ }) => {
     screenName: 'skullbots'
   }}
   options={{
-    width: '350px',
+    width: '100vh',
     height: '500'
   }}
 />  
   
-    </Item>
-   
-    <Item>
-    
-
-    <Paper sx={{width:'350px'}}>
-    <Chart
-      data={data}
-    >
-      <ArgumentAxis />
-      <ValueAxis />
-  
-      <BarSeries valueField="value" argumentField="argument" />
-    </Chart>
-      </Paper>
-
     </Item>
   </Box>
   </div> 

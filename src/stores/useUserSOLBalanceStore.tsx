@@ -23,6 +23,8 @@ let amount_lust_stake:number;
 let amount_sloth_stake:number
 let amount_pride_stake:number;
 
+const RPCurl = 'https://ssc-dao.genesysgo.net/';
+
 const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
   balance: 0,
   getUserSOLBalance: async (publicKey, connection) => {
@@ -45,7 +47,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
 
 (async () => {
   const GREED = new PublicKey("HWvQYCs2PVqzojeLSV3cJDqBN3SKSrvc9KyKBmLLahHH");
-  const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+  const connection = new Connection(RPCurl, "confirmed");
 
   let stakeDataAccounts = await connection.getProgramAccounts(
     GREED, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
@@ -68,7 +70,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
 
   (async () => {
     const PRIDE = new PublicKey("uqr8EnUBim9nuFaLxrQXhsvYjTzzqz9pqRrtwfj6syC");
-    const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+    const connection = new Connection(RPCurl, "confirmed");
   
     let stakeDataAccounts = await connection.getProgramAccounts(
       PRIDE, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
@@ -91,7 +93,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
 
     (async () => {
       const LUST = new PublicKey("EuHyjTWeWAwhQxGa7pAmWypYh5NZ484N4GiLYYonnoQ6");
-      const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+      const connection = new Connection(RPCurl, "confirmed");
     
       let stakeDataAccounts = await connection.getProgramAccounts(
         LUST, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
@@ -115,7 +117,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
 
       (async () => {
         const ENVY = new PublicKey("G9aio3ToS6SknjPTftq4XxxAPcCd95HK6jTEGehrVHzr");
-        const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+        const connection = new Connection(RPCurl, "confirmed");
       
         let stakeDataAccounts = await connection.getProgramAccounts(
           ENVY, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
@@ -139,7 +141,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
 
         (async () => {
           const GLUTTONY = new PublicKey("G66UbQdyq6FkyFyv3gfsZhDY1CagC5EcfjroNGTryxQL");
-          const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+          const connection = new Connection(RPCurl, "confirmed");
         
           let stakeDataAccounts = await connection.getProgramAccounts(
             GLUTTONY, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
@@ -163,7 +165,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
 
           (async () => {
             const WRATH = new PublicKey("5MGz9bqJd4nSjzPBXwMPXup5xALYfiNpNV67oYBRDhdA");
-            const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+            const connection = new Connection(RPCurl, "confirmed");
           
             let stakeDataAccounts = await connection.getProgramAccounts(
               WRATH, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
@@ -187,7 +189,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
 
             (async () => {
               const SLOTH = new PublicKey("73VXGs6Rs7aCQGDEDsfXcJtVfLCgxMh8cPJc5MnybvU6");
-              const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+              const connection = new Connection(RPCurl, "confirmed");
             
               let stakeDataAccounts = await connection.getProgramAccounts(
                 SLOTH, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
@@ -235,7 +237,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
 
 (async () => {
   const MY_WALLET_ADDRESS = "EpUafgip3NRLoqjCdkDNXZhWoF6ZaerSH4dJPwfyFe3r";
-  const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
+  const connection = new Connection(RPCurl, "confirmed");
 
   const accounts = await connection.getParsedProgramAccounts(
     TOKEN_PROGRAM_ID, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
