@@ -22,24 +22,20 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardHeader';
-import { Timeline } from 'react-twitter-widgets';
+
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {
-  ArgumentAxis,
-  ValueAxis,
-  Chart,
-  BarSeries,
-} from '@devexpress/dx-react-chart-material-ui';
+
 import Image from 'next/image';
 import bg from '../../images/SB_BG.png';
 import Container from '@mui/material/Container';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 
 
-
-
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
 
 
 
@@ -64,16 +60,17 @@ export const HomeView: FC = ({ }) => {
 
 
   return (
-    
+    <ThemeProvider theme={theme}>
       <Box sx={{ display: 'flex', alignItems: 'center',  justifyContent: 'center', backgroundColor: 'white', flexDirection: 'column', flexGrow: '1', minHeight:'95vh' }}>
         <div>
       <Image src={require('../../images/logo_rot.gif')}  />
       </div>
       <div>
-      <Typography fontSize='2.5vw' align='center' color='darkred' margin='30px' fontFamily= "montserrat">
+      <Typography variant='h3' align='center' color='darkred' margin='30px' fontFamily= "montserrat">
              Project advisory   -   Community management    -    Promotion
             </Typography>     
             </div>
       </Box>
+      </ThemeProvider>
       )};
  

@@ -22,20 +22,22 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardHeader';
-import { Timeline } from 'react-twitter-widgets';
+
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import PropTypes from 'prop-types';
-import {
-  ArgumentAxis,
-  ValueAxis,
-  Chart,
-  BarSeries,
-} from '@devexpress/dx-react-chart-material-ui';
+
 import Image from 'next/image';
 import bg from '../../images/SB_BG.png';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
+
+
+
+let theme = createTheme();
+theme = responsiveFontSizes(theme);
+
 
 
 
@@ -82,7 +84,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '30vm',
+  width: '70vw',
   bgcolor: 'white',
   border: '5px solid',
   borderRadius: '10px',
@@ -110,6 +112,7 @@ export const Coll: FC = ({ }) => {
 
   return (
 
+    <ThemeProvider theme={theme}>
     <Box sx={{marginTop:"10vh"  }}>
       <Typography marginBottom='40px' variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
           The Collections
@@ -241,7 +244,7 @@ export const Coll: FC = ({ }) => {
       
           </Box>
 
-      
+          </ThemeProvider>  
   );
 };
 
