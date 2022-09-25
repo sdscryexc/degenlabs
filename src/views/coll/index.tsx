@@ -34,6 +34,8 @@ import {
 } from '@devexpress/dx-react-chart-material-ui';
 import Image from 'next/image';
 import bg from '../../images/SB_BG.png';
+import Modal from '@mui/material/Modal';
+import Button from '@mui/material/Button';
 
 
 
@@ -75,80 +77,52 @@ Item.propTypes = {
   ]),
 };
 
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '30vm',
+  bgcolor: 'white',
+  border: '5px solid',
+  borderRadius: '10px',
+  borderColor: 'darkred',
+  boxShadow: 24,
+  p: 4,
+  color: 'black',
+  
+};
 
+
+ 
 
 
 export const Coll: FC = ({ }) => {
-  const wallet = useWallet();
-  const { connection } = useConnection();
-
-  const balance = useUserSOLBalanceStore((s) => s.balance)
-  const { getUserSOLBalance } = useUserSOLBalanceStore()
-
-
-
-
-  useEffect(() => {
-    if (wallet.publicKey) {
-      console.log(wallet.publicKey.toBase58())
-      getUserSOLBalance(wallet.publicKey, connection)
-    }
-  }, [wallet.publicKey, connection, getUserSOLBalance])
-
-  function createData(
-    name: string,
-    Tokenamount: number,
-
-  ) {
-    return { name, Tokenamount};
-  }
-
-  const rows = [
-    createData('GREED', amount_greed),
-    createData('LUST', amount_lust),
-    createData('PRIDE', amount_pride),
-    createData('GLUTTONY', amount_gluttony),
-    createData('ENVY', amount_envy),
-    createData('SLOTH', amount_sloth),
-    createData('WRATH', amount_wrath),
-  ];
-
-  const data = [
-    {argument: 'GRE', value: amount_greed},
-    {argument: 'LUS', value: amount_lust},
-    {argument: 'PRI', value: amount_pride},
-    {argument: 'GLU', value: amount_gluttony},
-    {argument: 'ENV', value: amount_envy},
-    {argument: 'SLO', value: amount_sloth},
-    {argument: 'WRA', value: amount_wrath},
-  ];
   
-  const [time, setTime] = React.useState();
- 
- /* React.useEffect(() => {
-    const timer = setInterval(() => {
-      return setTime(new Date().toLocaleString());
-    }, 1000);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-*/
-
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  
+  const [open1, setOpen1] = React.useState(false);
+  const handleOpen1 = () => setOpen1(true);
+  const handleClose1 = () => setOpen1(false);
 
 
   return (
-    <Box sx={{backgroundImage: '../../images/biker.png', marginTop:"10vh"  }}>
+
+    <Box sx={{marginTop:"10vh"  }}>
       <Typography marginBottom='40px' variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
           The Collections
           </Typography>
        <Image src={require('../../images/biker.png')}  layout="responsive"  /> 
+       
+    
+       
        <Box sx={{display: 'flex',flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap', margin: '25px'}} >
           <Item>
           <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
           
-          <Box sx={{margin: '10px', backgroundColor: 'white' , '&:hover': {
+          <Box  onClick={handleOpen} sx={{margin: '10px', backgroundColor: 'white' , '&:hover': {
           backgroundColor: 'lightgray',
           opacity: [0.9, 0.8, 0.7],}}}> 
 
@@ -169,7 +143,9 @@ export const Coll: FC = ({ }) => {
           </Item>
           <Item>
           <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
-          <Box sx={{margin: '10px'}}> 
+          <Box onClick={handleOpen1} sx={{margin: '10px', backgroundColor: 'white' , '&:hover': {
+          backgroundColor: 'lightgray',
+          opacity: [0.9, 0.8, 0.7],}}}>  
           <Image src={require('../../images/gen1.gif')} width= '200px' height= '200px'  />
           </Box>    
           <Typography gutterBottom  variant="h5" component="div" align='center'>
@@ -218,9 +194,53 @@ export const Coll: FC = ({ }) => {
           
           </Box>
           
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style} border='none'>
+          <Typography id="modal-modal-title" fontSize="2vh" >
+          Gen 0:
+          </Typography>    
+          <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
+           A small collection of rare NFT’s with only a total of 169 in circulation. Owning one of these yields a high amount
+           </Typography>
+           <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
+           of our token $BOLT but also gives instant access to our Hell DAO where holders get added benefits and alpha on whats to come!
+           </Typography>
+           <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
+           Staking Yield: 69 $BOLT per week
+           </Typography>
+        </Box>
+      </Modal>
+      <Modal
+        open={open1}
+        onClose={handleClose1}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" fontSize="2vh" >
+          Gen 1: 
+          </Typography>    
+          <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
+          Another rare collection with only 338 available, similar to the Gen 0 collection these give instant access to Hell DAO,
+           </Typography>
+           <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
+           yiedling a smaller amount of $BOLT. These were given to our early community as a reward for believing in our vision!
+           </Typography>
+           <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
+           Staking Yield: 30 $BOLT per week
+           </Typography>
+        </Box>
+      </Modal>
 
+
+      
           </Box>
-  
+
       
   );
 };

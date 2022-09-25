@@ -10,7 +10,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,7 +27,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Drawer from '@mui/material/Drawer';
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     
     primary: {
@@ -37,9 +37,9 @@ const theme = createTheme({
       main: 'rgba(255, 255, 255, 0.7)'
     }
   },
-
 });
 
+theme = responsiveFontSizes(theme);
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
@@ -137,7 +137,7 @@ export default function Header() {
                 <div>
                     <React.Fragment key={anchor}>
                       <Button onClick={toggleDrawer(anchor, true)}>{
-            <Typography fontSize="1.5vw" fontFamily="montserrat">
+            <Typography variant="h5" fontFamily="montserrat" >
               Menu
             </Typography>}</Button>
                       <Drawer
@@ -153,9 +153,9 @@ export default function Header() {
               <div className="p-3">
               <Image src={require('../images/sWFLOGO.png')} width='40' height={'40'}/>
               </div>
-              <Typography fontSize="1.5vw" color= "black" sx={{ flexGrow: 1 }} fontFamily="montserrat">
+              <Typography variant="body1" color= "black" sx={{ flexGrow: 1 }} fontFamily="montserrat">
               
-              <Link href="/">Skullbots Whale Foundation</Link>
+              <Link href="/">Skullbots Whales</Link>
               </Typography>
               <WalletMultiButton/>
           

@@ -258,7 +258,7 @@ export const War: FC = ({ }) => {
     screenName: 'skullbots'
   }}
   options={{
-    width: '100vh',
+    width: '350px',
     height: '500'
   }}
 />  

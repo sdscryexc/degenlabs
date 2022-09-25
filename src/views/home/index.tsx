@@ -67,7 +67,7 @@ export const HomeView: FC = ({ }) => {
     
       <Box sx={{ display: 'flex', alignItems: 'center',  justifyContent: 'center', backgroundColor: 'white', flexDirection: 'column', flexGrow: '1', minHeight:'95vh' }}>
         <div>
-      <Image src={require('../../images/sWFLOGO_gross.png')}  />
+      <Image src={require('../../images/logo_rot.gif')}  />
       </div>
       <div>
       <Typography fontSize='2.5vw' align='center' color='darkred' margin='30px' fontFamily= "montserrat">
