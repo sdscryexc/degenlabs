@@ -23,7 +23,7 @@ let amount_lust_stake:number;
 let amount_sloth_stake:number
 let amount_pride_stake:number;
 
-const RPCurl = 'https://ssc-dao.genesysgo.net/';
+const RPCurl = 'https://rpc.ankr.com/solana/';
 
 const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
   balance: 0,
