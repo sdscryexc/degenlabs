@@ -23,7 +23,7 @@ let amount_lust_stake:number;
 let amount_sloth_stake:number
 let amount_pride_stake:number;
 
-const RPCurl = 'https://rpc.ankr.com/solana/';
+const RPCurl = 'https://billowing-few-tree.solana-mainnet.discover.quiknode.pro/a873bf593f7be12ac32dd204328ac690cfd37765/';
 
 const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
   balance: 0,
