@@ -62,8 +62,10 @@ export const HomeView: FC = ({ }) => {
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ display: 'flex', alignItems: 'center', marginTop: '5vh', justifyContent: 'center', flexDirection: 'column', flexGrow: '1', minHeight:'95vh' }}>
-        <Box sx={{display: 'flex', alignItems: 'center', height: '40vh', width: '40vw'}}>
+        <Box sx={{display: 'flex', alignItems: 'center',  justifyContent: 'center', backgroundColor: 'white', height:'20vh' }}>
+      <div>
       <Image src={require('../../images/start.png')}  />
+      </div>
       </Box>
       <Box sx={{display: 'flex', alignItems: 'center'}}>
       <Typography variant='h3' align='center' color='darkred' marginTop='15vh ' fontFamily= "montserrat">

@@ -126,7 +126,9 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
               offset: 0,
               length: 0,
             },
-            filters: [createStakeTokenActiveFilter()],
+            filters: [{
+              dataSize: 165, // number of bytes
+            }],
           });
           
       
