@@ -7,8 +7,7 @@ import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 
 
 // Store
-import useUserSOLBalanceStore from '../../stores/useUserSOLBalanceStore';
-import { amount_wrath, amount_envy, amount_gluttony, amount_greed, amount_lust, amount_pride, amount_sloth, amount_greed_stake } from '../../stores/useUserSOLBalanceStore';
+
 
 import * as React from 'react';
 import Table from '@mui/material/Table';

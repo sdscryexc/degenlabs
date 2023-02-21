@@ -21,7 +21,14 @@ const RPCurl = 'https://billowing-few-tree.solana-mainnet.discover.quiknode.pro/
 const connection = new Connection(RPCurl, "confirmed");
 export function getlastholder(){
       var hash = (document.getElementById("hash") as HTMLInputElement).value;
-      var hashdecimus = hash.split(",");
+      var hash1 = hash.replace(new RegExp("[\r\n]", "gm"), ",");
+     
+      var hashdecimus = hash1.split(' ');
+
+      console.log(
+        `hash1,  ${hash1}`
+      );
+
       
       for (let i=0; i<hashdecimus.length; i++) { 
         setTimeout(function() {  
@@ -61,7 +68,11 @@ export function getlastholder(){
   
             lastowner[t] = stakeDataAccounts.meta.preTokenBalances[t]["owner"];
             mint[t] = stakeDataAccounts.meta.preTokenBalances[t]["mint"];
-            document.getElementById("demo").innerHTML = lastowner.join("<br>");   
+            
+            if(lastowner[t]!= "4f72LP67pfZDbM8EoHiHStS8EdeoWTLe7n1bn4mLCSX9" && mint[t]=="3bZ8c2k7PHaqPiLaDYhnh2TNT7RK29CSHruAF62HvidC")
+            {
+            document.getElementById("lastowner").innerHTML = lastowner.join("<br>");
+            };   
 
 
           };
@@ -108,7 +119,7 @@ export const Decimus: FC = ({ }) => {
          
           <div>
           Holders <p>{lastowner[1]}</p>
-          <p id="demo"></p>
+          <p id="lastowner"></p>
           </div>
 
           </Typography>
