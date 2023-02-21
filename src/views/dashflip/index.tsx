@@ -78,7 +78,6 @@ Item.propTypes = {
 export const DashFlip: FC = ({ }) => {
   const wallet = useWallet();
   const { connection } = useConnection();
-  let balance_diff = balance_trea - 300;
 
 
 
@@ -113,8 +112,8 @@ export const DashFlip: FC = ({ }) => {
 
   function createData1(
     name: string,
-    Treasury: number,
-    Fees: number,
+    Treasury: string,
+    Fees: string,
 
   ) {
     return { name, Treasury, Fees};
@@ -146,17 +145,6 @@ export const DashFlip: FC = ({ }) => {
     {argument: 'WRA', value: amount_wrath},
   ];
   */
-  const [time, setTime] = React.useState();
- 
- React.useEffect(() => {
-    const timer = setInterval(() => {
-      return setTime(new Date().toLocaleString());
-    }, 10);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
 
 
   return (
