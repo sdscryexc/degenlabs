@@ -45,14 +45,18 @@ function parseUint64Le(data, offset = 0) {
 }
 
 
-/*const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
+interface UserSOLBalanceStore extends State {
+  balance: number;
+  getUserSOLBalance: (publicKey: PublicKey, connection: Connection) => void
+}
+
+const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
   balance: 0,
   getUserSOLBalance: async (publicKey, connection) => {
     let balance = 0;
-    const sol_treasury = new PublicKey("3z9qkHLuLJGd32LCPGNAXJAVNoAPgpTLdcHNhWQmH3B3");
     try {
       balance = await connection.getBalance(
-        sol_treasury,
+        publicKey,
         'confirmed'
       );
       balance = balance / LAMPORTS_PER_SOL;
@@ -64,7 +68,9 @@ function parseUint64Le(data, offset = 0) {
       console.log(`balance updated, `, balance);
     })
   },
-}));*/
+}));
+
+export default useUserSOLBalanceStore;
 
 let balance_trea : number = 0;
 let balance_fee : number = 0;
@@ -124,43 +130,27 @@ let balance_fee : number = 0;
 
     
 
- 
-      const connection = new Connection(RPCurl, "confirmed");
-      
-      
+      /*
+      const connection = new Connection(RPCurl, "confirmed");     
       for (let i=0; i<transactions.length; i++) { 
-
         setTimeout(function() {  
-
-        
-
       (async () => {
         //const ENVY = new PublicKey("9HeBEFWvSRTVkBvagV3PzdW2rtdbqPgSTcKzgvMPa6im");
-        
-      
-       
         const stakeDataAccounts = await connection.getParsedTransaction(
           transactions[i]
           );
-          
-
           /*stakeDataAccounts.map(async ({ account: { data } }) => {
             let timestamp = parseUint64Le(data, 0);
             let mint = new PublicKey(data.slice(40, 72))
             let owner = new PublicKey(data.slice(8,40))
-            
-
+          
             console.log(`Tokenaddress: ${mint} Owner ${owner}`);
-           
-            
-          
-          }),*/
-
-            
-          
+              
+          }),
+    
           /*console.log(
             `LAST OWNER ${stakeDataAccounts.meta.preTokenBalances["0"]["owner"]} MINT ${stakeDataAccounts.meta.preTokenBalances["0"]["mint"]} `
-          );*/
+          );
 
           for (let t=0; t<stakeDataAccounts.meta.preTokenBalances.length; t++) {
           console.log(
@@ -177,12 +167,12 @@ let balance_fee : number = 0;
       };
         
         
-        
+        */
 
 
 
 
-/*(async () => {
+(async () => {
   const SplTreasury = "3GQfja9iasuP97UUvHLTXVLK4hfbPUhUuvVDGuZ8sNtq";
   const connection = new Connection(RPCurl, "confirmed");
 
@@ -302,4 +292,4 @@ export {amount_fronk, amount_bonk};
 
 })();
 export {amount_deds, amount_mob, amount_vault, amount_silver, amount_dgen, amount_woop, amount_pogger, amount_luv, amount_exp, amount_trb, amount_catnip, amount_s7n, amount_glug  };
-*/
+

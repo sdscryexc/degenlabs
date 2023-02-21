@@ -84,40 +84,48 @@ export const DashFlip: FC = ({ }) => {
 
 
 
-  /*function createData(
+  function createData(
     name: string,
     Tokenamount: number,
-    Diff: number,
     Fees: number,
 
   ) {
-    return { name, Tokenamount, Diff, Fees};
+    return { name, Tokenamount, Fees};
   }
 
   const rows = [
-    createData('FRONK', amount_fronk, amount_fronk, amount_fronk),
-    createData('BONK', amount_bonk, amount_bonk, amount_bonk),
-    createData('DEDS', amount_deds, amount_deds, amount_deds),
-    createData('MOB', amount_mob, amount_mob, amount_mob),
-    createData('VAULT', amount_vault, amount_vault, amount_vault),
-    createData('DGEN', amount_dgen, amount_dgen, amount_dgen),
-    createData('SILVER', amount_silver, amount_silver, amount_silver),
-    createData('WOOP', amount_woop, amount_woop, amount_woop),
-    createData('LUV', amount_luv, amount_luv, amount_luv),
-    createData('POGGER', amount_pogger, amount_pogger, amount_pogger),
-    createData('EXP', amount_exp, amount_exp, amount_exp),
-    createData('TRB', amount_trb, amount_trb, amount_trb),
-    createData('CATNIP', amount_catnip, amount_catnip, amount_catnip),
-    createData('TRB', amount_s7n, amount_s7n, amount_s7n),
-    createData('CATNIP', amount_glug, amount_glug, amount_glug),  
+    createData('FRONK', amount_fronk, amount_fronk),
+    createData('BONK', amount_bonk, amount_bonk),
+    createData('DEDS', amount_deds, amount_deds),
+    createData('MOB', amount_mob, amount_mob),
+    createData('VAULT', amount_vault, amount_vault),
+    createData('DGEN', amount_dgen, amount_dgen),
+    createData('SILVER', amount_silver, amount_silver),
+    createData('WOOP', amount_woop, amount_woop),
+    createData('LUV', amount_luv, amount_luv),
+    createData('POGGER', amount_pogger, amount_pogger),
+    createData('EXP', amount_exp, amount_exp),
+    createData('TRB', amount_trb, amount_trb),
+    createData('CATNIP', amount_catnip, amount_catnip),
+    createData('TRB', amount_s7n, amount_s7n),
+    createData('CATNIP', amount_glug, amount_glug),  
   ];
+
+  function createData1(
+    name: string,
+    Treasury: number,
+    Fees: number,
+
+  ) {
+    return { name, Treasury, Fees};
+  }
 
   const rows1 = [
-    createData('Multiflip', balance_trea.toFixed(2), balance_diff.toFixed(2), balance_fee.toFixed(2)),
+    createData1('Multiflip', balance_trea.toFixed(2), balance_fee.toFixed(2)),
   ];
 
-
-  /*const rows1 = [
+/*
+  const rows1 = [
     createData('GREED', amount_greed_stake),
     createData('LUST', amount_lust_stake),
     createData('PRIDE', amount_pride_stake),
@@ -152,19 +160,95 @@ export const DashFlip: FC = ({ }) => {
 
 
   return (
+    <div style={{marginTop: '80px'}}>
           
-          <div style={{marginTop: '80px'}}>
           
-          
-          <Box>
-          
-   </Box>
-   
-  </div> 
+    <Box>
+      <Typography marginBottom='40px' marginTop="25px" variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
+    Flipgame Stats
+    </Typography>
+     
+    </Box>
+  
+ 
 
-  );
+
+
+
+
+
+
+
+
+<Box sx={{display: 'flex',flexDirection: 'row', flexWrap: 'wrap', bgcolor: 'transparent', justifyContent: 'center'}}>
+<Item>
+
+    <TableContainer component={Paper}>
+    <Typography marginBottom='20px' marginTop="25px" variant="h5" align='center' color='black'  fontFamily= "montserrat">
+    SPL STATS
+    </Typography>
+<Table sx={{ width: '350px', bgcolor: 'transparent'}} aria-label="simple table">
+  <TableHead>
+    <TableRow>
+      <TableCell>Token</TableCell>
+      <TableCell align="right">Treasury</TableCell>
+    </TableRow>
+  </TableHead>
+  <TableBody>
+    {rows.map((row) => (
+      <TableRow
+        key={row.name}
+        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+      >
+        <TableCell component="th" scope="row">
+          {row.name}
+        </TableCell>
+        <TableCell align="right">{row.Tokenamount}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+</TableContainer>
+
+</Item>
+
+
+<Item>
+
+    <TableContainer component={Paper}>
+    <Typography marginBottom='20px' marginTop="25px" variant="h5" align='center' color='black'  fontFamily= "montserrat">
+    SOL STATS
+    </Typography>
+<Table sx={{ width: '350px', bgcolor: 'transparent'}} aria-label="simple table">
+  <TableHead>
+    <TableRow>
+      <TableCell>SOL</TableCell>
+      <TableCell align="right">Fees</TableCell>
+      <TableCell align="right">Treasury</TableCell>
+    </TableRow>
+  </TableHead>
+  <TableBody>
+    {rows1.map((row) => (
+      <TableRow
+        key={row.name}
+        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+      >
+        <TableCell component="th" scope="row">
+          {row.name}
+        </TableCell>
+        <TableCell align="right">{row.Fees}</TableCell>
+        <TableCell align="right">{row.Treasury}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+</TableContainer>
+
+</Item>
+
+</Box>
+</div> 
+
+);
 };
-
-
-
 
