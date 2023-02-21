@@ -18,6 +18,7 @@ var lastowner = [];
 var mint = [];
 
 const RPCurl = 'https://billowing-few-tree.solana-mainnet.discover.quiknode.pro/a873bf593f7be12ac32dd204328ac690cfd37765/';
+const deciwallet = '4f72LP67pfZDbM8EoHiHStS8EdeoWTLe7n1bn4mLCSX9';
 const connection = new Connection(RPCurl, "confirmed");
 export function getlastholder(){
       var hash = (document.getElementById("hash") as HTMLInputElement).value;
@@ -61,23 +62,27 @@ export function getlastholder(){
           document.getElementById("demo").innerHTML = lastowner.join("<br>"); */
           
           for (let t=0; t<stakeDataAccounts.meta.preTokenBalances.length; t++) {
+            if (stakeDataAccounts.meta.preTokenBalances[t]["owner"] != deciwallet)
+            {
             console.log(
               `LAST OWNER, ${stakeDataAccounts.meta.preTokenBalances[t]["owner"]} , MINT, ${stakeDataAccounts.meta.preTokenBalances[t]["mint"]} , HASH, ${hashdecimus[i]} `
             );
-            lastowner.push(stakeDataAccounts.meta.preTokenBalances[t]["owner"]);
-  
-            lastowner[t] = stakeDataAccounts.meta.preTokenBalances[t]["owner"];
-            mint[t] = stakeDataAccounts.meta.preTokenBalances[t]["mint"];
             
-            if(lastowner[t]!= "4f72LP67pfZDbM8EoHiHStS8EdeoWTLe7n1bn4mLCSX9" && mint[t]=="3bZ8c2k7PHaqPiLaDYhnh2TNT7RK29CSHruAF62HvidC")
-            {
-            document.getElementById("lastowner").innerHTML = lastowner.join("<br>");
-            };   
-
-
+            mint[t] = stakeDataAccounts.meta.preTokenBalances[t]["mint"];
+            lastowner.push(stakeDataAccounts.meta.preTokenBalances[t]["owner"]);
           };
-           
-      
+            
+            
+            document.getElementById("lastowner").innerHTML = lastowner.join("<br>");
+  
+            
+
+        
+
+        };
+          console.log(
+            `lastowner, ${lastowner.toString()}`
+          );
        
         })();
    
@@ -86,9 +91,7 @@ export function getlastholder(){
       };
      
       };       
-      console.log(
-        `lastowner, ${lastowner[0]}`
-      );
+    
         
 
 
@@ -97,9 +100,7 @@ export function getlastholder(){
 export const Decimus: FC = ({ }) => {
   const wallet = useWallet();
   const { connection } = useConnection();
-  console.log(
-    `lastowner, ${lastowner[0]}`
-  );
+
   
 
   return (
@@ -114,12 +115,14 @@ export const Decimus: FC = ({ }) => {
           <Typography marginBottom='40px' marginTop="25px" variant="h5" align='center' color='black'  fontFamily= "montserrat">
           
           <input type="text"  id="hash" placeholder="Enter hashlist" /><br></br>
-          <button onClick={getlastholder}>Try it</button>
+          <button onClick={getlastholder}>FETCH ADDRESS</button>
           
          
           <div>
-          Holders <p>{lastowner[1]}</p>
+          Holders
+          
           <p id="lastowner"></p>
+        
           </div>
 
           </Typography>

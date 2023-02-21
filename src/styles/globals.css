@@ -24,9 +24,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 /* example: override wallet button style */
 .wallet-adapter-button:not([disabled]):hover {
@@ -48,3 +45,9 @@ a {
 
 }
 
+.inputfield {
+
+  border-color: black;
+  width: 70%;
+  height: 40%;
+}
