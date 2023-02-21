@@ -2,18 +2,29 @@ import create, { State } from 'zustand'
 import { Connection, PublicKey, LAMPORTS_PER_SOL, clusterApiUrl } from '@solana/web3.js'
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import * as bs58 from "bs58";
+import {transactions} from "./transactions";
 
-interface UserSOLBalanceStore extends State {
+/*interface UserSOLBalanceStore extends State {
   balance: number;
   getUserSOLBalance: (publicKey: PublicKey, connection: Connection) => void
-}
-let amount_wrath:number;
-let amount_envy:number;
-let amount_gluttony:number;
-let amount_greed:number;
-let amount_lust:number;
-let amount_sloth:number
-let amount_pride:number;
+}*/
+let amount_bonk:number;
+let amount_deds:number;
+let amount_mob:number;
+let amount_fronk:number;
+let amount_vault:number;
+let amount_silver:number
+let amount_dgen:number;
+let amount_woop:number;
+let amount_pogger:number;
+let amount_luv:number;
+let amount_exp:number;
+let amount_trb:number;
+let amount_catnip:number;
+let amount_s7n:number;
+let amount_glug:number;
+
+
 
 let amount_greed_stake:number;
 let amount_wrath_stake:number;
@@ -25,13 +36,23 @@ let amount_pride_stake:number;
 
 const RPCurl = 'https://billowing-few-tree.solana-mainnet.discover.quiknode.pro/a873bf593f7be12ac32dd204328ac690cfd37765/';
 
-const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
+
+function parseUint64Le(data, offset = 0) {
+  let number = BigInt(0);
+  for (let i = 0; i < 8; i++)
+    number += BigInt(data[offset + i]) << BigInt(i * 8);
+  return number;
+}
+
+
+/*const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
   balance: 0,
   getUserSOLBalance: async (publicKey, connection) => {
     let balance = 0;
+    const sol_treasury = new PublicKey("3z9qkHLuLJGd32LCPGNAXJAVNoAPgpTLdcHNhWQmH3B3");
     try {
       balance = await connection.getBalance(
-        publicKey,
+        sol_treasury,
         'confirmed'
       );
       balance = balance / LAMPORTS_PER_SOL;
@@ -43,202 +64,126 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
       console.log(`balance updated, `, balance);
     })
   },
-}));
+}));*/
+
+let balance_trea : number = 0;
+let balance_fee : number = 0;
 
 (async () => {
-  const GREED = new PublicKey("HWvQYCs2PVqzojeLSV3cJDqBN3SKSrvc9KyKBmLLahHH");
+  const sol_treasury = new PublicKey("Had1emGD3qmFRXeBUeBXPQqS8Wi7BLGLAZ7167d4aM1W");
   const connection = new Connection(RPCurl, "confirmed");
+  
+  const balance1 = await connection.getBalance(
+    sol_treasury,
+    'confirmed'
+  )
+  balance_trea = balance1 / LAMPORTS_PER_SOL;
 
-  let stakeDataAccounts = await connection.getProgramAccounts(
-    GREED, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-    {
-      dataSlice: {
-        offset: 0,
-        length: 0,
-      },
-      filters: [createStakeTokenActiveFilter()],
-    });
-    
-
-    amount_greed_stake=stakeDataAccounts.length;
- 
-
- 
+  console.log(
+    `BALANCE_TREA ${balance_trea.toFixed(2)}`
+  );
   })();
-  export {amount_greed_stake};
-
+  
+  export{balance_trea};
 
   (async () => {
-    const PRIDE = new PublicKey("uqr8EnUBim9nuFaLxrQXhsvYjTzzqz9pqRrtwfj6syC");
+    const sol_treasury = new PublicKey("3z9qkHLuLJGd32LCPGNAXJAVNoAPgpTLdcHNhWQmH3B3");
     const connection = new Connection(RPCurl, "confirmed");
+    
+    const balance2 = await connection.getBalance(
+      sol_treasury,
+      'confirmed'
+    )
+    balance_fee = balance2 / LAMPORTS_PER_SOL;
   
-    let stakeDataAccounts = await connection.getProgramAccounts(
-      PRIDE, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-      {
-        dataSlice: {
-          offset: 0,
-          length: 0,
-        },
-        filters: [createStakeTokenActiveFilter()],
-      });
-      
-  
-      amount_pride_stake=stakeDataAccounts.length;
-   
-
-   
+    console.log(
+      `BALANCE_FEE ${balance_fee.toFixed(2)}`
+    );
     })();
-    export {amount_pride_stake};
-
-
-    (async () => {
-      const LUST = new PublicKey("EuHyjTWeWAwhQxGa7pAmWypYh5NZ484N4GiLYYonnoQ6");
-      const connection = new Connection(RPCurl, "confirmed");
     
-      let stakeDataAccounts = await connection.getProgramAccounts(
-        LUST, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-        {
-          dataSlice: {
-            offset: 0,
-            length: 0,
+    export{balance_fee};
+  
+
+
+
+
+
+   
+      
+      
+      //Get Staked NFTs from Skullbots Staking site
+      export function createStakeTokenActiveFilter(active = true) {
+        return {
+          memcmp: {
+            offset: 72,
+            bytes: bs58.encode([active ? 1 : 0]),
           },
-          filters: [createStakeTokenActiveFilter()],
-        });
+        };
+      }
+
+
+    
+
+ 
+      const connection = new Connection(RPCurl, "confirmed");
+      
+      
+      for (let i=0; i<transactions.length; i++) { 
+
+        setTimeout(function() {  
+
         
-    
-        amount_lust_stake=stakeDataAccounts.length;
-     
-    
-     
-      })();
-      export {amount_lust_stake};
-
-
 
       (async () => {
-        const ENVY = new PublicKey("G9aio3ToS6SknjPTftq4XxxAPcCd95HK6jTEGehrVHzr");
-        const connection = new Connection(RPCurl, "confirmed");
+        //const ENVY = new PublicKey("9HeBEFWvSRTVkBvagV3PzdW2rtdbqPgSTcKzgvMPa6im");
+        
       
-        let stakeDataAccounts = await connection.getProgramAccounts(
-          ENVY, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-          {
-            dataSlice: {
-              offset: 0,
-              length: 0,
-            },
-            filters: [{
-              dataSize: 165, // number of bytes
-            }],
-          });
-          
-      
-          amount_envy_stake=stakeDataAccounts.length;
        
-     
+        const stakeDataAccounts = await connection.getParsedTransaction(
+          transactions[i]
+          );
+          
+
+          /*stakeDataAccounts.map(async ({ account: { data } }) => {
+            let timestamp = parseUint64Le(data, 0);
+            let mint = new PublicKey(data.slice(40, 72))
+            let owner = new PublicKey(data.slice(8,40))
+            
+
+            console.log(`Tokenaddress: ${mint} Owner ${owner}`);
+           
+            
+          
+          }),*/
+
+            
+          
+          /*console.log(
+            `LAST OWNER ${stakeDataAccounts.meta.preTokenBalances["0"]["owner"]} MINT ${stakeDataAccounts.meta.preTokenBalances["0"]["mint"]} `
+          );*/
+
+          for (let t=0; t<stakeDataAccounts.meta.preTokenBalances.length; t++) {
+          console.log(
+            `LAST OWNER, ${stakeDataAccounts.meta.preTokenBalances[t]["owner"]} , MINT, ${stakeDataAccounts.meta.preTokenBalances[t]["mint"]} , HASH, ${transactions[i]} `
+          );
+          };
+           
+      
        
         })();
-        export {amount_envy_stake};
-
-
-
-        (async () => {
-          const GLUTTONY = new PublicKey("G66UbQdyq6FkyFyv3gfsZhDY1CagC5EcfjroNGTryxQL");
-          const connection = new Connection(RPCurl, "confirmed");
+   
+      }, 500 * i);
+      
+      };
         
-          let stakeDataAccounts = await connection.getProgramAccounts(
-            GLUTTONY, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-            {
-              dataSlice: {
-                offset: 0,
-                length: 0,
-              },
-              filters: [createStakeTokenActiveFilter()],
-            });
-            
         
-            amount_gluttony_stake=stakeDataAccounts.length;
-         
-  
-         
-          })();
-          export {amount_gluttony_stake};
-
-
-
-          (async () => {
-            const WRATH = new PublicKey("5MGz9bqJd4nSjzPBXwMPXup5xALYfiNpNV67oYBRDhdA");
-            const connection = new Connection(RPCurl, "confirmed");
-          
-            let stakeDataAccounts = await connection.getProgramAccounts(
-              WRATH, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-              {
-                dataSlice: {
-                  offset: 0,
-                  length: 0,
-                },
-                filters: [createStakeTokenActiveFilter()],
-              });
-              
-          
-              amount_wrath_stake=stakeDataAccounts.length;
-           
-    
-           
-            })();
-            export {amount_wrath_stake};
-
-
-
-            (async () => {
-              const SLOTH = new PublicKey("73VXGs6Rs7aCQGDEDsfXcJtVfLCgxMh8cPJc5MnybvU6");
-              const connection = new Connection(RPCurl, "confirmed");
-            
-              let stakeDataAccounts = await connection.getProgramAccounts(
-                SLOTH, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-                {
-                  dataSlice: {
-                    offset: 0,
-                    length: 0,
-                  },
-                  filters: [createStakeTokenActiveFilter()],
-                });
-                
-            
-                amount_sloth_stake=stakeDataAccounts.length;
-             
-     
-             
-              })();
-              export {amount_sloth_stake};
-
-
-
-              
+        
 
 
 
 
-
-
-
-
-
-
-
-
- export function createStakeTokenActiveFilter(active = true) {
-    return {
-      memcmp: {
-        offset: 72,
-        bytes: bs58.encode([active ? 1 : 0]),
-      },
-    };
-  }
-
-
-
-(async () => {
-  const MY_WALLET_ADDRESS = "EpUafgip3NRLoqjCdkDNXZhWoF6ZaerSH4dJPwfyFe3r";
+/*(async () => {
+  const SplTreasury = "3GQfja9iasuP97UUvHLTXVLK4hfbPUhUuvVDGuZ8sNtq";
   const connection = new Connection(RPCurl, "confirmed");
 
   const accounts = await connection.getParsedProgramAccounts(
@@ -251,7 +196,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
         {
           memcmp: {
             offset: 32, // number of bytes
-            bytes: MY_WALLET_ADDRESS, // base58 encoded string
+            bytes: SplTreasury, // base58 encoded string
           },
         },
       ],
@@ -259,7 +204,7 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
   );
 
   console.log(
-    `Found ${accounts.length} token account(s) for wallet ${MY_WALLET_ADDRESS}: `
+    `Found ${accounts.length} token account(s) for wallet ${SplTreasury}: `
   );
   accounts.forEach((account, i) => {
     console.log(
@@ -269,32 +214,92 @@ const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
     console.log(
       `Amount: ${account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]}`
     );
-    if(account.pubkey.toString()=="GLxVgrfLwrqTQrMRZ1o9HvMBqmfcc3eN6xeULXPBehcK")
-    amount_wrath =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
+    if(account.pubkey.toString()=="28r1JY8gMM44pHWZWMSLcvkmiJqsoczMekuvdj22DRbG")
+    amount_bonk =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
     
-    if(account.pubkey.toString()=="AMFtxzhq97antgvFUM3xZMYmiZzCqhwnVz52TEecG4fk")
-    amount_greed =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
+    if(account.pubkey.toString()=="8Ao5ih8Anyi1f4udzXssispMmLTFcnL6twyZciqfgPgx")
+    amount_fronk =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
     
-    if(account.pubkey.toString()=="7htoZbMJRbC5bXUQf1CKFqEKVCzAjKpyC1k1SpBRrqE9")
-    amount_lust =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
-    
-    if(account.pubkey.toString()=="FpTo6b48AuYidMcbcmy9DMsZoSMcZQxMXpZhAen6naok")
-    amount_gluttony =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
-    
-    if(account.pubkey.toString()=="7ubNKhZd62exoRJqDGC34M59uo4yzEXAn8oWDZK7D7hw")
-    amount_pride =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
-    
-    if(account.pubkey.toString()=="66y7PCozNwVUtwh21uD8Md818pW8KD2sWgrgohjsVnNL")
-    amount_sloth =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
-    
-    if(account.pubkey.toString()=="FRrz4zRn9LwFkTjDZUZD8imMA9YrKZ6Ao27x5Ru78AUQ")
-    amount_envy =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
- 
-    //console.log(`amount_wrath: ${amount_wrath}`);
   });
 
 })();
-export default useUserSOLBalanceStore;
-export {amount_envy, amount_gluttony, amount_greed, amount_lust, amount_pride, amount_sloth, amount_wrath};
+//export default useUserSOLBalanceStore;
+export {amount_fronk, amount_bonk};
 
 
+(async () => {
+  const SplTreasury1 = "GL7hhMqBfbDd1w9NbNJh6VBcY8ecfdWp3sEZDoQrVkRv";
+  const connection = new Connection(RPCurl, "confirmed");
+
+  const accounts = await connection.getParsedProgramAccounts(
+    TOKEN_PROGRAM_ID, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+    {
+      filters: [
+        {
+          dataSize: 165, // number of bytes
+        },
+        {
+          memcmp: {
+            offset: 32, // number of bytes
+            bytes: SplTreasury1, // base58 encoded string
+          },
+        },
+      ],
+    }
+  );
+
+  console.log(
+    `Found ${accounts.length} token account(s) for wallet ${SplTreasury1}: `
+  );
+  accounts.forEach((account, i) => {
+    console.log(
+      `-- Token Account Address ${i + 1}: ${account.pubkey.toString()} --`
+    );
+    console.log(`Mint: ${account.account.data["parsed"]["info"]["mint"]}`);
+    console.log(
+      `Amount: ${account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]}`
+    );
+    if(account.pubkey.toString()=="5Cvnuv7HFaUc75WEtLvevfh7P5MMZ9xNV37WNXcGzqPu")
+    amount_deds =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
+    
+    if(account.pubkey.toString()=="EK4zRD3VxTvhvj2UWbwTwmUVDHZWWwuG1Gs1aEky9jaY")
+    amount_mob =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+    
+    if(account.pubkey.toString()=="8ehcDEZfVd9FQufNwrN9nxsVwxasDfQigbXwZUNbf44a")
+    amount_vault =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="8ZkDAJqy5piGNPNUKi44kyyGufLERXsG3Np9vj3ke31C")
+    amount_silver =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="F9UrrdmUjVDqtCsXB6Vn2exF3d6UNGdUf9vzxPvLehoF")
+    amount_dgen =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="7yEbWHoWcR5tue1yza6DdQvkJXm3yB27A2XGFCj3dNbd")
+    amount_woop =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="HYAkZpECDrNoLDcppTPKb72q4uREpqTWu7b7fxfgewEV")
+    amount_pogger =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="6yxGz5tnAeHHctkcDAFH4jnjvzGRJtF2uSEUVNpqRtza")
+    amount_luv =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="HiDyHPrXqgDXNgCv64riqF8q161xDiYk9v4vjskP9Ato")
+    amount_exp =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="AGFkYsMua1fQQgo9tdnYdxPi4sgJTpNMybfpfxHM6EqB")
+    amount_trb =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="BbmTT32vwaDxWeNVjGyV1CEB1CsvSSEoNpB73vRnpZ8L")
+    amount_catnip =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="5TG5k4GrTrt8NbfgemeFNUeobBoGy3aEgQRjx8qW85rg")
+    amount_s7n =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+    if(account.pubkey.toString()=="FrpV11aJpcD73C1czpXez8By9BncFV6Q31kx3JEkca14")
+    amount_glug =  Math.round(account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"]);
+
+  });
+
+})();
+export {amount_deds, amount_mob, amount_vault, amount_silver, amount_dgen, amount_woop, amount_pogger, amount_luv, amount_exp, amount_trb, amount_catnip, amount_s7n, amount_glug  };
+*/

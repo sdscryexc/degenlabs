@@ -26,6 +26,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Drawer from '@mui/material/Drawer';
+import NetworkSwitcher from './NetworkSwitcher';
 
 let theme = createTheme({
   palette: {
@@ -158,6 +159,7 @@ export default function Header() {
               <Link href="/">Skullbots Whales</Link>
               </Typography>
               <WalletMultiButton/>
+            
           
               </Toolbar>
           </AppBar>

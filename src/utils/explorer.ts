@@ -12,7 +12,7 @@ export function getExplorerUrl(
         cluster = `custom&customUrl=${encodeURIComponent(
           'http://127.0.0.1:8899'
         )}`
-      } else if (endpoint === 'https://api.devnet.solana.com') {
+      } else if (endpoint === 'https://billowing-few-tree.solana-mainnet.discover.quiknode.pro/a873bf593f7be12ac32dd204328ac690cfd37765') {
         cluster = 'devnet'
       }
   
