@@ -61,7 +61,7 @@ export function getlastholder(){
   
             lastowner[t] = stakeDataAccounts.meta.preTokenBalances[t]["owner"];
             mint[t] = stakeDataAccounts.meta.preTokenBalances[t]["mint"];
-            document.getElementById("demo").innerHTML = lastowner.join("<br>");
+            document.getElementById("demo").innerHTML = lastowner.join("<br>");   
 
 
           };
