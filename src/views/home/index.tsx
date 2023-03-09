@@ -45,12 +45,12 @@ export const HomeView: FC = ({ }) => {
         <Item sx={{marginRight: '5vw'}} >
           
           
-             <Button className='button-64' role='button' href='./basics' ><span className="text">Check Demon status</span></Button>
+             <Button className='button1' role='button' href='./basics' ><span className="text">Check Demon status</span></Button>
          
               
         </Item>
           <Item>
-          <Button className='button-64' role='button' href='./basics' ><span className="text">Buy Summon</span></Button>   
+          <Button className='button1' role='button' href='./basics' ><span className="text">Buy Summon</span></Button>   
         </Item>
       </Box>
       </Container>
