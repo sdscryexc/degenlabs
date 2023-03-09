@@ -139,7 +139,7 @@ export default function Header() {
               </div>
               <Typography variant="body1" color= "white" sx={{ flexGrow: 1 }}>
               
-              <Link href="/">Degenlabs Whales</Link>
+              <Link href="/">DEGENLABS</Link>
               </Typography>
               <WalletMultiButton/>
             
