@@ -52,11 +52,28 @@ export const BasicsView: FC = ({ }) => {
 
   return (
     <ThemeProvider theme={theme}>
-<Container  sx={{ marginTop : '15vh', alignItems: 'center',  justifyContent: 'center', flexDirection: 'column', flexGrow: '1' }}>
-    <Box>
-    Congratulations, you have sacrificed {DBots} Degenbots and are eligable to mint {Kings} King Demons.
+
+ <Box  sx={{marginTop : '15vh'}}>
+   
+   <div className="scenes" style={{width:'20vw', backgroundColor:"green", marginLeft:'auto', marginRight:'auto', display:'block'}}>
+     <div className="scene-1">
+       <h2 className="scene-title" >Biker</h2>
+     </div>
+     <div className="scene-2">
+       <h2 className="scene-title">Demon</h2>
+     </div>
+   </div>
+  </Box>
+  <Box sx={{marginTop : '10vh', textAlign:'center', fontSize:'large' }}>
+    Congratulations,<br></br> you have sacrificed {DBots} Degenbots and are eligible to mint {Kings} King Demons.
 
     </Box>
+     
+<Container  sx={{ marginTop : '15vh', alignItems: 'center',  justifyContent: 'center', flexDirection: 'column', flexGrow: '1'}}>
+    
+    
+    
+    
 </Container>
 </ThemeProvider>
 

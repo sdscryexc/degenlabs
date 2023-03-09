@@ -116,7 +116,7 @@ export default function Header() {
     
     <ThemeProvider theme={theme}>
          <Box >
-          <AppBar elevation={0} color="secondary">
+          <AppBar elevation={2} color="secondary" border-width="5px">
             <Toolbar> 
                 <div>
                     <React.Fragment key={anchor}>

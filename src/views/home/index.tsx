@@ -43,14 +43,14 @@ export const HomeView: FC = ({ }) => {
       <Container sx={{ display: 'flex', alignItems: 'center', marginTop: '10vh', justifyContent: 'center', flexDirection: 'column', flexGrow: '1' }}>
       <Box sx={{display: 'flex', alignItems: 'center'}}>
         <Item sx={{marginRight: '5vw'}} >
-          <Typography variant='h3' align='center' color='white'>
-             <Button href='./basics'>Check Demon status</Button>
-          </Typography>     
+          
+          
+             <Button className='button-35' href='./basics' >Check Demon status</Button>
+         
+              
         </Item>
           <Item>
-          <Typography variant='h3' align='center' color='white'>
-             Buy Summon
-          </Typography>     
+          <Button className='button-35' >Buy Summon</Button>   
         </Item>
       </Box>
       </Container>
