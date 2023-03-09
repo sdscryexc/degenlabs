@@ -35,7 +35,7 @@ let theme = createTheme({
       main: 'rgba(0, 0, 0, 1)',
     },
     secondary: {
-      main: 'rgba(255, 255, 255, 0.7)'
+      main: '#181c1f',
     }
   },
 });
@@ -81,7 +81,7 @@ export default function Header() {
             <ListItem >
               <ListItemButton href="./" alignItems="center" >
                 <ListItemText primary={
-            <Typography fontFamily="montserrat">
+            <Typography color={'black'}>
               Home
             </Typography>
           }/>
@@ -90,7 +90,7 @@ export default function Header() {
             <ListItem >
               <ListItemButton href="./Team">
                 <ListItemText primary={
-            <Typography fontFamily="montserrat">
+            <Typography color={'black'}>
               Team
             </Typography>
           } />
@@ -98,30 +98,13 @@ export default function Header() {
             </ListItem>
             <Divider />
             <ListItem >
-              <ListItemButton href="./SB">
+              <ListItemButton href="./basics">
                 <ListItemText primary={
-            <Typography fontFamily="montserrat">
-              Skullbots
+            <Typography color={'black'}>
+              Demon Status
             </Typography>}/>
               </ListItemButton>
-            </ListItem>
-            <ListItem >
-              <ListItemButton href="./Degenbots">
-                <ListItemText primary={
-            <Typography fontFamily="montserrat">
-              Degenbots
-            </Typography>}/>
-              </ListItemButton>
-            </ListItem>
-            <Divider />
-            <ListItem >
-              <ListItemButton href="./war">
-                <ListItemText primary={
-            <Typography fontFamily="montserrat">
-              War Interface
-            </Typography>}/>
-              </ListItemButton>
-            </ListItem>
+            </ListItem>            
         </List>
       </Box>
     );
@@ -138,7 +121,7 @@ export default function Header() {
                 <div>
                     <React.Fragment key={anchor}>
                       <Button onClick={toggleDrawer(anchor, true)}>{
-            <Typography variant="h5" fontFamily="montserrat" >
+            <Typography variant="h5" color= "white" >
               Menu
             </Typography>}</Button>
                       <Drawer
@@ -152,11 +135,11 @@ export default function Header() {
                  
                 </div>
               <div className="p-3">
-              <Image src={require('../images/sWFLOGO.png')} width='40' height={'40'}/>
+              <Image src={require('../images/degenlabs.png')} width='40' height={'40'}/>
               </div>
-              <Typography variant="body1" color= "black" sx={{ flexGrow: 1 }} fontFamily="montserrat">
+              <Typography variant="body1" color= "white" sx={{ flexGrow: 1 }}>
               
-              <Link href="/">Skullbots Whales</Link>
+              <Link href="/">Degenlabs Whales</Link>
               </Typography>
               <WalletMultiButton/>
             
