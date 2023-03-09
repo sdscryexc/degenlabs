@@ -10,25 +10,13 @@ import { useWallet, useConnection } from '@solana/wallet-adapter-react';
 
 
 import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardHeader';
-
+import Item from '@mui/material/ListItem'
 import Box from '@mui/material/Box';
-import { Typography } from '@mui/material';
-import PropTypes from 'prop-types';
+import { Button, Container, Typography } from '@mui/material';
+
 
 import Image from 'next/image';
-import bg from '../../images/SB_BG.png';
-import Container from '@mui/material/Container';
+
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 
@@ -43,35 +31,29 @@ export const HomeView: FC = ({ }) => {
 
 
 
-
- 
- /* React.useEffect(() => {
-    const timer = setInterval(() => {
-      return setTime(new Date().toLocaleString());
-    }, 1000);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-*/
-
-
-
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex', alignItems: 'center', marginTop: '5vh', justifyContent: 'center', flexDirection: 'column', flexGrow: '1', minHeight:'95vh' }}>
-        <Box sx={{display: 'flex', alignItems: 'center',  justifyContent: 'center', backgroundColor: 'white', height:'20vh' }}>
-      <div>
-      <Image src={require('../../images/start.png')}  />
-      </div>
-      </Box>
+      <Container  sx={{ display: 'flex', alignItems: 'center', marginTop: '15vh', justifyContent: 'center', flexDirection: 'column', flexGrow: '1' }}>
+        <Box sx={{display: 'flex', alignItems: 'center',  justifyContent: 'center', backgroundColor: 'white', maxWidth: '50vw'}}>
+      
+          <Image src={require('../../images/start.png')} objectFit='cover' />
+      
+        </Box>
+      </Container>
+      <Container sx={{ display: 'flex', alignItems: 'center', marginTop: '10vh', justifyContent: 'center', flexDirection: 'column', flexGrow: '1' }}>
       <Box sx={{display: 'flex', alignItems: 'center'}}>
-      <Typography variant='h3' align='center' color='darkred' marginTop='15vh ' fontFamily= "montserrat">
-             SkullBots Brand   -   Degendevil Casino    -    Degenlabs Service
-            </Typography>     
-            </Box>
+        <Item sx={{marginRight: '5vw'}} >
+          <Typography variant='h3' align='center' color='white'>
+             <Button href='./basics'>Check Demon status</Button>
+          </Typography>     
+        </Item>
+          <Item>
+          <Typography variant='h3' align='center' color='white'>
+             Buy Summon
+          </Typography>     
+        </Item>
       </Box>
+      </Container>
       </ThemeProvider>
       )};
  

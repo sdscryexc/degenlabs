@@ -15,7 +15,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./src/images"],
   "exclude": ["node_modules", ".next",],

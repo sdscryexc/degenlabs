@@ -1,6 +1,5 @@
 import create, { State } from 'zustand'
 import { Connection, PublicKey, LAMPORTS_PER_SOL, clusterApiUrl } from '@solana/web3.js'
-import { useWallet } from "@solana/wallet-adapter-react";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import * as bs58 from "bs58";
 import {transactions} from "./transactions";
@@ -35,7 +34,6 @@ let amount_lust_stake:number;
 let amount_sloth_stake:number
 let amount_pride_stake:number;
 
-
 const RPCurl = 'https://billowing-few-tree.solana-mainnet.discover.quiknode.pro/a873bf593f7be12ac32dd204328ac690cfd37765/';
 
 
@@ -49,13 +47,11 @@ function parseUint64Le(data, offset = 0) {
 
 interface UserSOLBalanceStore extends State {
   balance: number;
-  
   getUserSOLBalance: (publicKey: PublicKey, connection: Connection) => void
 }
 
 const useUserSOLBalanceStore = create<UserSOLBalanceStore>((set, _get) => ({
   balance: 0,
-
   getUserSOLBalance: async (publicKey, connection) => {
     let balance = 0;
     try {
