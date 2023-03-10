@@ -15,6 +15,7 @@ import Box from '@mui/material/Box';
 import { Button, Container, Typography } from '@mui/material';
 
 
+
 import Image from 'next/image';
 
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
@@ -23,6 +24,7 @@ import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/s
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
+
 
 
 
@@ -45,12 +47,12 @@ export const HomeView: FC = ({ }) => {
         <Item sx={{marginRight: '5vw'}} >
           
           
-             <Button  className="button" href='./basics' ><span className="text">Check Demon status</span></Button>
+             <Button  className="button1" href='./basics' ><span className="text">Check Demon status</span></Button>
          
               
         </Item>
           <Item>
-          <Button className='button' href='./basics' ><span className="text">Buy Summon</span></Button>   
+          <Button className='button1' href='./basics' ><span className="text">Buy Summon</span></Button>   
         </Item>
       </Box>
       </Container>
