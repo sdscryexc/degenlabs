@@ -64,7 +64,7 @@ a {
   --shadow-inner: 277deg, 90%, 62%;
   all: unset;
   color: white;
-  font: 700 1.125rem/1.2 Raleway, sans-serif;
+  font: sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-align: center;
