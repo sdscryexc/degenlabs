@@ -59,16 +59,16 @@ export const HomeView: FC = ({ }) => {
         </Box>
       </Container>
       <Container sx={{ display: 'flex', alignItems: 'center', marginTop: '10vh', justifyContent: 'center', flexDirection: 'column', flexGrow: '1' }}>
-      <Box sx={{display: 'flex', alignItems: 'center'}}>
-        <Item sx={{marginRight: '5vw', maxWidth:"20vw", flexDirection: 'column', flexGrow: '1' }} >
+      <Box sx={{display: 'flex', alignItems: 'center', flexDirection: 'row', flexGrow: '1' }}>
+        <Item sx={{display: 'flex', flexGrow: '1' }}>
           
              <a href='./basics'>
-             <Button1></Button1>
+             <Button1 ></Button1>
              </a>
              
               
         </Item>
-          <Item sx={{marginLeft: '5vw', maxWidth:"20vw", flexDirection: 'column', flexGrow: '1' }}>
+          <Item sx={{display: 'flex', flexGrow: '1' }}>
           <a href='./basics'>
              <Button2></Button2>
              </a>
