@@ -10,7 +10,7 @@ import Header from '../components/AppBar'
 
 require('@solana/wallet-adapter-react-ui/styles.css');
 require('../styles/globals.css');
-require('../styles/home.css');
+
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
     return (

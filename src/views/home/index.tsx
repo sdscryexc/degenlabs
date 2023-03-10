@@ -15,18 +15,34 @@ import Box from '@mui/material/Box';
 import { Button, Container, Typography } from '@mui/material';
 
 
-
 import Image from 'next/image';
 
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
-
+import { styled } from "@mui/material/styles";
 
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
+const label = 'Check Demon Status';
 
 
+const Button1 = ({}) => (
+  
+  <button
+    className="button1">
+    Check Demon Status
+  </button>
+);
 
+const Button2 = ({}) => (
+  
+  <button
+    className="button1">
+    Buy Summon
+  </button>
+);
+
+export default Button;
 
 
 export const HomeView: FC = ({ }) => {
@@ -46,13 +62,16 @@ export const HomeView: FC = ({ }) => {
       <Box sx={{display: 'flex', alignItems: 'center'}}>
         <Item sx={{marginRight: '5vw'}} >
           
-          
-             <Button  className="button1" href='./basics' ><span className="text">Check Demon status</span></Button>
-         
+             <a href='./basics'>
+             <Button1></Button1>
+             </a>
+             
               
         </Item>
           <Item>
-          <Button className='button1' href='./basics' ><span className="text">Buy Summon</span></Button>   
+          <a href='./basics'>
+             <Button2></Button2>
+             </a>
         </Item>
       </Box>
       </Container>

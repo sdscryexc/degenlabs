@@ -55,7 +55,7 @@ export const BasicsView: FC = ({ }) => {
 
  <Box  sx={{marginTop : '15vh'}}>
    
-   <div className="scenes" style={{width:'20vw', backgroundColor:"green", marginLeft:'auto', marginRight:'auto', display:'block'}}>
+   <div className="scenes" style={{width:'30vw', backgroundColor:"green", marginLeft:'auto', marginRight:'auto', display:'block'}}>
      <div className="scene-1">
        <h2 className="scene-title" >Biker</h2>
      </div>
@@ -64,7 +64,7 @@ export const BasicsView: FC = ({ }) => {
      </div>
    </div>
   </Box>
-  <Box sx={{marginTop : '10vh', textAlign:'center', fontSize:'large' }}>
+  <Box sx={{marginTop : '10vh', textAlign:'center', fontSize:'x-large' }}>
     Congratulations,<br></br> you have sacrificed {DBots} Degenbots and are eligible to mint {Kings} King Demons.
 
     </Box>
