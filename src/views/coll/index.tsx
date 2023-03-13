@@ -1,5 +1,5 @@
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, FC } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { getParsedNftAccountsByOwner, isValidSolanaAddress, createConnectionConfig, } from "@nfteyez/sol-rayz";
 import { Col, Row, Button, Form} from "react-bootstrap";
@@ -9,7 +9,7 @@ import Collections from '../../components/collections';
 import GalleryView from '../../components/galleryview';
 import { PublicKey, Connection } from '@solana/web3.js';
 
-export function Coll({variant, cluster}) {
+export const Coll: FC = ({ }) => {
   const { publicKey } = useWallet();
   const RPCurl = 'https://billowing-few-tree.solana-mainnet.discover.quiknode.pro/a873bf593f7be12ac32dd204328ac690cfd37765/';
   const connection = new Connection(RPCurl, "confirmed");
@@ -125,8 +125,8 @@ export function Coll({variant, cluster}) {
             />
           </Col>
           <Col xs="12" md="12" lg="3" className="d-grid">
-            <Button variant={variant} type="submit" onClick={getNfts}>
-              Get NFTs from {cluster}
+            <Button  type="submit" onClick={getNfts}>
+              GET YOUR BIKERS
             </Button>
           </Col>
           <Col lg="1"></Col>
@@ -147,7 +147,7 @@ export function Coll({variant, cluster}) {
 
         {loading ? (
           <div className="loading">
-            <PreLoader variant={variant} />
+            <PreLoader  />
           </div>
         ) :  (
           <GalleryView nfts={nfts} />

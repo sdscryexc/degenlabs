@@ -371,7 +371,7 @@ a {
   float: left;
 }
 .imageGrid:hover {
-  background-color: #61dafb;
+  background-color: #d32a2a;
   z-index: 12;
   transform: scale(1.1);
   aspect-ratio: 1 / 1;
