@@ -68,8 +68,8 @@ export const Coll: FC = ({ }) => {
     setLoading(true);
     const nftArray = await getParsedNftAccountsByOwner({
       publicAddress: address,
-      connection,
-      
+      connection
+    
     });
 
 
