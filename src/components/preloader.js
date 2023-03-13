@@ -1,13 +1,13 @@
 import { HashLoader } from "react-spinners";
 
-function PreLoader({variant}) {
+function PreLoader() {
     const colors = {
       "success": "#198754;",
       "primary":"#0d6efd",
       "warning": "#ffc107",
     };
     return (
-      <HashLoader color={colors[variant]} loading size={100} speedMultiplier={1} />
+      <HashLoader color='red' loading size={100} speedMultiplier={1} />
     );
 }
 export default PreLoader;

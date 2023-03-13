@@ -69,7 +69,7 @@ export const Coll: FC = ({ }) => {
     const nftArray = await getParsedNftAccountsByOwner({
       publicAddress: address,
       connection,
-      serialization: true,
+      
     });
 
 
