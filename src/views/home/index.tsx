@@ -23,7 +23,7 @@ import { styled } from "@mui/material/styles";
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
-const label = 'Check Demon Status';
+
 
 
 const Button1 = ({}) => (
@@ -38,7 +38,7 @@ const Button2 = ({}) => (
   
   <button
     className="button1">
-    Buy Summon
+    Check Biker Level
   </button>
 );
 
@@ -60,7 +60,7 @@ export const HomeView: FC = ({ }) => {
       </Container>
       <Container sx={{ display: 'flex', alignItems: 'center', marginTop: '10vh', justifyContent: 'center', flexDirection: 'column', flexGrow: '1' }}>
       <Box sx={{display: 'flex', alignItems: 'center', flexDirection: 'row', flexGrow: '1' }}>
-        <Item sx={{display: 'flex', flexGrow: '1' }}>
+        <Item sx={{display: 'flex'}}>
           
              <a href='./basics'>
              <Button1 ></Button1>
@@ -68,8 +68,8 @@ export const HomeView: FC = ({ }) => {
              
               
         </Item>
-          <Item sx={{display: 'flex', flexGrow: '1' }}>
-          <a href='./basics'>
+          <Item sx={{display: 'flex'}}>
+          <a href='./Coll'>
              <Button2></Button2>
              </a>
         </Item>

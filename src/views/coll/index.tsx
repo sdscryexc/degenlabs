@@ -1,252 +1,163 @@
-// Next, React
-import { FC, useEffect, useState } from 'react';
-import Link from 'next/link';
 
-// Wallet
-import { useWallet, useConnection } from '@solana/wallet-adapter-react';
+import { useEffect, useRef, useState } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
+import { getParsedNftAccountsByOwner, isValidSolanaAddress, createConnectionConfig, } from "@nfteyez/sol-rayz";
+import { Col, Row, Button, Form} from "react-bootstrap";
+import AlertDismissible from '../../components/alert/alertDismissible';
+import PreLoader from '../../components/preloader';
+import Collections from '../../components/collections';
+import GalleryView from '../../components/galleryview';
+import { PublicKey, Connection } from '@solana/web3.js';
 
+export function Coll({variant, cluster}) {
+  const { publicKey } = useWallet();
+  const RPCurl = 'https://billowing-few-tree.solana-mainnet.discover.quiknode.pro/a873bf593f7be12ac32dd204328ac690cfd37765/';
+  const connection = new Connection(RPCurl, "confirmed");
+  const wallet = useWallet();
+  // input ref
+  const inputRef = useRef() as React.MutableRefObject<HTMLInputElement>;
 
-// Store
+  // state change
+  useEffect(() => {
+    setNfts([]);
+    setView("collection");
+    setShow(false);
+     if (publicKey) {
+       inputRef.current.value = publicKey.toBase58();
+     }
+  }, [publicKey]);
 
-
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardHeader';
-
-import Box from '@mui/material/Box';
-import { Typography } from '@mui/material';
-import PropTypes from 'prop-types';
-
-import Image from 'next/image';
-import bg from '../../images/SB_BG.png';
-import Modal from '@mui/material/Modal';
-import Button from '@mui/material/Button';
-import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
-
-
-
-let theme = createTheme();
-theme = responsiveFontSizes(theme);
+  const [nfts, setNfts] = useState([]);
+  const [view, setView] = useState('collection');
+  //alert props
+  const [title, setTitle] = useState("");
+  const [message, setMessage] = useState("");
+  const [show, setShow] = useState(false);
 
 
+  console.log(show);
+  console.log(title);
+  
+  console.log(view);
 
 
+  //loading props
+  const [loading, setLoading] = useState(false);
+  console.log(loading);
+
+  const getNfts = async (e) => {
+    e.preventDefault();
+
+    setShow(false);
+
+    let address = inputRef.current.value;
+
+    if (address.length === 0) {
+      address = publicKey.toBase58();
+    }
+
+    if (!isValidSolanaAddress(address)) {
+      setTitle("Invalid address");
+      setMessage("Please enter a valid Solana address or Connect your wallet");
+      setLoading(false);
+      setShow(true);
+      return;
+    }
+
+ 
+    setLoading(true);
+    const nftArray = await getParsedNftAccountsByOwner({
+      publicAddress: address,
+      connection,
+      serialization: true,
+    });
 
 
+    if (nftArray.length === 0) {
+      setTitle("No NFTs found in " + title);
+      setMessage("No NFTs found for address: " + address);
+      setLoading(false);
+      setView('collection');
+      setShow(true);
+      return;
+    }
 
-function Item(props) {
-  const { sx, ...other } = props;
+    const Biker = nftArray.filter(val => val.updateAuthority === "BL5U8CoFPewr9jFcKf3kE1BhdFS1J59cwGpeZrm7ZTeP");
+
+    const metadatas = await fetchMetadata(Biker);
+
+
+    setLoading(false);
+    return setNfts(metadatas);
+    
+  };
+
+
+  
+  const fetchMetadata = async (Biker) => {
+    let metadatas = [];
+    for (const nft of Biker) {
+      console.log(nft);
+      try {
+        await fetch(nft.data.uri)
+        .then((response) => response.json())
+        .then((meta) => { 
+          metadatas.push({...meta, ...nft});
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    return metadatas;
+  };
+  console.log(nfts)
+  console.log(nfts[0]?.attributes[9])
   return (
-    <Box
-      sx={{
-        p: 1,
-        m: 1,
-        bgcolor: 'white',
-        color: (theme) => (theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800'),
-        borderColor: 'red',
-        borderRadius: 1,
-        fontSize: '0.875rem',
-        fontWeight: '700',
-        display: 'flex',
-        width: '250 px',
-        ...sx,
-      }}
-      {...other}
-    />
+    <div>
+      <div className="main" style={{marginTop:'15vh'}}>
+        <Row className="inputForm">
+          <Col lg="2"></Col>
+          <Col xs="12" md="12" lg="5" style={{textAlign:'center'}}>
+            <Form.Control
+              type="text"
+              ref={inputRef}
+              placeholder="Wallet address"
+            />
+          </Col>
+          <Col xs="12" md="12" lg="3" className="d-grid">
+            <Button variant={variant} type="submit" onClick={getNfts}>
+              Get NFTs from {cluster}
+            </Button>
+          </Col>
+          <Col lg="1"></Col>
+          <Col xs="12" md="12" lg="1">
+            {view === "nft-grid" && (
+              <Button
+                
+                variant="danger"
+                onClick={() => {
+                  setView("collection");
+                }}
+              >
+                Close
+              </Button>
+            )}
+          </Col>
+        </Row>
+
+        {loading ? (
+          <div className="loading">
+            <PreLoader variant={variant} />
+          </div>
+        ) :  (
+          <GalleryView nfts={nfts} />
+        )}
+        {show && (
+          <AlertDismissible title={title} message={message} setShow={setShow} />
+        )}
+      </div>
+    </div>
   );
 }
 
-Item.propTypes = {
-  /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */
-  sx: PropTypes.oneOfType([
-    PropTypes.arrayOf(
-      PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool]),
-    ),
-    PropTypes.func,
-    PropTypes.object,
-  ]),
-};
-
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '70vw',
-  bgcolor: 'white',
-  border: '5px solid',
-  borderRadius: '10px',
-  borderColor: 'darkred',
-  boxShadow: 24,
-  p: 4,
-  color: 'black',
-  
-};
-
-
- 
-
-
-export const Coll: FC = ({ }) => {
-  
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-  
-  const [open1, setOpen1] = React.useState(false);
-  const handleOpen1 = () => setOpen1(true);
-  const handleClose1 = () => setOpen1(false);
-
-
-  return (
-
-    <ThemeProvider theme={theme}>
-    <Box sx={{marginTop:"10vh"  }}>
-      <Typography marginBottom='40px' variant="h3" align='center' color='darkred'  fontFamily= "montserrat">
-          The Collections
-          </Typography>
-       <Image src={require('../../images/biker.png')}  layout="responsive"  /> 
-       
-    
-       
-       <Box sx={{display: 'flex',flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap', margin: '25px'}} >
-          <Item>
-          <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
-          
-          <Box  onClick={handleOpen} sx={{margin: '10px', backgroundColor: 'white' , '&:hover': {
-          backgroundColor: 'lightgray',
-          opacity: [0.9, 0.8, 0.7],}}}> 
-
-
-
-          <Image src={require('../../images/gen0.png')} width= '200px' height= '200px'  />
-          </Box>    
-          <Typography gutterBottom  variant="h5" component="div" align='center'>
-          Gen0
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          earn 69Bolt/week
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          SUPPLY 169
-          </Typography>     
-          </Card>
-          </Item>
-          <Item>
-          <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
-          <Box onClick={handleOpen1} sx={{margin: '10px', backgroundColor: 'white' , '&:hover': {
-          backgroundColor: 'lightgray',
-          opacity: [0.9, 0.8, 0.7],}}}>  
-          <Image src={require('../../images/gen1.gif')} width= '200px' height= '200px'  />
-          </Box>    
-          <Typography gutterBottom  variant="h5" component="div" align='center'>
-          Gen1
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          earn 30Bolt/week
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          SUPPLY 338
-          </Typography>     
-          </Card>
-          </Item>
-          <Item>
-          <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
-          <Box sx={{margin: '10px'}}> 
-          <Image src={require('../../images/gen2.png')} width= '200px' height= '200px'  />
-          </Box>    
-          <Typography gutterBottom  variant="h5" component="div" align='center'>
-          Gen2 - Biker
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          earn 10Bolt/week - upgradable
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          SUPPLY 3666
-          </Typography>     
-          </Card>
-          </Item>
-          <Item>
-          <Card variant="outlined" sx={{ Width: '250px' , bgcolor: 'white'}}>
-          <Box sx={{margin: '10px'}}> 
-          <Image src={require('../../images/prospects.png')} width= '200px' height= '200px'  />
-          </Box>    
-          <Typography gutterBottom  variant="h5" component="div" align='center'>
-          Prospects
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          earn 7Fuel/week
-          </Typography>
-          <Typography variant="body1" color="text.secondary" align='center'>
-          SUPPLY 16000
-          </Typography>     
-          </Card>
-          </Item>
-          
-          </Box>
-          
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style} border='none'>
-          <Typography id="modal-modal-title" fontSize="2vh" >
-          Gen 0:
-          </Typography>    
-          <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
-           A small collection of rare NFT’s with only a total of 169 in circulation. Owning one of these yields a high amount
-           </Typography>
-           <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
-           of our token $BOLT but also gives instant access to our Hell DAO where holders get added benefits and alpha on whats to come!
-           </Typography>
-           <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
-           Staking Yield: 69 $BOLT per week
-           </Typography>
-        </Box>
-      </Modal>
-      <Modal
-        open={open1}
-        onClose={handleClose1}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" fontSize="2vh" >
-          Gen 1: 
-          </Typography>    
-          <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
-          Another rare collection with only 338 available, similar to the Gen 0 collection these give instant access to Hell DAO,
-           </Typography>
-           <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
-           yiedling a smaller amount of $BOLT. These were given to our early community as a reward for believing in our vision!
-           </Typography>
-           <Typography id="modal-modal-description" fontSize="1,5 vh" sx={{ mt: 2 }}>
-           Staking Yield: 30 $BOLT per week
-           </Typography>
-        </Box>
-      </Modal>
-
-
-      
-          </Box>
-
-          </ThemeProvider>  
-  );
-};
-
-
-
-
+export default Coll;
