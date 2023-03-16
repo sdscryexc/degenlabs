@@ -35,7 +35,7 @@ let theme = createTheme({
       main: 'rgba(0, 0, 0, 1)',
     },
     secondary: {
-      main: '#181c1f',
+      main: '#292a2c',
     }
   },
 });

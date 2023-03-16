@@ -75,7 +75,7 @@ a {
   background: inherit;
   background-clip: padding-box;
   border: 5px solid #d32a2a;
-  border-radius: 2em;
+  border-radius: 1em;
   cursor: pointer;
   position: relative;
   transition: 0.25s ease-out;

@@ -34,12 +34,15 @@
     "next": "12.0.8",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^9.0.0",
-    "react": "17.0.2",
+    "react": "^17.0.2",
     "react-bootstrap": "^2.7.2",
-    "react-dom": "17.0.2",
+    "react-dom": "^17.0.2",
+    "react-player": "^2.12.0",
     "react-spinners": "^0.13.8",
     "react-twitter-widgets": "^1.11.0",
+    "redux": "^4.2.1",
     "url-inspector": "^4.4.0",
+    "video-react": "^0.16.0",
     "zustand": "^3.6.9"
   },
   "devDependencies": {
