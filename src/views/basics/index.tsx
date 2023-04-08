@@ -67,6 +67,10 @@ const publicAddress = wallet.publicKey?.toBase58();
     return DbotsJson.filter((d)=> d.Owner === name).map((res) => res.Sacrificed)
   }
 
+  function getEnvyDBotsSacrificedByaddress (name: string) {
+    return DbotsJson.filter((d)=> d.Owner === name).map((res) => res.Envy)
+  }
+
   function getGen0SacrificedByaddress (name: string) {
     return Gen0Json.filter((d)=> d.Owner === name).map((res) => res.Sacrificed)
   }
@@ -90,10 +94,10 @@ const publicAddress = wallet.publicKey?.toBase58();
 
  
 
-  let DBots = getDBotsSacrificedByaddress(wallet.publicKey?.toBase58());
-  let Gen0 = getGen0SacrificedByaddress(wallet.publicKey?.toBase58());
-  let Gen1 = getGen1SacrificedByaddress(wallet.publicKey?.toBase58());
-  let Gen2 = getGen2SacrificedByaddress(wallet.publicKey?.toBase58());
+  let DBots = Number(getDBotsSacrificedByaddress(wallet.publicKey?.toBase58())) + Number(getEnvyDBotsSacrificedByaddress(wallet.publicKey?.toBase58()));
+  let Gen0 = Number(getGen0SacrificedByaddress(wallet.publicKey?.toBase58()));
+  let Gen1 = Number(getGen1SacrificedByaddress(wallet.publicKey?.toBase58()));
+  let Gen2 = Number(getGen2SacrificedByaddress(wallet.publicKey?.toBase58()));
   
 
   let DBotsnumb =Number(DBotKings);
@@ -102,6 +106,8 @@ const publicAddress = wallet.publicKey?.toBase58();
   let Gen2numb =Number(Gen2Kings);
 
   let Kingssum = DBotsnumb + Gen0numb + Gen1numb + Gen2numb;
+
+  let Demons = Number(Gen0) * 2 + Number(Gen1);
 
   
 
@@ -126,8 +132,8 @@ const publicAddress = wallet.publicKey?.toBase58();
     </div>
     <div className="content">
       <div>
-        <h2>Image Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+        <h2></h2>
+        <p>
         </p>
       </div>
     </div>
@@ -138,8 +144,8 @@ const publicAddress = wallet.publicKey?.toBase58();
     </div>
     <div className="content">
       <div>
-        <h2>Image Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+        <h2></h2>
+        <p>
         </p>
       </div>
     </div>
@@ -150,8 +156,8 @@ const publicAddress = wallet.publicKey?.toBase58();
     </div>
     <div className="content">
       <div>
-        <h2>Image Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+        <h2></h2>
+        <p>
         </p>
       </div>
     </div>
@@ -162,8 +168,8 @@ const publicAddress = wallet.publicKey?.toBase58();
     </div>
     <div className="content">
       <div>
-        <h2>Image Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+        <h2></h2>
+        <p>
         </p>
       </div>
     </div>
@@ -177,7 +183,8 @@ const publicAddress = wallet.publicKey?.toBase58();
       
  <Box  sx={{marginTop : '5vh', display:'flex', flexDirection:'column', textAlign:'center', fontSize:'x-large' }}>
 
-   Congratulations,<br></br> you have sacrificed {DBots} Degenbots <br></br> {Gen0} Gen0 <br></br> {Gen1} Gen1 <br></br> {Gen2} Gen2<br></br> and are eligible to mint {Kingssum} King Demons.
+   Congratulations,<br></br> you have succesfully sacrificed <br></br> {DBots} Degenbots <br></br> {Gen0} Gen0 <br></br> {Gen1} Gen1 <br></br> {Gen2} Gen2<br></br> and are eligible to mint <br></br>
+   {Kingssum} King Demons and <br></br> {Demons} Demons.
 
   </Box>
   <Box >
