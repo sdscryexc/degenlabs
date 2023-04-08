@@ -84,37 +84,28 @@ export const HomeView: FC = ({ }) => {
       
           <Box sx={{textAlign:'center', marginTop:'10vh', justifyContent:'center', display:'flex'}}>
 
-            <Item sx={{fontSize:"xx-large", display:'flex', textAlign:'bottom', flexdirection:'column', height:'10vh', width:'85vw',  borderTop:'2px solid', borderColor:'#d32a2a'}}>
-            <Item sx={{height:'5vh', justifyContent:'center'}}>
-              Demons coming soon...
-              
-            </Item></Item>
+            <Item sx={{fontSize:"xx-large", display:'flex', textAlign:'bottom', justifyContent:'center', minheight:'10vh', width:'85vw',  borderTop:'2px solid', borderColor:'#d32a2a'}}>
+            #1 Utility Provider for SOL and SPL Token
+            </Item>
             
             </Box>
-            <Box sx={{display:'flex', justifyContent:'center', backgroundColor:'#242426', marginLeft:'10vw', marginRight:'10vw' }}>
-            <Item sx={{ display:'flex', justifyContent:'center', marginTop:'5vh', marginBottom:'5vh'}}>
-            <ReactPlayer url='https://video.wixstatic.com/video/fb3ca9_c7297cda2af3404ebe895a18979cd283/1080p/mp4/file.mp4'  loop controls />
-
-            </Item>
-            <Item sx={{ justifyContent:'center', display: 'block', marginTop:'5vh', marginBottom:'5vh', textAlign:'center'}}>
-             
-
-    	      <div style={{fontSize:'x-large'}}>
-            Secure your Demon
             
-            </div>
-            <div style={{marginTop:'5vh'}}>
-              Available Pre-Sale packages
-            </div>
-        
-           
+            <Box sx={{display: 'flex', backgroundColor:'#242426', width:"85vw",  p:1, m:1, margin:'auto'}}>
+            <Item sx={{display:'flex',  alignItems:'stretch', maxwidth:'80vw', flexDirection:'row' }}>
+            
+            <Item sx={{bgColor:'white', display:'flex', justifyContent:'center',minwidth:'40vw'}}>  
+            <ReactPlayer url='https://video.wixstatic.com/video/fb3ca9_c7297cda2af3404ebe895a18979cd283/1080p/mp4/file.mp4'  loop controls />
+            </Item>
+            <Item sx={{bgColor:'red', display:'flex', justifyContent:'center', minwidth:'40vw'}}>
+            Lorem Ipsum
 
             </Item>
-
+            </Item>
+            
 
 
           </Box>
-
+          
 
 
 

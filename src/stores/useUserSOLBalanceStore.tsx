@@ -3,7 +3,7 @@ import { Connection, PublicKey, LAMPORTS_PER_SOL, clusterApiUrl } from '@solana/
 import { useWallet } from "@solana/wallet-adapter-react";
 import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import * as bs58 from "bs58";
-import {transactions} from "./transactions";
+import {transactions} from "./transactions_arch";
 
 /*interface UserSOLBalanceStore extends State {
   balance: number;
@@ -152,7 +152,7 @@ let balance_fee : number = 0;
               
           }),
     
-          /*console.log(
+          console.log(
             `LAST OWNER ${stakeDataAccounts.meta.preTokenBalances["0"]["owner"]} MINT ${stakeDataAccounts.meta.preTokenBalances["0"]["mint"]} `
           );
 
@@ -168,10 +168,10 @@ let balance_fee : number = 0;
    
       }, 500 * i);
       
-      };
+      };*/
         
         
-        */
+        
 
 
 

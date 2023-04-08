@@ -1,6 +1,9 @@
 
 import { FC, useEffect, useState } from 'react';
 import DbotsJson from '../../stores/Dbots.json';
+import Gen0Json from '../../stores/Gen0.json';
+import Gen1Json from '../../stores/Gen1.json';
+import Gen2Json from '../../stores/Gen2.json';
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { Connection, PublicKey, LAMPORTS_PER_SOL, clusterApiUrl, Cluster, Keypair } from '@solana/web3.js'
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
@@ -44,20 +47,71 @@ export const BasicsView: FC = ({ }) => {
 const publicAddress = wallet.publicKey?.toBase58();
 
 
-  function getKingsByaddress(name: string) {
+  function getDBotKingsByaddress(name: string) {
     return DbotsJson.filter((d)=> d.Owner === name).map((res) => res.Kings)
   }
 
-  function getSacrificedByaddress (name: string) {
-    return DbotsJson.filter((d)=> d.Owner === name).map((res) => res.SUM)
+  function getGen0KingsByaddress(name: string) {
+    return Gen0Json.filter((d)=> d.Owner === name).map((res) => res.Kings)
   }
 
+  function getGen1KingsByaddress(name: string) {
+    return Gen1Json.filter((d)=> d.Owner === name).map((res) => res.Kings)
+  }
+
+  function getGen2KingsByaddress(name: string) {
+    return Gen2Json.filter((d)=> d.Owner === name).map((res) => res.Kings)
+  }
+
+  function getDBotsSacrificedByaddress (name: string) {
+    return DbotsJson.filter((d)=> d.Owner === name).map((res) => res.Sacrificed)
+  }
+
+  function getGen0SacrificedByaddress (name: string) {
+    return Gen0Json.filter((d)=> d.Owner === name).map((res) => res.Sacrificed)
+  }
+
+  function getGen1SacrificedByaddress (name: string) {
+    return Gen1Json.filter((d)=> d.Owner === name).map((res) => res.Sacrificed)
+  }
   
-  console.log(getKingsByaddress(wallet.publicKey?.toBase58()));
-  let Kings = getKingsByaddress(wallet.publicKey?.toBase58());
-  let DBots = getSacrificedByaddress (wallet.publicKey?.toBase58())
+  function getGen2SacrificedByaddress (name: string) {
+    return Gen2Json.filter((d)=> d.Owner === name).map((res) => res.Sacrificed)
+  } 
 
 
+  
+
+
+  let DBotKings = getDBotKingsByaddress(wallet.publicKey?.toBase58());
+  let Gen0Kings = getGen0KingsByaddress(wallet.publicKey?.toBase58());
+  let Gen1Kings = getGen1KingsByaddress(wallet.publicKey?.toBase58());
+  let Gen2Kings = getGen2KingsByaddress(wallet.publicKey?.toBase58());
+
+ 
+
+  let DBots = getDBotsSacrificedByaddress(wallet.publicKey?.toBase58());
+  let Gen0 = getGen0SacrificedByaddress(wallet.publicKey?.toBase58());
+  let Gen1 = getGen1SacrificedByaddress(wallet.publicKey?.toBase58());
+  let Gen2 = getGen2SacrificedByaddress(wallet.publicKey?.toBase58());
+  
+
+  let DBotsnumb =Number(DBotKings);
+  let Gen0numb =Number(Gen0Kings);
+  let Gen1numb =Number(Gen1Kings);
+  let Gen2numb =Number(Gen2Kings);
+
+  let Kingssum = DBotsnumb + Gen0numb + Gen1numb + Gen2numb;
+
+  
+
+  console.log(
+    `DbotsSacrificed ${DBots},  Gen2Sacrificed ${Gen2numb}`
+  );
+
+  console.log(
+    `wallet ${wallet.publicKey?.toBase58()}`
+  );
 
 
   return (
@@ -123,7 +177,7 @@ const publicAddress = wallet.publicKey?.toBase58();
       
  <Box  sx={{marginTop : '5vh', display:'flex', flexDirection:'column', textAlign:'center', fontSize:'x-large' }}>
 
-   Congratulations,<br></br> you have sacrificed {DBots} Degenbots <br></br> and are eligible to mint {Kings} King Demons.
+   Congratulations,<br></br> you have sacrificed {DBots} Degenbots <br></br> {Gen0} Gen0 <br></br> {Gen1} Gen1 <br></br> {Gen2} Gen2<br></br> and are eligible to mint {Kingssum} King Demons.
 
   </Box>
   <Box >
