@@ -121,7 +121,7 @@ export default function Header() {
                 <div>
                     <React.Fragment key={anchor}>
                       <Button onClick={toggleDrawer(anchor, true)}>{
-            <Typography variant="h5" color= "white" >
+            <Typography variant="body1" color= "white" >
               Menu
             </Typography>}</Button>
                       <Drawer
@@ -134,10 +134,10 @@ export default function Header() {
                     </React.Fragment>
                  
                 </div>
-              <div className="p-3">
+              <div >
               <Image src={require('../images/degenlabs.png')} width='40' height={'40'}/>
               </div>
-              <Typography variant="body1" color= "white" sx={{ flexGrow: 1 }}>
+              <Typography variant="body1" color= "white" sx={{ flexGrow: 1, marginLeft:'1vw' }}>
               
               <Link href="/">DEGENLABS</Link>
               </Typography>

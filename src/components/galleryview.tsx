@@ -26,7 +26,7 @@ function GalleryView({nfts}) {
               />
               <Card.Body>
                 <Card.Title style={{ color: "#fff",display:'flex',justifyContent:'center', textAlign:'center' }}>
-                <Typography sx={{fontSize: 'large'}}>{metadata?.name}<br></br>Level{nfts[index]?.attributes[9]?.value}</Typography>
+                <Typography sx={{fontSize: 'large'}}>{metadata?.name}<br></br>Level{nfts[index]?.attributes[0]?.value}</Typography>
                 </Card.Title>
               </Card.Body>
             </Card>

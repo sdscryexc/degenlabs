@@ -214,12 +214,12 @@ const publicAddress = wallet.publicKey?.toBase58();
  <Box  sx={{marginTop : '5vh',alignItems:'center', display:'flex', flexDirection:'column', fontSize: 'large', textAlign:'center' }}>
  Congratulations , <br></br> you have succesfully sacrificed <br></br>
 
- <TableContainer component={Paper} sx={{ marginTop: '2vh', width: '60vw', justifyContent:'center' }}>
-      <Table sx={{ width: '60vw', bgColor: '#181c1f' }} aria-label="simple table">
+ <TableContainer sx={{ marginTop: '2vh', width: '60vw', justifyContent:'center', backgroundColor:'#292a2c', border:'2px', color:'white' }}>
+      <Table sx={{ width: '60vw'}} aria-label="simple table">
         <TableHead>
-          <TableRow sx={{fontSize: 'large'}}>
-            <TableCell align="center">Collection</TableCell>
-            <TableCell align="center">Amount sacrificed</TableCell>
+          <TableRow sx={{fontSize: 'large', color: 'white'}}>
+            <TableCell align="center" sx={{fontSize: 'medium', color: 'white', borderBottom:0}}><b>Collection</b></TableCell>
+            <TableCell align="center" sx={{fontSize: 'medium', color: 'white', borderBottom:0}}><b>Amount sacrificed</b></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -228,10 +228,10 @@ const publicAddress = wallet.publicKey?.toBase58();
               key={row.collection}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row" align="center">
+              <TableCell component="th" scope="row" align="center" sx={{fontSize: 'medium', color: 'white', borderBottom:0}}>
                 {row.collection}
               </TableCell>
-              <TableCell align="center">{row.amount}</TableCell>
+              <TableCell align="center" sx={{fontSize: 'medium', color: 'white', borderBottom:0}}>{row.amount}</TableCell>
 
             </TableRow>
           ))}
@@ -239,11 +239,11 @@ const publicAddress = wallet.publicKey?.toBase58();
       </Table>
     </TableContainer>
 
-   <br></br> You are eligible to mint {Kingssum} King Demons and <br></br> {Demons} Demons. <br></br>
+   <br></br> You are eligible to mint <b>{Kingssum} King Demons </b>and <b> {Demons} Demons.</b> <br></br>
 
   </Box>
   <Box  sx={{marginTop : '5vh',alignItems:'center', display:'flex', flexDirection:'column', fontSize: 'large', textAlign:'center' }}>
-    B Y O C soon
+     # B Y O C soon
 
     </Box>
 

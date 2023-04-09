@@ -61,12 +61,13 @@ export const HomeView: FC = ({ }) => {
         <Box sx={{width:'40vw', display:'flex', flexDirection:'row', justifyContent:'center'}}>
           <Item sx={{justifyContent:'center'}}><a href='https://discord.gg/fqfD29Wckq'>
           <i className="fa fa-discord fa-2x" aria-hidden="true"></i></a></Item>
-          <Item sx={{justifyContent:'center'}}><a href='https://twitter.com/SKULLBOTS'>
+          <Item sx={{justifyContent:'center'}}><a href='https://twitter.com/degenlabs'>
             <i className="fa fa-twitter fa-2x" aria-hidden="true"></i></a></Item>
-          <Item sx={{justifyContent:'center'}}><i className="fa fa-globe fa-2x" aria-hidden="true"></i></Item>
+          <Item sx={{justifyContent:'center'}}><a href='https://degenportal.io'>
+            <i className="fa fa-globe fa-2x" aria-hidden="true"></i></a></Item>
         </Box>
       </Container>
-      <Container sx={{ display: 'flex', alignItems: 'center', marginTop: '10vh', justifyContent: 'center', flexDirection: 'column', flexGrow: '1' }}>
+      <Container sx={{ display: 'flex', alignItems: 'center', marginTop: '10vh', marginBottom: '10vh',justifyContent: 'center', flexDirection: 'column', flexGrow: '1' }}>
       <Box sx={{display: 'flex', alignItems: 'center', flexDirection: 'row', flexGrow: '1' }}>
         <Item sx={{justifyContent:'center'}}>       
              <a href='./basics'>
@@ -83,21 +84,21 @@ export const HomeView: FC = ({ }) => {
       </Container>
       
           <Box sx={{textAlign:'center', marginTop:'10vh', justifyContent:'center', display:'flex'}}>
-
+ 
             <Item sx={{fontSize:"xx-large", display:'flex', textAlign:'bottom', justifyContent:'center', minheight:'10vh', width:'85vw',  borderTop:'2px solid', borderColor:'#d32a2a'}}>
-            #1 Utility Provider for SOL and SPL Token
+            <br></br>#1 Utility Provider for SOL and SPL Token
             </Item>
             
             </Box>
             
             <Box sx={{display: 'flex', backgroundColor:'#242426', width:"85vw",  p:1, m:1, margin:'auto'}}>
-            <Item sx={{display:'flex',  alignItems:'stretch', maxwidth:'80vw', flexDirection:'row' }}>
+            <Item sx={{display:'flex',  alignItems:'stretch', maxwidth:'80vw', flexDirection:'row', flexWrap:'wrap' }}>
             
             <Item sx={{bgColor:'white', display:'flex', justifyContent:'center',minwidth:'40vw'}}>  
             <ReactPlayer url='https://video.wixstatic.com/video/fb3ca9_c7297cda2af3404ebe895a18979cd283/1080p/mp4/file.mp4'  loop controls />
             </Item>
-            <Item sx={{bgColor:'red', display:'flex', justifyContent:'center', minwidth:'40vw'}}>
-            Lorem Ipsum
+            <Item sx={{bgColor:'red', display:'flex', justifyContent:'center',textAlign:'center', minwidth:'40vw', }}>
+            #BYOC <br></br><br></br>Owning a Demon will give you unlimited opportunity to generate your own Rev
 
             </Item>
             </Item>
