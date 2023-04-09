@@ -215,7 +215,7 @@ const publicAddress = wallet.publicKey?.toBase58();
  Congratulations , <br></br> you have succesfully sacrificed <br></br>
 
  <TableContainer component={Paper} sx={{ marginTop: '2vh', width: '60vw', justifyContent:'center' }}>
-      <Table sx={{ width: '60vw' }} aria-label="simple table">
+      <Table sx={{ width: '60vw', bgColor: '#181c1f' }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell align="center">Collection</TableCell>
