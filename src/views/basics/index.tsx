@@ -242,6 +242,10 @@ const publicAddress = wallet.publicKey?.toBase58();
    <br></br> You are eligible to mint {Kingssum} King Demons and <br></br> {Demons} Demons. <br></br>
 
   </Box>
+  <Box  sx={{marginTop : '5vh',alignItems:'center', display:'flex', flexDirection:'column', fontSize: 'large', textAlign:'center' }}>
+    B Y O C soon
+
+    </Box>
 
 </ThemeProvider>
 
