@@ -217,7 +217,7 @@ const publicAddress = wallet.publicKey?.toBase58();
  <TableContainer component={Paper} sx={{ marginTop: '2vh', width: '60vw', justifyContent:'center' }}>
       <Table sx={{ width: '60vw', bgColor: '#181c1f' }} aria-label="simple table">
         <TableHead>
-          <TableRow>
+          <TableRow sx={{fontSize: 'large'}}>
             <TableCell align="center">Collection</TableCell>
             <TableCell align="center">Amount sacrificed</TableCell>
           </TableRow>
@@ -242,10 +242,6 @@ const publicAddress = wallet.publicKey?.toBase58();
    <br></br> You are eligible to mint {Kingssum} King Demons and <br></br> {Demons} Demons. <br></br>
 
   </Box>
-  <Box >
-    
-
-    </Box>
 
 </ThemeProvider>
 
