@@ -8,15 +8,28 @@ import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { Connection, PublicKey, LAMPORTS_PER_SOL, clusterApiUrl, Cluster, Keypair } from '@solana/web3.js'
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import { Button, Container, Typography } from '@mui/material';
-import Item from '@mui/material/ListItem';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
-
+function createData(
+  collection: string,
+  amount: number,
+  
+) {
+  return { collection, amount };
+}
 
 
 
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
+
+
 
 
 export const BasicsView: FC = ({ }) => {
@@ -59,8 +72,12 @@ const publicAddress = wallet.publicKey?.toBase58();
     return Gen1Json.filter((d)=> d.Owner === name).map((res) => res.Kings)
   }
 
-  function getGen2KingsByaddress(name: string) {
-    return Gen2Json.filter((d)=> d.Owner === name).map((res) => res.Kings)
+  function getGen2KingshighByaddress(name: string) {
+    return Gen2Json.filter((d)=> d.Owner === name).map((res) => res.Kingshigh)
+  }
+
+  function getGen2KingslowByaddress(name: string) {
+    return Gen2Json.filter((d)=> d.Owner === name).map((res) => res.Kingslow)
   }
 
   function getDBotsSacrificedByaddress (name: string) {
@@ -90,8 +107,8 @@ const publicAddress = wallet.publicKey?.toBase58();
   let DBotKings = getDBotKingsByaddress(wallet.publicKey?.toBase58());
   let Gen0Kings = getGen0KingsByaddress(wallet.publicKey?.toBase58());
   let Gen1Kings = getGen1KingsByaddress(wallet.publicKey?.toBase58());
-  let Gen2Kings = getGen2KingsByaddress(wallet.publicKey?.toBase58());
-
+  let Gen2Kingshigh = getGen2KingshighByaddress(wallet.publicKey?.toBase58());
+  let Gen2Kingslow = getGen2KingslowByaddress(wallet.publicKey?.toBase58());
  
 
   let DBots = Number(getDBotsSacrificedByaddress(wallet.publicKey?.toBase58())) + Number(getEnvyDBotsSacrificedByaddress(wallet.publicKey?.toBase58()));
@@ -103,13 +120,26 @@ const publicAddress = wallet.publicKey?.toBase58();
   let DBotsnumb =Number(DBotKings);
   let Gen0numb =Number(Gen0Kings);
   let Gen1numb =Number(Gen1Kings);
-  let Gen2numb =Number(Gen2Kings);
+  let Gen2numb =Number(Gen2Kingshigh) + Number(Gen2Kingslow);
+  let Gen2high =Number(Gen2Kingshigh);
+  let Gen2low =Number(Gen2Kingslow);
 
   let Kingssum = DBotsnumb + Gen0numb + Gen1numb + Gen2numb;
 
-  let Demons = Number(Gen0) * 2 + Number(Gen1);
+  let Demons = Number(Gen0) * 2 + Number(Gen1) + Gen2high;
 
+  const rows = [
+    createData('Degenbots', DBots),
+    createData('Gen0', Gen0),
+    createData('Gen1', Gen1),
+    createData('Gen2 (rare) ', Gen2high),
+    createData('Gen2 (common)', Gen2low),
+  ];
   
+
+
+
+
 
   console.log(
     `DbotsSacrificed ${DBots},  Gen2Sacrificed ${Gen2numb}`
@@ -123,7 +153,7 @@ const publicAddress = wallet.publicKey?.toBase58();
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{marginTop : '10vh',textAlign:'center', fontSize:'xxx-large' }}>
-        Flex your King demons
+        Flex your demons
       </Box>
       <div className="container">
   <div className="box">
@@ -181,10 +211,35 @@ const publicAddress = wallet.publicKey?.toBase58();
 
 
       
- <Box  sx={{marginTop : '5vh', display:'flex', flexDirection:'column', textAlign:'center', fontSize:'x-large' }}>
+ <Box  sx={{marginTop : '5vh',alignItems:'center', display:'flex', flexDirection:'column', fontSize: 'large', textAlign:'center' }}>
+ Congratulations , <br></br> you have succesfully sacrificed <br></br>
 
-   Congratulations,<br></br> you have succesfully sacrificed <br></br> {DBots} Degenbots <br></br> {Gen0} Gen0 <br></br> {Gen1} Gen1 <br></br> {Gen2} Gen2<br></br> and are eligible to mint <br></br>
-   {Kingssum} King Demons and <br></br> {Demons} Demons.
+ <TableContainer component={Paper} sx={{ width: '60vw', justifyContent:'center', color:'white'}}>
+      <Table sx={{ width: '60vw' }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell align="center">Collection</TableCell>
+            <TableCell align="center">Amount sacrificed</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.collection}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row" align="center">
+                {row.collection}
+              </TableCell>
+              <TableCell align="center">{row.amount}</TableCell>
+
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+   <br></br> You are eligible to mint {Kingssum} King Demons and <br></br> {Demons} Demons.
 
   </Box>
   <Box >

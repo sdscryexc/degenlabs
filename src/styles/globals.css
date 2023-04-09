@@ -395,3 +395,13 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.MuiPaper-root {
+  background-color: #181c1f;
+
+}
+
+.MuiTableCell-root{
+  color: white;
+}
+

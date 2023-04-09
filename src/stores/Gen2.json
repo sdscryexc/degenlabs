@@ -1,667 +1,926 @@
 [
  {
-  "Owner": "8YipBFpgGmDN94jhESeRbiwajPjA21kJ6VZnJoehoeXi",
-  "Sacrificed": 7,
-  "Kings": 7
- },
- {
-  "Owner": "GWQFgJx1xKnyFnY8QJyiaVGDLrbeAM9xxpwHZyMC5Skr",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "3xjn97fprYv2KQoqPMZQjuQDtCQMgrSzapNCseukLAUr",
-  "Sacrificed": 3,
-  "Kings": 3
- },
- {
-  "Owner": "hgMa1Z1sNnEhv1CAsyNsUiHUCRFD3N2JVTXvv7dCMT8",
-  "Sacrificed": 23,
-  "Kings": 23
- },
- {
-  "Owner": "E9xp9pg6aatv8immR49zUAa5dCNx7WeDMxZniqL8WK9S",
-  "Sacrificed": 7,
-  "Kings": 7
- },
- {
-  "Owner": "4pLcJ9C25Yu3Wu5QVwL6EMcavRHweSd4ZXQw6NW3uSkA",
-  "Sacrificed": 32,
-  "Kings": 32
- },
- {
-  "Owner": "FEN8BwrcscgWG7v4KfWYmGtfirrdSqvRMMMxPZCHUWXv",
-  "Sacrificed": 4,
-  "Kings": 4
- },
- {
-  "Owner": "ECpNQoXDtKz8HaWW6CnGHBSqdQ5CBwNeGfgMzqYGWevx",
-  "Sacrificed": 9,
-  "Kings": 9
- },
- {
-  "Owner": "2k8E52nmySnZFQDmY688SR9yKnpJELXkD7kGB2xSZYRj",
-  "Sacrificed": 7,
-  "Kings": 7
- },
- {
-  "Owner": "GD8kmjCe7PR7RPLzcwu3f5RpNdWZhsXGELiDkv1MrSGE",
-  "Sacrificed": 67,
-  "Kings": 67
- },
- {
-  "Owner": "Hoy4Pys5Duoj9tuhVb2h8iaChJYiDD1BRvhFBHfn1QLN",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "GbuAeR3eYvDW5VXpkTxBSnqe8WSWxNb5wbUnwZCY7pSo",
-  "Sacrificed": 15,
-  "Kings": 15
- },
- {
-  "Owner": "DoQ7aY1r2JmXog52xFUrxteDcinJF2pjuNUGwfa8cKJr",
-  "Sacrificed": 5,
-  "Kings": 5
- },
- {
-  "Owner": "FfgJSrwJL9S35q3LNoX6baFJybS8mRtVyeEfdmvGmuFL",
-  "Sacrificed": 4,
-  "Kings": 4
- },
- {
-  "Owner": "NkT2qXq5N39QQADX6gw8SShMnXEWRLsMYpoNzhkCH4j",
-  "Sacrificed": 8,
-  "Kings": 8
- },
- {
-  "Owner": "CHnrYACA8NAJnzjZjzakpBsP9bBcQf9c2jwN3ttkxrnU",
-  "Sacrificed": 18,
-  "Kings": 18
- },
- {
-  "Owner": "E7gCJ3Cn5ggdeNS7RG8xmHiSr1uho2fnTo1ZRHjdaRwt",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "8RjMwZ4yNQ619XSoDy2jnvrKfR4DKwtEWeFn9CJEJrHD",
-  "Sacrificed": 3,
-  "Kings": 3
- },
- {
-  "Owner": "HYa2hsWoUQ87P5fskbQLPvXhvLJSpYZVYWM7KhkkmYG8",
-  "Sacrificed": 35,
-  "Kings": 35
- },
- {
-  "Owner": "XGFZk186maEp6FtE2YMHNXiY2c9kTkUu88ofnnBm94j",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "BrCE1uZ6AdEv6PPZ7i1wkpE6Uoh1sDYgX4f2z5rPJUT9",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "AHHbScUYuTxHoBfd6XZYtpGcSUqowJjvZ7Lo7QcBr2Wo",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "6BH2vWijMmhaf46enSDHZ1RJC7AwRgGk8TJAmcY7pwDq",
-  "Sacrificed": 20,
-  "Kings": 20
- },
- {
-  "Owner": "74XjjNnDGpqwv1586Af7q78ZnQ5NJuSW9GeH8nRvH3hT",
-  "Sacrificed": 7,
-  "Kings": 7
- },
- {
-  "Owner": "DKV49b3wxfk5x5tF6exWjgTKJcK9ygPifHYCRsfVmqxr",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "9Q7SE8EC6k2QfxtLmakbjqDB72wRKhkjqhthFZ4ZByhM",
-  "Sacrificed": 3,
-  "Kings": 3
- },
- {
-  "Owner": "FgVS2FRvPwpyn2qg4mU9bjdgkU6wBKbppXXiDXyCgPHe",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "J5XMfbyqYQncAZ9KfTxCYz4ehXoVbSgBdkt6YRGdFHsc",
-  "Sacrificed": 6,
-  "Kings": 6
- },
- {
-  "Owner": "ESJbr4agmTKnxAmE2cCtNg6BSkUHueTaEmKHcqo4EX65",
-  "Sacrificed": 4,
-  "Kings": 4
- },
- {
-  "Owner": "4bX7xjShNWXGJovZYBZc8SiQmnCKNzwLWrZYA2Hyh1Vm",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "HCiCGCsue6bSgNyhVt21NUyts1D54BK3oQu2wCu7kW1n",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "3gG4t5K7HdaxEKUYWiwK4gVVdo8bAegXUr6Dw5FDm8BN",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "7oPnR37baoYf1dqSWxbcpdH5AFyV2z54YgkLaQrhVf2U",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "Byn24whMaWvAu656kxwJ9naRC6VgDpqGhVDWvJ1wnBsb",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "9iC59yd9j5UEdoFbr6URWkwL3cnFrLGtRvzzY5QvwH4r",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "ERKstRFM6wnw5Cf4T7S5t5hvij67XWwn8xzTimf8K4Mo",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "7AmSzurEoHRn4vDc3HifrbewMNuApDGMHpwXvR2Hoi4j",
-  "Sacrificed": 32,
-  "Kings": 32
- },
- {
-  "Owner": "GzsE8hDqtBhqVpgQu1wXr8kpXgUHyv1iG2yYD3yt2Khd",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "HQc8axxhdu9jLfKtwcsmmGaF6LZPFgNjPAV1kThh3dew",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "AkEMfmzfxSe9hDzKKmsbWezG6ReSB5cXLqGvbDW496jQ",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "AgPkaCudTPud9S7vp2BvZWnmLwu8HUfBS8JezuoZpq2P",
-  "Sacrificed": 7,
-  "Kings": 7
- },
- {
-  "Owner": "8jNzDndn7r43ZBgv2ytu4fqfW4mp1izAdus6nWZ7T6vh",
-  "Sacrificed": 5,
-  "Kings": 5
- },
- {
   "Owner": "jTU6SS3cH5cuFenWaPFo37aD5uXp5YRET5HGHw6aJ6q",
   "Sacrificed": 5,
-  "Kings": 5
- },
- {
-  "Owner": "42wvW87YkFMeUYKanaXmyLua5PBQ8DLupEYXPhdVgok7",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "6mdkGmUxwEaSjY7abttN7bG3aBVzXacvftfSmk3pVAtP",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "MxBDzzcedeRKfSv6ya1aCWLU4eePy5EaETH84TUz22b",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "DNywoy1x9z8ZzreJ2U6o1j8W5MuZJ5FScNS8oSMB5aHM",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "BAGkesJh8jr5hud3rBnjcq4bZLyNXmtYhLYAiAQXM7yJ",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "2Xjd4VkZ11VfGevyXQnekDq767jqgKkLXXSGKgyJXZZC",
-  "Sacrificed": 8,
-  "Kings": 8
- },
- {
-  "Owner": "GckY1BsPcDWWgd4ubsP8ZtBVbCw5MrJw8q5jrJYKFhJP",
-  "Sacrificed": 4,
-  "Kings": 4
- },
- {
-  "Owner": "7ULXT4khRWTGc78HdKWGXcSkwmXqunuMktH5V24BCU5",
-  "Sacrificed": 34,
-  "Kings": 34
- },
- {
-  "Owner": "9jpVekdjMQRtvdv9N7c8TANxeqmLhKJu3ciUjQ33k1as",
-  "Sacrificed": 6,
-  "Kings": 6
- },
- {
-  "Owner": "9n9fnjnjZXJjsQHjujJsjRjwJD8vC9iX2TvRFcds57Zx",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "AJHBcG3CCnHRsBcXEjEL1Zo4gxxh2biRmBgSyZK3o5eQ",
-  "Sacrificed": 3,
-  "Kings": 3
+  "Kingshigh": 2,
+  "Kingslow": 3,
+  "Demons": 2
  },
  {
   "Owner": "HV7zveTB5dBxZrJPe64KQStZPrbyQw821sA6XwrKtzGb",
   "Sacrificed": 13,
-  "Kings": 13
+  "Kingshigh": 5,
+  "Kingslow": 8,
+  "Demons": 5
  },
  {
-  "Owner": "12u9t2upAgsfe3ywzquz5WXkabe6DQg5B4DnhMraaPvi",
+  "Owner": "9n9fnjnjZXJjsQHjujJsjRjwJD8vC9iX2TvRFcds57Zx",
   "Sacrificed": 2,
-  "Kings": 2
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
  },
  {
-  "Owner": "BCBRVRXuhnMNRvhGo3azVnaVwibp3cfL9mYEfPBnPRTW",
-  "Sacrificed": 10,
-  "Kings": 10
- },
- {
-  "Owner": "DKwL5pyJdVqryi8Fw2W9SjhesV9b2bXUp5m2ysCrBbxQ",
-  "Sacrificed": 3,
-  "Kings": 3
- },
- {
-  "Owner": "FecL9kUAhWav6VXy97jmEC487x7MKWypCCsaYi2mm72B",
-  "Sacrificed": 10,
-  "Kings": 10
- },
- {
-  "Owner": "9aJ3GsaQcPkXSZUef8x4wxMXgMyoMWZxx8UmynREAM6",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "7JhS4MmfqGzz5cSHKX9ZsLSUEqg8xt7gS7DZ4isf8Szk",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "CNnY3wDYW7xr664dJqrRTehFHr91cnjCXhVDeRwu6YP5",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "EQoUnfZPqB7Qp3JFiPcwJdTqW2m9kCpqnyFfRDuL6jCX",
+  "Owner": "J5XMfbyqYQncAZ9KfTxCYz4ehXoVbSgBdkt6YRGdFHsc",
   "Sacrificed": 6,
-  "Kings": 6
- },
- {
-  "Owner": "Dkm1XDQpBXjVRXsPhxaYehEaJd4VGVDTgydih2cGBBuu",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "3zaxdFmqbtu8D7FSPy2rrSVgU65humrmFUg4qs9D4vJy",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "47zQUX5vGaHKzHSmzsTEsQnjDbYS7pRCQL6QHYwR4fs7",
-  "Sacrificed": 20,
-  "Kings": 20
- },
- {
-  "Owner": "Gnp4C3vnhVMTKuP2Zr1ToHviJnuEuVmWMSnNrmF7VgLe",
-  "Sacrificed": 10,
-  "Kings": 10
- },
- {
-  "Owner": "8pLXGkvVjmSoA2x6o3Bd7VQy932C6ftEy2qe3V68jLNn",
-  "Sacrificed": 5,
-  "Kings": 5
- },
- {
-  "Owner": "BcV6o6pKeJNe9dq9QLusLvtgDD7CnG83uGbNznXqXfjK",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "6swgnR2QzV6yWmEyGR2zMigAefggaE1kBJiDt2z2Dxnh",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "6oe1mN2pT9biJEHD3BdAYDEddkKtiJCguHQtic9RtKGs",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "7bGeiwpyiKNZHVqAYjVMQK6QDY5w13J2abh7PPW5GJMd",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "12Wk7Qu3gPic8X6Bu2wsAQcvVa47DySSBv5eigDw6EAV",
-  "Sacrificed": 4,
-  "Kings": 4
- },
- {
-  "Owner": "HWjmwWPK94K6b9DPmZAjARoacye94PDykEwbwKv5HaNn",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "EuJPFod8563FVZmP92qPcFYEfbY9JUYwcofSxyU5iAxv",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "B3PL8a1FXLHhjsL9UhWnE4AhcPWr3Ar1JY9QavnTVBUU",
-  "Sacrificed": 5,
-  "Kings": 5
- },
- {
-  "Owner": "G2XYq9Xift1Vwt5NnPeFTVD5n5iF82FEVqumGaBXpwcP",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "Cz4T9X8eSPk513bWQZxTvHmZKjfQ5xET6iHBXUcJENv1",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "5ms4sZ9vRny8MY4VJuL6m1y6ktUU9e3s32sZDxnbypNy",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "GrFp7bP4E1gbfMGACBXZNU74p43QvyKQqck47D3Hk47K",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "A6k6LVLdp1pNWFozzqANM8RPPwCsY9wMhJr5KV366XMc",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "GaMw3hP4JU4dN35FXJ7uigSnALzZY6noaQaMLVi6wUj5",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "3QkEvKWDxaYhLRygLWQajm5uQAZxZGA7iKQKphL7vXTd",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "CKabc8GF5nY6P3ervwTyA1gpWLQcn4VhCEV5JR3SnTr1",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "eUSMEqAKPwbDao2e4LkorXLb7hTvem8XC62MQdBurQx",
-  "Sacrificed": 3,
-  "Kings": 3
- },
- {
-  "Owner": "GFVsGF8cqystGJSjeuRKEwGZUTCpkq3bGajZVF8zuTKs",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "GKAkKheio3AbBZvRENoCoKRc9x6pJgKva8vckfdayiPQ",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "3McjGFQNHMbtQfph1PKDk9akRqyWcJRawfReaaZGuuLA",
-  "Sacrificed": 8,
-  "Kings": 8
- },
- {
-  "Owner": "E1N5kN2ZiSwjPfbyu79HTwJCzf8WsF8uNqg9NJM54XrY",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "4vuri5my8VNRbAnKPWzgxPHv5q8nduZbi3ZUt2MLmXWj",
-  "Sacrificed": 60,
-  "Kings": 60
- },
- {
-  "Owner": "76hBL2XWiZT6y5RYbSyoSG6qqKmYx1EaejbAuxgQgM1M",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "BJzotQ4nykk27ebfeUcrASsTdJoJXPWc19dHxuYsUvY6",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "GHpdLjiyDRXFk96yyn7kEAb9pyAd2D8cjDdMpsiUnbit",
-  "Sacrificed": 3,
-  "Kings": 3
- },
- {
-  "Owner": "3BRYUZt9gXT9mEpCWCCM4uR2G2yRz3CcRCcsAMYjgPjt",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "9Y6ufVyfoZqpxD1P1YJByPGXKtV7xhmuFke6w3Sxm96U",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "Am1fLJLDWhtUF2e6fc5fX4QnkWhYs7Sg9uPU4hAugarv",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "8vbmLEv3RwSLmv1ji1u2vngjK6vppbFVnMocysAXUryN",
-  "Sacrificed": 3,
-  "Kings": 3
+  "Kingshigh": 1,
+  "Kingslow": 5,
+  "Demons": 1
  },
  {
   "Owner": "3UiAeojrSjJThsNkrDoiFBgTrkL55K7uW6JAo5bEfmEw",
   "Sacrificed": 5,
-  "Kings": 5
+  "Kingshigh": 4,
+  "Kingslow": 1,
+  "Demons": 4
  },
  {
-  "Owner": "GGiGhFL3qx7avoDYnddTV8xTy8nEPrY8XqBNVpeFf3ig",
-  "Sacrificed": 5,
-  "Kings": 5
+  "Owner": "9jpVekdjMQRtvdv9N7c8TANxeqmLhKJu3ciUjQ33k1as",
+  "Sacrificed": 6,
+  "Kingshigh": 1,
+  "Kingslow": 5,
+  "Demons": 1
  },
  {
-  "Owner": "G7jL4grLYy8C3VGkRRF9X4iCciTNjq3nT9naWar43pno",
-  "Sacrificed": 1,
-  "Kings": 1
+  "Owner": "7AmSzurEoHRn4vDc3HifrbewMNuApDGMHpwXvR2Hoi4j",
+  "Sacrificed": 32,
+  "Kingshigh": 6,
+  "Kingslow": 26,
+  "Demons": 6
  },
  {
-  "Owner": "2s9YZUjFT3bZSsbSFdhUqiUGZCo7iBPWCK1CYa1no97R",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "AaCVn6fvDcaL3ud2fWzfzFFkN5D5QtG5LxHr6WYeVSft",
-  "Sacrificed": 3,
-  "Kings": 3
- },
- {
-  "Owner": "FAwDVr9mAsHueeNYHz91HwVsgR1ScaHETnyRpUZf9GPM",
-  "Sacrificed": 12,
-  "Kings": 12
- },
- {
-  "Owner": "9Zb5S6zLFEBFZPWhk8BdD617uRmWzZKV5Axg1Ss11LLc",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "9vXH4PeM58xeuAKuBwVpasTe3V1L4BaDTSGxz4a5UL2X",
-  "Sacrificed": 8,
-  "Kings": 8
- },
- {
-  "Owner": "ATQy6UHmX6UBijnHsrspMWBfEgTA5nLWCGhnXovp8cit",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "D3LV6KGMebq8KeaLt2JQRPmqbCrB3CX2vXZoCdrxAMZV",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "9QUAqDNTBs3eR3KektyiYq8d8nCRaWxoK9Y8nPY4dzpS",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "8XQVxmmWoWrXWS81onNT2V2oGtQrEkDRqyPHGsWJtjYp",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "8JfiA9VCdpzVWE7enYB9Gf551Wr2YDdSmMGFokYaKHyV",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "61rj3AhoHqBhPJ9e1XRDAAcdcXRwLGbMQwNHGrjs9jqS",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "FLFmUz3FERwvAPtGpm1XmW7wTxuSP3YLwEJde6kquJkG",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "CjA7cDa4VkPMuw4jyhEdNduToNjH5ou6Je42PQFxsp7N",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "8keRzPrsgs9kBniCU8S7Zkn5SRexYVeMqM8EPNaq7GqF",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "CJ6e2pjf7jpZ8L5KQVKiWHJ7cgByNbP9SbPY4WzLno2U",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "5vNJfkEdqFaVjsBiUAhEQmxWNg57nWiqscq4P8JQtFyK",
-  "Sacrificed": 10,
-  "Kings": 10
- },
- {
-  "Owner": "55PTzBqXtrpj6S4wooTLqF79Vqx1Kbq48TB1ga5UYj16",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "5kLrMCiafBdzwCsntfieMM4Fc4Qzq89c2vSoYvsdi3uj",
-  "Sacrificed": 4,
-  "Kings": 4
- },
- {
-  "Owner": "7ofZ8Gr2LyGfKGw6svYoB3U6Admdwjg2cw2M8igDYDLr",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "56NMxt5GMpw5JNuKMcpiQ87x1htEiQBZbAmSe3gGbVrJ",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "3oH51xMZVZET3RqyrMtfB511iRBouEogNa2UQbpz3Emk",
-  "Sacrificed": 5,
-  "Kings": 5
- },
- {
-  "Owner": "9nw3ttmaBn3kC24ojyLgbTLUKDZVeCZP8CCg74QzAyqP",
-  "Sacrificed": 1,
-  "Kings": 1
- },
- {
-  "Owner": "imnhQUNDD8Zcr2xWtEQQ7qar2iQk2uYKXJ1STsmtdYA",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "22nJ6FTE72sANJctAvksWEBBpWtxGhZGpSYdbKjGPPLm",
-  "Sacrificed": 2,
-  "Kings": 2
- },
- {
-  "Owner": "2wv45sikYTCUHg7XbvzL8VHkMHqr4WGQLAYDGfWScrng",
-  "Sacrificed": 5,
-  "Kings": 5
- },
- {
-  "Owner": "8vigEy5L1PNBgDo9S7CExQtJxqgmNrBRD4KKs2JsE24A",
-  "Sacrificed": 1,
-  "Kings": 1
+  "Owner": "4vuri5my8VNRbAnKPWzgxPHv5q8nduZbi3ZUt2MLmXWj",
+  "Sacrificed": 60,
+  "Kingshigh": 10,
+  "Kingslow": 50,
+  "Demons": 10
  },
  {
   "Owner": "DdHenciZ6MzSfQU7cjmxeosruoyFSdx3QgMrTdi5s7eD",
   "Sacrificed": 6,
-  "Kings": 6
+  "Kingshigh": 5,
+  "Kingslow": 1,
+  "Demons": 5
  },
  {
-  "Owner": "5uLoKBMhzSrWjsM7KoyfZC33457HHFdAhJ4RBEAgzTVo",
-  "Sacrificed": 2,
-  "Kings": 2
+  "Owner": "AgPkaCudTPud9S7vp2BvZWnmLwu8HUfBS8JezuoZpq2P",
+  "Sacrificed": 7,
+  "Kingshigh": 2,
+  "Kingslow": 5,
+  "Demons": 2
  },
  {
-  "Owner": "5SqC4bdqSd9RgpGPJk3xghGcYL623V39Aa15vcuofCNi",
-  "Sacrificed": 2,
-  "Kings": 2
+  "Owner": "6BH2vWijMmhaf46enSDHZ1RJC7AwRgGk8TJAmcY7pwDq",
+  "Sacrificed": 20,
+  "Kingshigh": 3,
+  "Kingslow": 17,
+  "Demons": 3
  },
  {
-  "Owner": "5xcrNX37Rn3uAi7whg64AMoTfk7U25J5t5KyKeYpu4Gw",
+  "Owner": "G2XYq9Xift1Vwt5NnPeFTVD5n5iF82FEVqumGaBXpwcP",
   "Sacrificed": 2,
-  "Kings": 2
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "HYa2hsWoUQ87P5fskbQLPvXhvLJSpYZVYWM7KhkkmYG8",
+  "Sacrificed": 35,
+  "Kingshigh": 4,
+  "Kingslow": 31,
+  "Demons": 4
+ },
+ {
+  "Owner": "Hoy4Pys5Duoj9tuhVb2h8iaChJYiDD1BRvhFBHfn1QLN",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "47zQUX5vGaHKzHSmzsTEsQnjDbYS7pRCQL6QHYwR4fs7",
+  "Sacrificed": 20,
+  "Kingshigh": 7,
+  "Kingslow": 13,
+  "Demons": 7
+ },
+ {
+  "Owner": "NkT2qXq5N39QQADX6gw8SShMnXEWRLsMYpoNzhkCH4j",
+  "Sacrificed": 8,
+  "Kingshigh": 5,
+  "Kingslow": 3,
+  "Demons": 5
+ },
+ {
+  "Owner": "hgMa1Z1sNnEhv1CAsyNsUiHUCRFD3N2JVTXvv7dCMT8",
+  "Sacrificed": 23,
+  "Kingshigh": 2,
+  "Kingslow": 21,
+  "Demons": 2
+ },
+ {
+  "Owner": "BCBRVRXuhnMNRvhGo3azVnaVwibp3cfL9mYEfPBnPRTW",
+  "Sacrificed": 10,
+  "Kingshigh": 1,
+  "Kingslow": 9,
+  "Demons": 1
+ },
+ {
+  "Owner": "GD8kmjCe7PR7RPLzcwu3f5RpNdWZhsXGELiDkv1MrSGE",
+  "Sacrificed": 67,
+  "Kingshigh": 0,
+  "Kingslow": 67,
+  "Demons": 0
+ },
+ {
+  "Owner": "EQoUnfZPqB7Qp3JFiPcwJdTqW2m9kCpqnyFfRDuL6jCX",
+  "Sacrificed": 6,
+  "Kingshigh": 1,
+  "Kingslow": 5,
+  "Demons": 1
+ },
+ {
+  "Owner": "ECpNQoXDtKz8HaWW6CnGHBSqdQ5CBwNeGfgMzqYGWevx",
+  "Sacrificed": 9,
+  "Kingshigh": 7,
+  "Kingslow": 2,
+  "Demons": 7
+ },
+ {
+  "Owner": "4pLcJ9C25Yu3Wu5QVwL6EMcavRHweSd4ZXQw6NW3uSkA",
+  "Sacrificed": 32,
+  "Kingshigh": 9,
+  "Kingslow": 23,
+  "Demons": 9
+ },
+ {
+  "Owner": "6oe1mN2pT9biJEHD3BdAYDEddkKtiJCguHQtic9RtKGs",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "FfgJSrwJL9S35q3LNoX6baFJybS8mRtVyeEfdmvGmuFL",
+  "Sacrificed": 4,
+  "Kingshigh": 0,
+  "Kingslow": 4,
+  "Demons": 0
+ },
+ {
+  "Owner": "7ULXT4khRWTGc78HdKWGXcSkwmXqunuMktH5V24BCU5",
+  "Sacrificed": 34,
+  "Kingshigh": 4,
+  "Kingslow": 30,
+  "Demons": 4
+ },
+ {
+  "Owner": "3xjn97fprYv2KQoqPMZQjuQDtCQMgrSzapNCseukLAUr",
+  "Sacrificed": 3,
+  "Kingshigh": 0,
+  "Kingslow": 3,
+  "Demons": 0
+ },
+ {
+  "Owner": "AkEMfmzfxSe9hDzKKmsbWezG6ReSB5cXLqGvbDW496jQ",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "GGiGhFL3qx7avoDYnddTV8xTy8nEPrY8XqBNVpeFf3ig",
+  "Sacrificed": 5,
+  "Kingshigh": 0,
+  "Kingslow": 5,
+  "Demons": 0
+ },
+ {
+  "Owner": "2k8E52nmySnZFQDmY688SR9yKnpJELXkD7kGB2xSZYRj",
+  "Sacrificed": 7,
+  "Kingshigh": 1,
+  "Kingslow": 6,
+  "Demons": 1
+ },
+ {
+  "Owner": "CHnrYACA8NAJnzjZjzakpBsP9bBcQf9c2jwN3ttkxrnU",
+  "Sacrificed": 18,
+  "Kingshigh": 18,
+  "Kingslow": 0,
+  "Demons": 18
+ },
+ {
+  "Owner": "E9xp9pg6aatv8immR49zUAa5dCNx7WeDMxZniqL8WK9S",
+  "Sacrificed": 7,
+  "Kingshigh": 2,
+  "Kingslow": 5,
+  "Demons": 2
+ },
+ {
+  "Owner": "imnhQUNDD8Zcr2xWtEQQ7qar2iQk2uYKXJ1STsmtdYA",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "Byn24whMaWvAu656kxwJ9naRC6VgDpqGhVDWvJ1wnBsb",
+  "Sacrificed": 2,
+  "Kingshigh": 2,
+  "Kingslow": 0,
+  "Demons": 2
+ },
+ {
+  "Owner": "GzsE8hDqtBhqVpgQu1wXr8kpXgUHyv1iG2yYD3yt2Khd",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "3McjGFQNHMbtQfph1PKDk9akRqyWcJRawfReaaZGuuLA",
+  "Sacrificed": 8,
+  "Kingshigh": 1,
+  "Kingslow": 7,
+  "Demons": 1
+ },
+ {
+  "Owner": "9vXH4PeM58xeuAKuBwVpasTe3V1L4BaDTSGxz4a5UL2X",
+  "Sacrificed": 8,
+  "Kingshigh": 2,
+  "Kingslow": 6,
+  "Demons": 2
  },
  {
   "Owner": "kpWyRmJnRCjiyypooS2Lh3ECpuJZsqVSEp2wRjt3zXA",
   "Sacrificed": 2,
-  "Kings": 2
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "9Q7SE8EC6k2QfxtLmakbjqDB72wRKhkjqhthFZ4ZByhM",
+  "Sacrificed": 3,
+  "Kingshigh": 0,
+  "Kingslow": 3,
+  "Demons": 0
+ },
+ {
+  "Owner": "AHHbScUYuTxHoBfd6XZYtpGcSUqowJjvZ7Lo7QcBr2Wo",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "74XjjNnDGpqwv1586Af7q78ZnQ5NJuSW9GeH8nRvH3hT",
+  "Sacrificed": 7,
+  "Kingshigh": 2,
+  "Kingslow": 5,
+  "Demons": 2
  },
  {
   "Owner": "ATXA6hyQrWatTYFuPKxATXt5nSupRTCuQA2ujVxqW3ma",
   "Sacrificed": 12,
-  "Kings": 12
+  "Kingshigh": 9,
+  "Kingslow": 3,
+  "Demons": 9
+ },
+ {
+  "Owner": "eUSMEqAKPwbDao2e4LkorXLb7hTvem8XC62MQdBurQx",
+  "Sacrificed": 3,
+  "Kingshigh": 2,
+  "Kingslow": 1,
+  "Demons": 2
+ },
+ {
+  "Owner": "4bX7xjShNWXGJovZYBZc8SiQmnCKNzwLWrZYA2Hyh1Vm",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "GHpdLjiyDRXFk96yyn7kEAb9pyAd2D8cjDdMpsiUnbit",
+  "Sacrificed": 3,
+  "Kingshigh": 3,
+  "Kingslow": 0,
+  "Demons": 3
+ },
+ {
+  "Owner": "Gnp4C3vnhVMTKuP2Zr1ToHviJnuEuVmWMSnNrmF7VgLe",
+  "Sacrificed": 10,
+  "Kingshigh": 4,
+  "Kingslow": 6,
+  "Demons": 4
+ },
+ {
+  "Owner": "XGFZk186maEp6FtE2YMHNXiY2c9kTkUu88ofnnBm94j",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "FecL9kUAhWav6VXy97jmEC487x7MKWypCCsaYi2mm72B",
+  "Sacrificed": 10,
+  "Kingshigh": 3,
+  "Kingslow": 7,
+  "Demons": 3
+ },
+ {
+  "Owner": "8jNzDndn7r43ZBgv2ytu4fqfW4mp1izAdus6nWZ7T6vh",
+  "Sacrificed": 5,
+  "Kingshigh": 0,
+  "Kingslow": 5,
+  "Demons": 0
+ },
+ {
+  "Owner": "5SqC4bdqSd9RgpGPJk3xghGcYL623V39Aa15vcuofCNi",
+  "Sacrificed": 2,
+  "Kingshigh": 1,
+  "Kingslow": 1,
+  "Demons": 1
+ },
+ {
+  "Owner": "ERKstRFM6wnw5Cf4T7S5t5hvij67XWwn8xzTimf8K4Mo",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "6swgnR2QzV6yWmEyGR2zMigAefggaE1kBJiDt2z2Dxnh",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "5vNJfkEdqFaVjsBiUAhEQmxWNg57nWiqscq4P8JQtFyK",
+  "Sacrificed": 10,
+  "Kingshigh": 3,
+  "Kingslow": 7,
+  "Demons": 3
+ },
+ {
+  "Owner": "FAwDVr9mAsHueeNYHz91HwVsgR1ScaHETnyRpUZf9GPM",
+  "Sacrificed": 12,
+  "Kingshigh": 3,
+  "Kingslow": 9,
+  "Demons": 3
+ },
+ {
+  "Owner": "7oPnR37baoYf1dqSWxbcpdH5AFyV2z54YgkLaQrhVf2U",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "Am1fLJLDWhtUF2e6fc5fX4QnkWhYs7Sg9uPU4hAugarv",
+  "Sacrificed": 2,
+  "Kingshigh": 2,
+  "Kingslow": 0,
+  "Demons": 2
+ },
+ {
+  "Owner": "DoQ7aY1r2JmXog52xFUrxteDcinJF2pjuNUGwfa8cKJr",
+  "Sacrificed": 5,
+  "Kingshigh": 4,
+  "Kingslow": 1,
+  "Demons": 4
+ },
+ {
+  "Owner": "8YipBFpgGmDN94jhESeRbiwajPjA21kJ6VZnJoehoeXi",
+  "Sacrificed": 7,
+  "Kingshigh": 0,
+  "Kingslow": 7,
+  "Demons": 0
+ },
+ {
+  "Owner": "ESJbr4agmTKnxAmE2cCtNg6BSkUHueTaEmKHcqo4EX65",
+  "Sacrificed": 4,
+  "Kingshigh": 1,
+  "Kingslow": 3,
+  "Demons": 1
+ },
+ {
+  "Owner": "GbuAeR3eYvDW5VXpkTxBSnqe8WSWxNb5wbUnwZCY7pSo",
+  "Sacrificed": 15,
+  "Kingshigh": 0,
+  "Kingslow": 15,
+  "Demons": 0
+ },
+ {
+  "Owner": "3zaxdFmqbtu8D7FSPy2rrSVgU65humrmFUg4qs9D4vJy",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "AJHBcG3CCnHRsBcXEjEL1Zo4gxxh2biRmBgSyZK3o5eQ",
+  "Sacrificed": 3,
+  "Kingshigh": 0,
+  "Kingslow": 3,
+  "Demons": 0
+ },
+ {
+  "Owner": "2wv45sikYTCUHg7XbvzL8VHkMHqr4WGQLAYDGfWScrng",
+  "Sacrificed": 5,
+  "Kingshigh": 4,
+  "Kingslow": 1,
+  "Demons": 4
+ },
+ {
+  "Owner": "G7jL4grLYy8C3VGkRRF9X4iCciTNjq3nT9naWar43pno",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "B3PL8a1FXLHhjsL9UhWnE4AhcPWr3Ar1JY9QavnTVBUU",
+  "Sacrificed": 5,
+  "Kingshigh": 1,
+  "Kingslow": 4,
+  "Demons": 1
+ },
+ {
+  "Owner": "EuJPFod8563FVZmP92qPcFYEfbY9JUYwcofSxyU5iAxv",
+  "Sacrificed": 2,
+  "Kingshigh": 1,
+  "Kingslow": 1,
+  "Demons": 1
+ },
+ {
+  "Owner": "5xcrNX37Rn3uAi7whg64AMoTfk7U25J5t5KyKeYpu4Gw",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "FEN8BwrcscgWG7v4KfWYmGtfirrdSqvRMMMxPZCHUWXv",
+  "Sacrificed": 4,
+  "Kingshigh": 2,
+  "Kingslow": 2,
+  "Demons": 2
+ },
+ {
+  "Owner": "2Xjd4VkZ11VfGevyXQnekDq767jqgKkLXXSGKgyJXZZC",
+  "Sacrificed": 8,
+  "Kingshigh": 1,
+  "Kingslow": 7,
+  "Demons": 1
+ },
+ {
+  "Owner": "12Wk7Qu3gPic8X6Bu2wsAQcvVa47DySSBv5eigDw6EAV",
+  "Sacrificed": 4,
+  "Kingshigh": 0,
+  "Kingslow": 4,
+  "Demons": 0
+ },
+ {
+  "Owner": "8vbmLEv3RwSLmv1ji1u2vngjK6vppbFVnMocysAXUryN",
+  "Sacrificed": 3,
+  "Kingshigh": 0,
+  "Kingslow": 3,
+  "Demons": 0
+ },
+ {
+  "Owner": "DKwL5pyJdVqryi8Fw2W9SjhesV9b2bXUp5m2ysCrBbxQ",
+  "Sacrificed": 3,
+  "Kingshigh": 0,
+  "Kingslow": 3,
+  "Demons": 0
+ },
+ {
+  "Owner": "BJzotQ4nykk27ebfeUcrASsTdJoJXPWc19dHxuYsUvY6",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "56NMxt5GMpw5JNuKMcpiQ87x1htEiQBZbAmSe3gGbVrJ",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "GWQFgJx1xKnyFnY8QJyiaVGDLrbeAM9xxpwHZyMC5Skr",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "9QUAqDNTBs3eR3KektyiYq8d8nCRaWxoK9Y8nPY4dzpS",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "GFVsGF8cqystGJSjeuRKEwGZUTCpkq3bGajZVF8zuTKs",
+  "Sacrificed": 2,
+  "Kingshigh": 1,
+  "Kingslow": 1,
+  "Demons": 1
+ },
+ {
+  "Owner": "9Y6ufVyfoZqpxD1P1YJByPGXKtV7xhmuFke6w3Sxm96U",
+  "Sacrificed": 2,
+  "Kingshigh": 2,
+  "Kingslow": 0,
+  "Demons": 2
+ },
+ {
+  "Owner": "9aJ3GsaQcPkXSZUef8x4wxMXgMyoMWZxx8UmynREAM6",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "GrFp7bP4E1gbfMGACBXZNU74p43QvyKQqck47D3Hk47K",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "22nJ6FTE72sANJctAvksWEBBpWtxGhZGpSYdbKjGPPLm",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "12u9t2upAgsfe3ywzquz5WXkabe6DQg5B4DnhMraaPvi",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "8pLXGkvVjmSoA2x6o3Bd7VQy932C6ftEy2qe3V68jLNn",
+  "Sacrificed": 5,
+  "Kingshigh": 0,
+  "Kingslow": 5,
+  "Demons": 0
+ },
+ {
+  "Owner": "ATQy6UHmX6UBijnHsrspMWBfEgTA5nLWCGhnXovp8cit",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "FgVS2FRvPwpyn2qg4mU9bjdgkU6wBKbppXXiDXyCgPHe",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "76hBL2XWiZT6y5RYbSyoSG6qqKmYx1EaejbAuxgQgM1M",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "3oH51xMZVZET3RqyrMtfB511iRBouEogNa2UQbpz3Emk",
+  "Sacrificed": 5,
+  "Kingshigh": 4,
+  "Kingslow": 1,
+  "Demons": 4
+ },
+ {
+  "Owner": "BcV6o6pKeJNe9dq9QLusLvtgDD7CnG83uGbNznXqXfjK",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "BAGkesJh8jr5hud3rBnjcq4bZLyNXmtYhLYAiAQXM7yJ",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "HQc8axxhdu9jLfKtwcsmmGaF6LZPFgNjPAV1kThh3dew",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "5kLrMCiafBdzwCsntfieMM4Fc4Qzq89c2vSoYvsdi3uj",
+  "Sacrificed": 4,
+  "Kingshigh": 3,
+  "Kingslow": 1,
+  "Demons": 3
+ },
+ {
+  "Owner": "GaMw3hP4JU4dN35FXJ7uigSnALzZY6noaQaMLVi6wUj5",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "42wvW87YkFMeUYKanaXmyLua5PBQ8DLupEYXPhdVgok7",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "HCiCGCsue6bSgNyhVt21NUyts1D54BK3oQu2wCu7kW1n",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "9Zb5S6zLFEBFZPWhk8BdD617uRmWzZKV5Axg1Ss11LLc",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "AaCVn6fvDcaL3ud2fWzfzFFkN5D5QtG5LxHr6WYeVSft",
+  "Sacrificed": 3,
+  "Kingshigh": 0,
+  "Kingslow": 3,
+  "Demons": 0
+ },
+ {
+  "Owner": "8vigEy5L1PNBgDo9S7CExQtJxqgmNrBRD4KKs2JsE24A",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "8RjMwZ4yNQ619XSoDy2jnvrKfR4DKwtEWeFn9CJEJrHD",
+  "Sacrificed": 3,
+  "Kingshigh": 1,
+  "Kingslow": 2,
+  "Demons": 1
+ },
+ {
+  "Owner": "5ms4sZ9vRny8MY4VJuL6m1y6ktUU9e3s32sZDxnbypNy",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "55PTzBqXtrpj6S4wooTLqF79Vqx1Kbq48TB1ga5UYj16",
+  "Sacrificed": 2,
+  "Kingshigh": 2,
+  "Kingslow": 0,
+  "Demons": 2
+ },
+ {
+  "Owner": "CjA7cDa4VkPMuw4jyhEdNduToNjH5ou6Je42PQFxsp7N",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "GckY1BsPcDWWgd4ubsP8ZtBVbCw5MrJw8q5jrJYKFhJP",
+  "Sacrificed": 4,
+  "Kingshigh": 1,
+  "Kingslow": 3,
+  "Demons": 1
+ },
+ {
+  "Owner": "HWjmwWPK94K6b9DPmZAjARoacye94PDykEwbwKv5HaNn",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "8XQVxmmWoWrXWS81onNT2V2oGtQrEkDRqyPHGsWJtjYp",
+  "Sacrificed": 2,
+  "Kingshigh": 1,
+  "Kingslow": 1,
+  "Demons": 1
+ },
+ {
+  "Owner": "E1N5kN2ZiSwjPfbyu79HTwJCzf8WsF8uNqg9NJM54XrY",
+  "Sacrificed": 2,
+  "Kingshigh": 1,
+  "Kingslow": 1,
+  "Demons": 1
+ },
+ {
+  "Owner": "5uLoKBMhzSrWjsM7KoyfZC33457HHFdAhJ4RBEAgzTVo",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "CJ6e2pjf7jpZ8L5KQVKiWHJ7cgByNbP9SbPY4WzLno2U",
+  "Sacrificed": 2,
+  "Kingshigh": 2,
+  "Kingslow": 0,
+  "Demons": 2
+ },
+ {
+  "Owner": "D3LV6KGMebq8KeaLt2JQRPmqbCrB3CX2vXZoCdrxAMZV",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "6mdkGmUxwEaSjY7abttN7bG3aBVzXacvftfSmk3pVAtP",
+  "Sacrificed": 2,
+  "Kingshigh": 1,
+  "Kingslow": 1,
+  "Demons": 1
+ },
+ {
+  "Owner": "A6k6LVLdp1pNWFozzqANM8RPPwCsY9wMhJr5KV366XMc",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "7JhS4MmfqGzz5cSHKX9ZsLSUEqg8xt7gS7DZ4isf8Szk",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "7ofZ8Gr2LyGfKGw6svYoB3U6Admdwjg2cw2M8igDYDLr",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "Cz4T9X8eSPk513bWQZxTvHmZKjfQ5xET6iHBXUcJENv1",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "3QkEvKWDxaYhLRygLWQajm5uQAZxZGA7iKQKphL7vXTd",
+  "Sacrificed": 2,
+  "Kingshigh": 1,
+  "Kingslow": 1,
+  "Demons": 1
+ },
+ {
+  "Owner": "BrCE1uZ6AdEv6PPZ7i1wkpE6Uoh1sDYgX4f2z5rPJUT9",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "8keRzPrsgs9kBniCU8S7Zkn5SRexYVeMqM8EPNaq7GqF",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "Dkm1XDQpBXjVRXsPhxaYehEaJd4VGVDTgydih2cGBBuu",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
  },
  {
   "Owner": "9Ugm9K3Hbw7GxgT2Xyw6Ug7jxevXeGXq16zgdXJJVP6S",
   "Sacrificed": 1,
-  "Kings": 1
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "61rj3AhoHqBhPJ9e1XRDAAcdcXRwLGbMQwNHGrjs9jqS",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "CNnY3wDYW7xr664dJqrRTehFHr91cnjCXhVDeRwu6YP5",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "3gG4t5K7HdaxEKUYWiwK4gVVdo8bAegXUr6Dw5FDm8BN",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "3BRYUZt9gXT9mEpCWCCM4uR2G2yRz3CcRCcsAMYjgPjt",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "8JfiA9VCdpzVWE7enYB9Gf551Wr2YDdSmMGFokYaKHyV",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "GKAkKheio3AbBZvRENoCoKRc9x6pJgKva8vckfdayiPQ",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "CKabc8GF5nY6P3ervwTyA1gpWLQcn4VhCEV5JR3SnTr1",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "FLFmUz3FERwvAPtGpm1XmW7wTxuSP3YLwEJde6kquJkG",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "2s9YZUjFT3bZSsbSFdhUqiUGZCo7iBPWCK1CYa1no97R",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
+ },
+ {
+  "Owner": "DKV49b3wxfk5x5tF6exWjgTKJcK9ygPifHYCRsfVmqxr",
+  "Sacrificed": 2,
+  "Kingshigh": 1,
+  "Kingslow": 1,
+  "Demons": 1
+ },
+ {
+  "Owner": "MxBDzzcedeRKfSv6ya1aCWLU4eePy5EaETH84TUz22b",
+  "Sacrificed": 2,
+  "Kingshigh": 0,
+  "Kingslow": 2,
+  "Demons": 0
+ },
+ {
+  "Owner": "7bGeiwpyiKNZHVqAYjVMQK6QDY5w13J2abh7PPW5GJMd",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "9iC59yd9j5UEdoFbr6URWkwL3cnFrLGtRvzzY5QvwH4r",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "9nw3ttmaBn3kC24ojyLgbTLUKDZVeCZP8CCg74QzAyqP",
+  "Sacrificed": 1,
+  "Kingshigh": 0,
+  "Kingslow": 1,
+  "Demons": 0
+ },
+ {
+  "Owner": "DNywoy1x9z8ZzreJ2U6o1j8W5MuZJ5FScNS8oSMB5aHM",
+  "Sacrificed": 1,
+  "Kingshigh": 1,
+  "Kingslow": 0,
+  "Demons": 1
  }
 ]

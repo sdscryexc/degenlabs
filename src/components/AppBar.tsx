@@ -81,17 +81,17 @@ export default function Header() {
             <ListItem >
               <ListItemButton href="./" alignItems="center" >
                 <ListItemText primary={
-            <Typography color={'black'}>
+            <Typography color={'white'}>
               Home
             </Typography>
           }/>
               </ListItemButton>
             </ListItem>
             <ListItem >
-              <ListItemButton href="./Team">
+              <ListItemButton href="./Coll">
                 <ListItemText primary={
-            <Typography color={'black'}>
-              Team
+            <Typography color={'white'}>
+              Check Biker Level
             </Typography>
           } />
               </ListItemButton>
@@ -100,7 +100,7 @@ export default function Header() {
             <ListItem >
               <ListItemButton href="./basics">
                 <ListItemText primary={
-            <Typography color={'black'}>
+            <Typography color={'white'}>
               Demon Status
             </Typography>}/>
               </ListItemButton>
