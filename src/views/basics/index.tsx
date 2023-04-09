@@ -214,7 +214,7 @@ const publicAddress = wallet.publicKey?.toBase58();
  <Box  sx={{marginTop : '5vh',alignItems:'center', display:'flex', flexDirection:'column', fontSize: 'large', textAlign:'center' }}>
  Congratulations , <br></br> you have succesfully sacrificed <br></br>
 
- <TableContainer component={Paper} sx={{ width: '60vw', justifyContent:'center', color:'white'}}>
+ <TableContainer component={Paper} sx={{ marginTop: '2vh', width: '60vw', justifyContent:'center' }}>
       <Table sx={{ width: '60vw' }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -239,7 +239,7 @@ const publicAddress = wallet.publicKey?.toBase58();
       </Table>
     </TableContainer>
 
-   <br></br> You are eligible to mint {Kingssum} King Demons and <br></br> {Demons} Demons.
+   <br></br> You are eligible to mint {Kingssum} King Demons and <br></br> {Demons} Demons. <br></br>
 
   </Box>
   <Box >
