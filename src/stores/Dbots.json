@@ -432,16 +432,16 @@
   "CALC": 0.2857142857,
   "Kings": 0,
   "Dead": 2
- },
+ }, 
  {
   "Owner": "6PS7oT1TRBRSBJ1CqLGyFh1JgcUkwsQJptRre9neoK6B",
   "Sacrificed": 7,
   "SUM": 7,
-  "CALC": 1,
+  "CALC": 1, 
   "Kings": 1,
   "Dead": 0
  },
- {
+ { 
   "Owner": "74XjjNnDGpqwv1586Af7q78ZnQ5NJuSW9GeH8nRvH3hT",
   "Sacrificed": 14,
   "SUM": 14,
