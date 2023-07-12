@@ -7,6 +7,7 @@ import Gen2Json from '../../stores/Gen2.json';
 import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import { Connection, PublicKey, LAMPORTS_PER_SOL, clusterApiUrl, Cluster, Keypair } from '@solana/web3.js'
 import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -150,6 +151,47 @@ const publicAddress = wallet.publicKey?.toBase58();
   );
 
 
+  let amount_summon: number;
+  (async () => {
+    const SplTreasury = wallet.publicKey.toBase58();
+    const connection = new Connection(RPCurl, "confirmed");
+  
+    const accounts = await connection.getParsedProgramAccounts(
+      TOKEN_PROGRAM_ID, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
+      {
+        filters: [
+          {
+            dataSize: 165, // number of bytes
+          },
+          {
+            memcmp: {
+              offset: 32, // number of bytes
+              bytes: SplTreasury, // base58 encoded string
+            },
+          },
+        ],
+      }
+    );
+  
+    console.log(
+      `Found ${accounts.length} token account(s) for wallet ${SplTreasury}: `
+    );
+    
+    
+    accounts.forEach((account, i) => {
+      
+      if(account.account.data["parsed"]["info"]["mint"]=="skuLLY6NHFrjL3oGpWMrrwjCfWMSvwp6AD7resMF9m7")
+      amount_summon =  account.account.data["parsed"]["info"]["tokenAmount"]["uiAmount"];
+      
+    });
+    ;
+  
+  })();
+  console.log(`summon ${amount_summon}`)
+
+
+
+
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{marginTop : '10vh',textAlign:'center', fontSize:'xxx-large' }}>
@@ -212,7 +254,7 @@ const publicAddress = wallet.publicKey?.toBase58();
 
       
  <Box  sx={{marginTop : '5vh',alignItems:'center', display:'flex', flexDirection:'column', fontSize: 'large', textAlign:'center' }}>
- Congratulations , <br></br> you have succesfully sacrificed <br></br>
+ Congratulations , <br></br> you have succesfully sacrificed <br></br> 
 
  <TableContainer sx={{ marginTop: '2vh', width: '60vw', justifyContent:'center', backgroundColor:'#292a2c', border:'2px', color:'white' }}>
       <Table sx={{ width: '60vw'}} aria-label="simple table">
